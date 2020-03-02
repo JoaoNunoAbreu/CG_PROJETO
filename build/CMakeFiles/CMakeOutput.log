@@ -1,0 +1,1302 @@
+The system is: Darwin - 19.2.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+note: Using new build system
+note: Planning build
+note: Constructing build description
+warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'CompilerIdC' from project 'CompilerIdC')
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources/Entitlements.plist (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.xcent (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.xcent
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/all-product-headers.yaml (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/all-product-headers.yaml
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.hmap (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.hmap
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-own-target-headers.hmap (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-project-headers.hmap (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-project-headers.hmap
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-generated-files.hmap (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-generated-files.hmap
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-non-framework-target-headers.hmap (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-target-headers.hmap (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-target-headers.hmap
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CMakeCCompilerId.o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CMakeCCompilerId.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -iquote /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-generated-files.hmap -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-own-target-headers.hmap -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-target-headers.hmap -iquote /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-project-headers.hmap -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CMakeCCompilerId.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CMakeCCompilerId.dia -c /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CMakeCCompilerId.c -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CMakeCCompilerId.o
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC.LinkFileList (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC.LinkFileList
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC normal x86_64 (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC_lto.o -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+
+PhaseScriptExecution Run\ Script /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    /bin/sh -c /Users/joaonunoabreu/Desktop/2\\ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+GCC_VERSION=com.apple.compilers.llvm.clang.1_0
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC (in target 'CompilerIdC' from project 'CompilerIdC')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'CompilerIdC' from project 'CompilerIdC')
+
+** BUILD SUCCEEDED **
+
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC"
+
+The C compiler identification is AppleClang, found in "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdC/CompilerIdC"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+note: Using new build system
+note: Planning build
+note: Constructing build description
+warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources/Entitlements.plist (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.xcent (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.xcent
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.hmap (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.hmap
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/all-product-headers.yaml (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/all-product-headers.yaml
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-project-headers.hmap (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-project-headers.hmap
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-own-target-headers.hmap (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-generated-files.hmap (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-generated-files.hmap
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-target-headers.hmap (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-non-framework-target-headers.hmap (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX.LinkFileList (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX.LinkFileList
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CMakeCXXCompilerId.o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CMakeCXXCompilerId.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -iquote /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-generated-files.hmap -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-own-target-headers.hmap -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-target-headers.hmap -iquote /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-project-headers.hmap -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CMakeCXXCompilerId.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CMakeCXXCompilerId.dia -c /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CMakeCXXCompilerId.cpp -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CMakeCXXCompilerId.o
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX normal x86_64 (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX_lto.o -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+
+PhaseScriptExecution Run\ Script /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    /bin/sh -c /Users/joaonunoabreu/Desktop/2\\ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+GCC_VERSION=com.apple.compilers.llvm.clang.1_0
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'CompilerIdCXX' from project 'CompilerIdCXX')
+
+** BUILD SUCCEEDED **
+
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX"
+
+The CXX compiler identification is AppleClang, found in "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CompilerIdCXX/CompilerIdCXX"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_07c0b" "-configuration" "Debug"
+note: Using new build system
+note: Planning build
+note: Constructing build description
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_07c0b' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/DerivedSources/Entitlements.plist (in target 'cmTC_07c0b' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/cmTC_07c0b.xcent (in target 'cmTC_07c0b' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/cmTC_07c0b.xcent
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/Objects-normal/x86_64/testCCompiler.o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/testCCompiler.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_07c0b' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/Objects-normal/x86_64/testCCompiler.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/Objects-normal/x86_64/testCCompiler.dia -c /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/testCCompiler.c -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/Objects-normal/x86_64/testCCompiler.o
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/Objects-normal/x86_64/cmTC_07c0b.LinkFileList (in target 'cmTC_07c0b' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/Objects-normal/x86_64/cmTC_07c0b.LinkFileList
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_07c0b normal x86_64 (in target 'cmTC_07c0b' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/Objects-normal/x86_64/cmTC_07c0b.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/Objects-normal/x86_64/cmTC_07c0b_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/Objects-normal/x86_64/cmTC_07c0b_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_07c0b
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_07c0b (in target 'cmTC_07c0b' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_07c0b.build/cmTC_07c0b.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_07c0b
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_07c0b (in target 'cmTC_07c0b' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_07c0b
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'cmTC_07c0b' from project 'CMAKE_TRY_COMPILE')
+
+** BUILD SUCCEEDED **
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_f8a90" "-configuration" "Debug"
+note: Using new build system
+note: Planning build
+note: Constructing build description
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/DerivedSources/Entitlements.plist (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/cmTC_f8a90.xcent (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/cmTC_f8a90.xcent
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/CMakeCCompilerABI.o /Applications/CMake.app/Contents/share/cmake-3.8/Modules/CMakeCCompilerABI.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/CMakeCCompilerABI.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/CMakeCCompilerABI.dia -c /Applications/CMake.app/Contents/share/cmake-3.8/Modules/CMakeCCompilerABI.c -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/CMakeCCompilerABI.o
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90.LinkFileList (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90.LinkFileList
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90 normal x86_64 (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_lto.o -Xlinker -no_deduplicate -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-macos10.15
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.15.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90 -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90.LinkFileList -object_path_lto /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug
+@(#)PROGRAM:ld  PROJECT:ld64-530
+BUILD 18:57:17 Dec 13 2019
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib
+Framework search paths:
+	/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90 (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/cmTC_f8a90.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90 (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')
+
+** BUILD SUCCEEDED **
+
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_f8a90" "-configuration" "Debug"]
+  ignore line: [note: Using new build system]
+  ignore line: [note: Planning build]
+  ignore line: [note: Constructing build description]
+  ignore line: [CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')]
+  ignore line: [    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: [    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/DerivedSources/Entitlements.plist (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')]
+  ignore line: [    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: [    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/DerivedSources/Entitlements.plist]
+  ignore line: []
+  ignore line: [ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/cmTC_f8a90.xcent (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')]
+  ignore line: [    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: [    ]
+  ignore line: []
+  ignore line: [Entitlements:]
+  ignore line: []
+  ignore line: [{]
+  ignore line: [    "com.apple.security.get-task-allow" = 1]
+  ignore line: []
+  ignore line: [}]
+  ignore line: []
+  ignore line: []
+  ignore line: [    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/cmTC_f8a90.xcent]
+  ignore line: []
+  ignore line: [CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/CMakeCCompilerABI.o /Applications/CMake.app/Contents/share/cmake-3.8/Modules/CMakeCCompilerABI.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')]
+  ignore line: [    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: [    export LANG=en_US.US-ASCII]
+  ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/CMakeCCompilerABI.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/CMakeCCompilerABI.dia -c /Applications/CMake.app/Contents/share/cmake-3.8/Modules/CMakeCCompilerABI.c -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/CMakeCCompilerABI.o]
+  ignore line: []
+  ignore line: [WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90.LinkFileList (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')]
+  ignore line: [    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: [    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90.LinkFileList]
+  ignore line: []
+  ignore line: [Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90 normal x86_64 (in target 'cmTC_f8a90' from project 'CMAKE_TRY_COMPILE')]
+  ignore line: [    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_lto.o -Xlinker -no_deduplicate -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90]
+  ignore line: [Apple clang version 11.0.0 (clang-1100.0.33.17)]
+  ignore line: [Target: x86_64-apple-macos10.15]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+  reduced line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.15.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90 -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90.LinkFileList -object_path_lto /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug]
+            to: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.15.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90 -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90.LinkFileList -object_path_lto /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a ]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.15.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90 -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90.LinkFileList -object_path_lto /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a ]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> lib [to_library]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.15.0] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_f8a90] ==> ignore
+    arg [-filelist] ==> ignore
+    arg [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90.LinkFileList] ==> ignore
+    arg [-object_path_lto] ==> ignore
+    arg [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_lto.o] ==> ignore
+    arg [-no_deduplicate] ==> ignore
+    arg [-v] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-dependency_info] ==> ignore
+    arg [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_f8a90.build/Objects-normal/x86_64/cmTC_f8a90_dependency_info.dat] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  Framework search paths: [;/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug] ==> [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug], skipping non-system directory
+  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  collapse framework dir [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug] ==> [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug], skipping non-system directory
+  collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
+  implicit libs: [to_library]
+  implicit dirs: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_17e2f" "-configuration" "Debug"
+note: Using new build system
+note: Planning build
+note: Constructing build description
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_17e2f' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/DerivedSources/Entitlements.plist (in target 'cmTC_17e2f' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/cmTC_17e2f.xcent (in target 'cmTC_17e2f' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/cmTC_17e2f.xcent
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/Objects-normal/x86_64/feature_tests.o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_17e2f' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -std=c11 -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/Objects-normal/x86_64/feature_tests.dia -c /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.c -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/Objects-normal/x86_64/feature_tests.o
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/Objects-normal/x86_64/cmTC_17e2f.LinkFileList (in target 'cmTC_17e2f' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/Objects-normal/x86_64/cmTC_17e2f.LinkFileList
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_17e2f normal x86_64 (in target 'cmTC_17e2f' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/Objects-normal/x86_64/cmTC_17e2f.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/Objects-normal/x86_64/cmTC_17e2f_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/Objects-normal/x86_64/cmTC_17e2f_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_17e2f
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_17e2f (in target 'cmTC_17e2f' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_17e2f.build/cmTC_17e2f.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_17e2f
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_17e2f (in target 'cmTC_17e2f' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_17e2f
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'cmTC_17e2f' from project 'CMAKE_TRY_COMPILE')
+
+** BUILD SUCCEEDED **
+
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_1cac8" "-configuration" "Debug"
+note: Using new build system
+note: Planning build
+note: Constructing build description
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_1cac8' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/DerivedSources/Entitlements.plist (in target 'cmTC_1cac8' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/cmTC_1cac8.xcent (in target 'cmTC_1cac8' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/cmTC_1cac8.xcent
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/Objects-normal/x86_64/cmTC_1cac8.LinkFileList (in target 'cmTC_1cac8' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/Objects-normal/x86_64/cmTC_1cac8.LinkFileList
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/Objects-normal/x86_64/feature_tests.o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_1cac8' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -std=c99 -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/Objects-normal/x86_64/feature_tests.dia -c /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.c -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/Objects-normal/x86_64/feature_tests.o
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_1cac8 normal x86_64 (in target 'cmTC_1cac8' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/Objects-normal/x86_64/cmTC_1cac8.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/Objects-normal/x86_64/cmTC_1cac8_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/Objects-normal/x86_64/cmTC_1cac8_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_1cac8
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_1cac8 (in target 'cmTC_1cac8' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1cac8.build/cmTC_1cac8.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_1cac8
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_1cac8 (in target 'cmTC_1cac8' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_1cac8
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'cmTC_1cac8' from project 'CMAKE_TRY_COMPILE')
+
+** BUILD SUCCEEDED **
+
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_5bf3d" "-configuration" "Debug"
+note: Using new build system
+note: Planning build
+note: Constructing build description
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_5bf3d' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/DerivedSources/Entitlements.plist (in target 'cmTC_5bf3d' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/cmTC_5bf3d.xcent (in target 'cmTC_5bf3d' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/cmTC_5bf3d.xcent
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/Objects-normal/x86_64/feature_tests.o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_5bf3d' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -std=c90 -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/Objects-normal/x86_64/feature_tests.dia -c /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.c -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/Objects-normal/x86_64/feature_tests.o
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/Objects-normal/x86_64/cmTC_5bf3d.LinkFileList (in target 'cmTC_5bf3d' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/Objects-normal/x86_64/cmTC_5bf3d.LinkFileList
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_5bf3d normal x86_64 (in target 'cmTC_5bf3d' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/Objects-normal/x86_64/cmTC_5bf3d.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/Objects-normal/x86_64/cmTC_5bf3d_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/Objects-normal/x86_64/cmTC_5bf3d_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_5bf3d
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_5bf3d (in target 'cmTC_5bf3d' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_5bf3d.build/cmTC_5bf3d.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_5bf3d
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_5bf3d (in target 'cmTC_5bf3d' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_5bf3d
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'cmTC_5bf3d' from project 'CMAKE_TRY_COMPILE')
+
+** BUILD SUCCEEDED **
+
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_05701" "-configuration" "Debug"
+note: Using new build system
+note: Planning build
+note: Constructing build description
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_05701' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/DerivedSources/Entitlements.plist (in target 'cmTC_05701' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/cmTC_05701.xcent (in target 'cmTC_05701' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/cmTC_05701.xcent
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/Objects-normal/x86_64/testCXXCompiler.o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_05701' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/Objects-normal/x86_64/testCXXCompiler.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/Objects-normal/x86_64/testCXXCompiler.dia -c /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/Objects-normal/x86_64/testCXXCompiler.o
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/Objects-normal/x86_64/cmTC_05701.LinkFileList (in target 'cmTC_05701' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/Objects-normal/x86_64/cmTC_05701.LinkFileList
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_05701 normal x86_64 (in target 'cmTC_05701' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/Objects-normal/x86_64/cmTC_05701.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/Objects-normal/x86_64/cmTC_05701_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/Objects-normal/x86_64/cmTC_05701_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_05701
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_05701 (in target 'cmTC_05701' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05701.build/cmTC_05701.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_05701
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_05701 (in target 'cmTC_05701' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_05701
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'cmTC_05701' from project 'CMAKE_TRY_COMPILE')
+
+** BUILD SUCCEEDED **
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_caa99" "-configuration" "Debug"
+note: Using new build system
+note: Planning build
+note: Constructing build description
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/DerivedSources/Entitlements.plist (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/cmTC_caa99.xcent (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/cmTC_caa99.xcent
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99.LinkFileList (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99.LinkFileList
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/CMakeCXXCompilerABI.o /Applications/CMake.app/Contents/share/cmake-3.8/Modules/CMakeCXXCompilerABI.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/CMakeCXXCompilerABI.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/CMakeCXXCompilerABI.dia -c /Applications/CMake.app/Contents/share/cmake-3.8/Modules/CMakeCXXCompilerABI.cpp -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/CMakeCXXCompilerABI.o
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99 normal x86_64 (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_lto.o -Xlinker -no_deduplicate -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-macos10.15
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.15.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99 -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99.LinkFileList -object_path_lto /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug
+@(#)PROGRAM:ld  PROJECT:ld64-530
+BUILD 18:57:17 Dec 13 2019
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib
+Framework search paths:
+	/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99 (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/cmTC_caa99.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99 (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')
+
+** BUILD SUCCEEDED **
+
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_caa99" "-configuration" "Debug"]
+  ignore line: [note: Using new build system]
+  ignore line: [note: Planning build]
+  ignore line: [note: Constructing build description]
+  ignore line: [CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')]
+  ignore line: [    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: [    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/DerivedSources/Entitlements.plist (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')]
+  ignore line: [    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: [    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/DerivedSources/Entitlements.plist]
+  ignore line: []
+  ignore line: [ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/cmTC_caa99.xcent (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')]
+  ignore line: [    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: [    ]
+  ignore line: []
+  ignore line: [Entitlements:]
+  ignore line: []
+  ignore line: [{]
+  ignore line: [    "com.apple.security.get-task-allow" = 1]
+  ignore line: []
+  ignore line: [}]
+  ignore line: []
+  ignore line: []
+  ignore line: [    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/cmTC_caa99.xcent]
+  ignore line: []
+  ignore line: [WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99.LinkFileList (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')]
+  ignore line: [    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: [    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99.LinkFileList]
+  ignore line: []
+  ignore line: [CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/CMakeCXXCompilerABI.o /Applications/CMake.app/Contents/share/cmake-3.8/Modules/CMakeCXXCompilerABI.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')]
+  ignore line: [    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: [    export LANG=en_US.US-ASCII]
+  ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/CMakeCXXCompilerABI.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/CMakeCXXCompilerABI.dia -c /Applications/CMake.app/Contents/share/cmake-3.8/Modules/CMakeCXXCompilerABI.cpp -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/CMakeCXXCompilerABI.o]
+  ignore line: []
+  ignore line: [Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99 normal x86_64 (in target 'cmTC_caa99' from project 'CMAKE_TRY_COMPILE')]
+  ignore line: [    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp]
+  ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_lto.o -Xlinker -no_deduplicate -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99]
+  ignore line: [Apple clang version 11.0.0 (clang-1100.0.33.17)]
+  ignore line: [Target: x86_64-apple-macos10.15]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+  reduced line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.15.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99 -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99.LinkFileList -object_path_lto /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug]
+            to: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.15.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99 -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99.LinkFileList -object_path_lto /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a ]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.15.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99 -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99.LinkFileList -object_path_lto /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a ]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> lib [to_library]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.15.0] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_caa99] ==> ignore
+    arg [-filelist] ==> ignore
+    arg [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99.LinkFileList] ==> ignore
+    arg [-object_path_lto] ==> ignore
+    arg [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_lto.o] ==> ignore
+    arg [-no_deduplicate] ==> ignore
+    arg [-v] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-dependency_info] ==> ignore
+    arg [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_caa99.build/Objects-normal/x86_64/cmTC_caa99_dependency_info.dat] ==> ignore
+    arg [-lc++] ==> lib [c++]
+    arg [-lSystem] ==> lib [System]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  Framework search paths: [;/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug] ==> [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug], skipping non-system directory
+  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  collapse framework dir [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug] ==> [/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug], skipping non-system directory
+  collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
+  implicit libs: [to_library;c++]
+  implicit dirs: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
+
+
+
+
+Detecting CXX [-std=c++1z] compiler features compiled with the following output:
+Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_573af" "-configuration" "Debug"
+note: Using new build system
+note: Planning build
+note: Constructing build description
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_573af' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/DerivedSources/Entitlements.plist (in target 'cmTC_573af' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/cmTC_573af.xcent (in target 'cmTC_573af' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/cmTC_573af.xcent
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/Objects-normal/x86_64/cmTC_573af.LinkFileList (in target 'cmTC_573af' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/Objects-normal/x86_64/cmTC_573af.LinkFileList
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/Objects-normal/x86_64/feature_tests.o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_573af' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -std=c++1z -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/Objects-normal/x86_64/feature_tests.dia -c /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.cxx -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/Objects-normal/x86_64/feature_tests.o
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_573af normal x86_64 (in target 'cmTC_573af' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/Objects-normal/x86_64/cmTC_573af.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/Objects-normal/x86_64/cmTC_573af_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/Objects-normal/x86_64/cmTC_573af_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_573af
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_573af (in target 'cmTC_573af' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_573af.build/cmTC_573af.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_573af
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_573af (in target 'cmTC_573af' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_573af
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'cmTC_573af' from project 'CMAKE_TRY_COMPILE')
+
+** BUILD SUCCEEDED **
+
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_ca68c" "-configuration" "Debug"
+note: Using new build system
+note: Planning build
+note: Constructing build description
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_ca68c' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/DerivedSources/Entitlements.plist (in target 'cmTC_ca68c' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/cmTC_ca68c.xcent (in target 'cmTC_ca68c' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/cmTC_ca68c.xcent
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/Objects-normal/x86_64/feature_tests.o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_ca68c' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -std=c++14 -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/Objects-normal/x86_64/feature_tests.dia -c /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.cxx -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/Objects-normal/x86_64/feature_tests.o
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/Objects-normal/x86_64/cmTC_ca68c.LinkFileList (in target 'cmTC_ca68c' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/Objects-normal/x86_64/cmTC_ca68c.LinkFileList
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_ca68c normal x86_64 (in target 'cmTC_ca68c' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/Objects-normal/x86_64/cmTC_ca68c.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/Objects-normal/x86_64/cmTC_ca68c_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/Objects-normal/x86_64/cmTC_ca68c_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_ca68c
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_ca68c (in target 'cmTC_ca68c' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ca68c.build/cmTC_ca68c.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_ca68c
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_ca68c (in target 'cmTC_ca68c' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_ca68c
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'cmTC_ca68c' from project 'CMAKE_TRY_COMPILE')
+
+** BUILD SUCCEEDED **
+
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_c96d7" "-configuration" "Debug"
+note: Using new build system
+note: Planning build
+note: Constructing build description
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_c96d7' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/DerivedSources/Entitlements.plist (in target 'cmTC_c96d7' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/cmTC_c96d7.xcent (in target 'cmTC_c96d7' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/cmTC_c96d7.xcent
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/Objects-normal/x86_64/cmTC_c96d7.LinkFileList (in target 'cmTC_c96d7' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/Objects-normal/x86_64/cmTC_c96d7.LinkFileList
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/Objects-normal/x86_64/feature_tests.o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_c96d7' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -std=c++11 -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/Objects-normal/x86_64/feature_tests.dia -c /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.cxx -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/Objects-normal/x86_64/feature_tests.o
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_c96d7 normal x86_64 (in target 'cmTC_c96d7' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/Objects-normal/x86_64/cmTC_c96d7.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/Objects-normal/x86_64/cmTC_c96d7_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/Objects-normal/x86_64/cmTC_c96d7_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_c96d7
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_c96d7 (in target 'cmTC_c96d7' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_c96d7.build/cmTC_c96d7.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_c96d7
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_c96d7 (in target 'cmTC_c96d7' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_c96d7
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'cmTC_c96d7' from project 'CMAKE_TRY_COMPILE')
+
+** BUILD SUCCEEDED **
+
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_73a82" "-configuration" "Debug"
+note: Using new build system
+note: Planning build
+note: Constructing build description
+CreateBuildDirectory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp (in target 'cmTC_73a82' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-create-build-directory /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/DerivedSources/Entitlements.plist (in target 'cmTC_73a82' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/cmTC_73a82.xcent (in target 'cmTC_73a82' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/cmTC_73a82.xcent
+
+WriteAuxiliaryFile /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/Objects-normal/x86_64/cmTC_73a82.LinkFileList (in target 'cmTC_73a82' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    write-file /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/Objects-normal/x86_64/cmTC_73a82.LinkFileList
+
+CompileC /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/Objects-normal/x86_64/feature_tests.o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_73a82' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -target x86_64-apple-macos10.15 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/DerivedSources-normal/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/DerivedSources/x86_64 -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -std=c++98 -MMD -MT dependencies -MF /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/Objects-normal/x86_64/feature_tests.dia -c /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.cxx -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/Objects-normal/x86_64/feature_tests.o
+
+Ld /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_73a82 normal x86_64 (in target 'cmTC_73a82' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -target x86_64-apple-macos10.15 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -L/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -F/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/Objects-normal/x86_64/cmTC_73a82.LinkFileList -Xlinker -object_path_lto -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/Objects-normal/x86_64/cmTC_73a82_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/Objects-normal/x86_64/cmTC_73a82_dependency_info.dat -o /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_73a82
+
+CodeSign /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_73a82 (in target 'cmTC_73a82' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_73a82.build/cmTC_73a82.xcent --timestamp=none /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_73a82
+
+RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_73a82 (in target 'cmTC_73a82' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp
+    builtin-RegisterExecutionPolicyException /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/CMakeTmp/Debug/cmTC_73a82
+note: Execution policy exception registration failed and was skipped: Error Domain=NSPOSIXErrorDomain Code=1 "Operation not permitted" (in target 'cmTC_73a82' from project 'CMAKE_TRY_COMPILE')
+
+** BUILD SUCCEEDED **
+
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
