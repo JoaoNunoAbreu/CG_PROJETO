@@ -176,6 +176,29 @@ void drawSphere(float r, int slices, int stacks){
     glEnd();
 }
 
+void drawCone(float r, float height, int slices, int stacks){
+    
+    float alpha = 0;
+    float beta = 0;
+    glBegin(GL_LINE_LOOP);
+    
+    for(int i = 0; i < slices; i++){
+        alpha = 2 * M_PI * i/slices;
+        for(int j = 0; j < stacks; j++){
+            
+            beta = 2 * M_PI * j/stacks;
+            r = r - r/stacks;
+            float x = r * cos(beta) * sin(alpha);
+            float y = r * sin(beta);
+            float z = r * cos(beta) * cos(alpha);
+            
+            glVertex3f(x,y,z);
+        }
+    }
+    glEnd();
+    
+}
+
 void renderScene(void) {
 
     // clear buffers
@@ -193,7 +216,7 @@ void renderScene(void) {
     glRotatef(angle2,0,0,1);
     //drawCube(2,2,2);
     //drawSphere(2, 50, 50);
-    glutWireCone(2,3,50,50);
+    drawCone(2,3,50,50);
     
     // End of frame
     glutSwapBuffers();
