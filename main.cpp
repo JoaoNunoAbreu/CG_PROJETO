@@ -155,47 +155,24 @@ void drawCube(float x, float y, float z) {
 
 }
 
-void drawSphere(float r, int slices, int stacks){
-    
-    float alpha = 0;
-    float beta = 0;
-    glBegin(GL_LINE_LOOP);
-    
-    for(int i = 0; i < slices; i++){
-        alpha = 2 * M_PI * i/slices;
-        for(int j = 0; j < stacks; j++){
-            
-            beta = 2 * M_PI * j/stacks;
-            float x = r * cos(beta) * sin(alpha);
-            float y = r * sin(beta);
-            float z = r * cos(beta) * cos(alpha);
-            
-            glVertex3f(x,y,z);
+// TEMPORÁRIO
+void drawCircle(float r, int slices){
+    float angulo = (2*M_PI) /slices;
+    glBegin(GL_TRIANGLES);
+        for(int i = 0; i < slices; i++){
+            glColor3f((1./slices)*i,0,1);
+            glVertex3f(0,0,0);
+            glVertex3f(r*sin(angulo*i),0,r*cos(angulo*i));
+            glVertex3f(r*sin(angulo*(i+1)),0,r*cos(angulo*(i+1)));
         }
-    }
     glEnd();
 }
 
+void drawSphere(float radius, int slices, int stacks){
+    
+}
+
 void drawCone(float r, float height, int slices, int stacks){
-    
-    float alpha = 0;
-    float beta = 0;
-    glBegin(GL_LINE_LOOP);
-    
-    for(int i = 0; i < slices; i++){
-        alpha = 2 * M_PI * i/slices;
-        for(int j = 0; j < stacks; j++){
-            
-            beta = 2 * M_PI * j/stacks;
-            r = r - r/stacks;
-            float x = r * cos(beta) * sin(alpha);
-            float y = r * sin(beta);
-            float z = r * cos(beta) * cos(alpha);
-            
-            glVertex3f(x,y,z);
-        }
-    }
-    glEnd();
     
 }
 
@@ -211,12 +188,12 @@ void renderScene(void) {
               0.0f,1.0f,0.0f);
     
     drawAxis();
-    // drawPlane(4,4);
     glRotatef(angle1,0,1,0);
     glRotatef(angle2,0,0,1);
     //drawCube(2,2,2);
-    //drawSphere(2, 50, 50);
-    drawCone(2,3,50,50);
+    //drawSphere(2, 4, 4);
+    drawCircle(1, 20);
+    //drawCone(2,3,50,50);
     
     // End of frame
     glutSwapBuffers();
