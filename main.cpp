@@ -76,94 +76,114 @@ void drawPlane(float x, float z) {
 
 }
 
-void drawCube(float x, float y, float z) {
+void drawCube(float x, float y, float z, int divisoes) {
 
     glBegin(GL_TRIANGLES);
     
-        // Face frontal
+    float shiftX = x/divisoes;
+    float shiftY = y/divisoes;
+    float shiftZ = z/divisoes;
     
-        glColor3f(1,0.5,0);
-    
-        glVertex3f(x/2, y/2, z/2);
-        glVertex3f(-x/2, y/2,z/2);
-        glVertex3f(-x/2, -y/2, z/2);
-    
-        glVertex3f(-x/2, -y/2, z/2);
-        glVertex3f(x/2, -y/2, z/2);
-        glVertex3f(x/2, y/2, z/2);
-    
-        // Face direita
-    
-        glColor3f(1, 0, 0);
-    
-        glVertex3f(x/2, y/2, -z/2);
-        glVertex3f(x/2, y/2, z/2);
-        glVertex3f(x/2, -y/2, z/2);
-    
-        glVertex3f(x/2, -y/2, z/2);
-        glVertex3f(x/2, -y/2, -z/2);
-        glVertex3f(x/2, y/2, -z/2);
-    
-        // Face de cima
-    
-        glColor3f(0, 0, 1);
-    
-        glVertex3f(x/2, y/2, z/2);
-        glVertex3f(x/2, y/2, -z/2);
-        glVertex3f(-x/2, y/2, -z/2);
-    
-        glVertex3f(-x/2, y/2, -z/2);
-        glVertex3f(-x/2, y/2, z/2);
-        glVertex3f(x/2, y/2, z/2);
-    
-        // Face de trás
-    
-        glColor3f(0, 1, 0);
-    
-        glVertex3f(-x/2, y/2, -z/2);
-        glVertex3f(x/2, y/2, -z/2);
-        glVertex3f(x/2, -y/2, -z/2);
-    
-        glVertex3f(x/2, -y/2, -z/2);
-        glVertex3f(-x/2, -y/2, -z/2);
-        glVertex3f(-x/2, y/2, -z/2);
-    
-        // Face esquerda
-    
-        glColor3f(0,0.5,1);
-    
-        glVertex3f(-x/2, y/2, -z/2);
-        glVertex3f(-x/2, -y/2, -z/2);
-        glVertex3f(-x/2, -y/2, z/2);
-    
-        glVertex3f(-x/2, -y/2, z/2);
-        glVertex3f(-x/2, y/2, z/2);
-        glVertex3f(-x/2, y/2, -z/2);
-    
-        // Face de baixo
-    
-        glColor3f(0.5,0,1);
-    
-        glVertex3f(-x/2, -y/2, -z/2);
-        glVertex3f(x/2, -y/2, -z/2);
-        glVertex3f(x/2, -y/2, z/2);
-    
-        glVertex3f(x/2, -y/2, z/2);
-        glVertex3f(-x/2, -y/2, z/2);
-        glVertex3f(-x/2, -y/2, -z/2);
-    
+    for(int i = 0; i < divisoes; i++){
+        for(int j = 0; j < divisoes; j++){
             
+            // Face frontal
+    
+            glColor3f((1./divisoes)*i,0,1);
+    
+            glVertex3f(x/2 , y/2  * shiftY, z/2);
+            glVertex3f(-x/2, y/2  * shiftY,z/2);
+            glVertex3f(-x/2, -y/2 * shiftY, z/2);
+    
+            glColor3f((1./divisoes)*j,1,0);
+            
+            glVertex3f(-x/2, -y/2 * shiftY, z/2);
+            glVertex3f(x/2 , -y/2 * shiftY, z/2);
+            glVertex3f(x/2 , y/2  * shiftY, z/2);
+    
+            // Face direita
+    
+            glColor3f((1./divisoes)*j,0,1);
+    
+            glVertex3f(x/2 , y/2  * shiftY, -z/2);
+            glVertex3f(x/2 , y/2  * shiftY, z/2);
+            glVertex3f(x/2 , -y/2 * shiftY, z/2);
+    
+            glColor3f((1./divisoes)*j,1,0);
+            
+            glVertex3f(x/2 , -y/2 * shiftY, z/2);
+            glVertex3f(x/2 , -y/2 * shiftY, -z/2);
+            glVertex3f(x/2 , y/2  * shiftY, -z/2);
+    
+            // Face de cima
+    
+            glColor3f((1./divisoes)*j,0,1);
+    
+            glVertex3f(x/2 , y/2, z/2);
+            glVertex3f(x/2 , y/2, -z/2);
+            glVertex3f(-x/2, y/2, -z/2);
+    
+            glColor3f((1./divisoes)*j,1,0);
+            
+            glVertex3f(-x/2, y/2, -z/2);
+            glVertex3f(-x/2, y/2, z/2);
+            glVertex3f(x/2 , y/2, z/2);
+    
+            // Face de trás
+    
+            glColor3f((1./divisoes)*j,0,1);
+    
+            glVertex3f(-x/2, y/2 * shiftY, -z/2);
+            glVertex3f(x/2 , y/2 * shiftY, -z/2);
+            glVertex3f(x/2 , -y/2* shiftY, -z/2);
+            
+            glColor3f((1./divisoes)*j,1,0);
+            
+            glVertex3f(x/2 , -y/2* shiftY, -z/2);
+            glVertex3f(-x/2, -y/2* shiftY, -z/2);
+            glVertex3f(-x/2, y/2 * shiftY, -z/2);
+    
+            // Face esquerda
+    
+            glColor3f((1./divisoes)*j,0,1);
+    
+            glVertex3f(-x/2, y/2 * shiftY, -z/2);
+            glVertex3f(-x/2, -y/2* shiftY, -z/2);
+            glVertex3f(-x/2, -y/2* shiftY, z/2);
+    
+            glColor3f((1./divisoes)*j,1,0);
+            
+            glVertex3f(-x/2, -y/2* shiftY, z/2);
+            glVertex3f(-x/2, y/2 * shiftY, z/2);
+            glVertex3f(-x/2, y/2 * shiftY, -z/2);
+    
+            // Face de baixo
+    
+            glColor3f((1./divisoes)*j,0,1);
+    
+            glVertex3f(-x/2, -y/2, -z/2);
+            glVertex3f(x/2 , -y/2, -z/2);
+            glVertex3f(x/2 , -y/2, z/2);
+    
+            glColor3f((1./divisoes)*j,1,0);
+            
+            glVertex3f(x/2 , -y/2, z/2);
+            glVertex3f(-x/2, -y/2, z/2);
+            glVertex3f(-x/2, -y/2, -z/2);
+    
+        }
+    }
     glEnd();
 
 }
 
 void drawSphere(float radius, int slices, int stacks){
-    float angulo_camada = (float)(M_PI / stacks);
-    float angulo_fatia = (float)(2 * M_PI / slices);
-    float beta = (float)-(M_PI / 2.0f);
+    float deslocacao_beta = M_PI / stacks;
+    float deslocacao_alpha = 2 * M_PI / slices;
+    float beta = -M_PI / 2;
     float alpha = 0;
-    float nextBeta = beta + angulo_camada;
-    float nextAlpha = alpha + angulo_fatia;
+    float nextBeta = beta + deslocacao_beta;
+    float nextAlpha = alpha + deslocacao_alpha;
     
     float xA, yA, zA;        //Ponto A - canto superior esquerdo
     float xB, yB, zB;        //Ponto B - canto inferior esquerdo
@@ -171,8 +191,8 @@ void drawSphere(float radius, int slices, int stacks){
     float xD, yD, zD;        //Ponto D - canto inferior direito
 
     glBegin(GL_TRIANGLES);
-    for (int stack = 0; stack < stacks; stack++) {
-        for (int slice = 0; slice < slices; slice++) {
+    for (int i = 0; i < stacks; i++) {
+        for (int j = 0; j < slices; j++) {
 
             xA= radius * cos(nextBeta) * sin(alpha);
             yA= radius * sin(nextBeta);
@@ -190,21 +210,21 @@ void drawSphere(float radius, int slices, int stacks){
             yD = radius * sin(beta);
             zD = radius * cos(beta) * cos(nextAlpha);
             
-            glColor3f((1./slices)*slice,0,1);
+            glColor3f((1./slices)*i,0,1);
             glVertex3f(xC, yC, zC);
             glVertex3f(xA, yA, zA);
             glVertex3f(xB, yB, zB);
             
-            glColor3f((1./stacks)*stack,0,1);
+            glColor3f((1./stacks)*i,0,1);
             glVertex3f(xB, yB, zB);
             glVertex3f(xD, yD, zD);
             glVertex3f(xC, yC, zC);
 
             alpha = nextAlpha;
-            nextAlpha += angulo_fatia;
+            nextAlpha += deslocacao_alpha;
         }
         beta = nextBeta;
-        nextBeta += angulo_camada;
+        nextBeta += deslocacao_beta;
     }
     glEnd();
 }
@@ -212,9 +232,9 @@ void drawSphere(float radius, int slices, int stacks){
 void drawCone(float radius, float height, int slices, int stacks){
     glBegin(GL_TRIANGLES);
     
-        float angle = 0;                // Ângulo ao centro
+        float angle = 0; // Ângulo ao centro
         float alfa = (2 * M_PI) / ((float) slices);
-        float diffRadius = (radius/stacks); // Diferença entre valores de raio de cada stack
+        float diffRadius = radius/stacks; // Diferença entre valores de raio de cada stack
 
         // Coordenadas de referência
         float lowerR = 0;        // Raio do círculo dos 2 pontos inferiores
@@ -225,13 +245,11 @@ void drawCone(float radius, float height, int slices, int stacks){
         float xB, yB, zB;        //Ponto B - canto inferior direito
         float xC, yC, zC;        //Ponto C - canto superior direito
         float xD, yD, zD;        //Ponto D - canto superior esquerdo
-
-        float ha = sqrt(pow(radius,2) + pow(height,2))/stacks;
     
         for (int i = 0; i < stacks; i++) {
 
-            lowerR = radius-(diffRadius * i);
-            upperR = radius-(diffRadius * (i+1));
+            lowerR = radius- diffRadius * i;
+            upperR = radius- diffRadius * (i+1);
             
             // Percorrem-se as slices e calculam-se as coordenadas
             // dos pontos de referência para a stack e slice atuais
@@ -240,23 +258,22 @@ void drawCone(float radius, float height, int slices, int stacks){
 
                 // Cálculo das novas coordenadas do ponto A
                 xA = lowerR * sin(angle);
-                yA = ha * i;
+                yA = i * height/stacks;
                 zA = lowerR * cos(angle);
-
 
                 // Cálculo das novas coordenadas do ponto B
                 xB = lowerR * sin(angle + alfa);
-                yB = ha * i;
+                yB = i * height/stacks;
                 zB = lowerR * cos(angle + alfa);
 
                 // Cálculo das novas coordenadas do ponto C
                 xC = upperR * sin(angle + alfa);
-                yC = ha * (i+1);
+                yC = (i+1) * height/stacks;
                 zC = upperR * cos(angle + alfa);
 
                 // Cálculo das novas coordenadas do ponto D
                 xD = upperR * sin(angle);
-                yD = ha * (i+1);
+                yD = (i+1) * height/stacks;
                 zD = upperR * cos(angle);
 
 
@@ -272,6 +289,16 @@ void drawCone(float radius, float height, int slices, int stacks){
                 glVertex3f(xD, yD, zD);
             }
         }
+    
+        alfa = -alfa; // Para vermos a base do cone, usando a regra da mão direita
+    
+        for(int i = 0; i < slices; i++){
+            glColor3f(1,0,1);
+            glVertex3f(0,0,0);
+            glVertex3f(radius*sin(alfa*i),0,radius*cos(alfa*i));
+            glVertex3f(radius*sin(alfa*(i+1)),0,radius*cos(alfa*(i+1)));
+        }
+    
     glEnd();
 }
 
@@ -290,9 +317,9 @@ void renderScene(void) {
     glRotatef(angle1,0,1,0);
     glRotatef(angle2,1,0,0);
     //drawPlane(2, 2);
-    //drawCube(2,2,2);
+    drawCube(2,2,2,3);
     //drawSphere(2, 100, 100);
-    drawCone(2,2,8,100);
+    //drawCone(2,2,8,100);
     //glutWireCone(2, 2, 100, 2);
     
     // End of frame
