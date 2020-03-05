@@ -12,6 +12,7 @@
 
 float angle1 = 0;
 float angle2 = 0;
+float angle3 = 0;
 
 void changeSize(int w, int h) {
 
@@ -177,14 +178,13 @@ void drawCube(float x, float y, float z, int divisoes) {
 
 }
 
-void drawSphere(float radius, int slices, int stacks){
+void drawSphere(float radius, int slices, int stacks) {
+    
     float deslocacao_beta = M_PI / stacks;
     float deslocacao_alpha = 2 * M_PI / slices;
     float beta = -M_PI / 2;
     float alpha = 0;
-    float nextBeta = beta + deslocacao_beta;
-    float nextAlpha = alpha + deslocacao_alpha;
-    
+
     float xA, yA, zA;        //Ponto A - canto superior esquerdo
     float xB, yB, zB;        //Ponto B - canto inferior esquerdo
     float xC, yC, zC;        //Ponto C - canto superior direito
@@ -192,39 +192,38 @@ void drawSphere(float radius, int slices, int stacks){
 
     glBegin(GL_TRIANGLES);
     for (int i = 0; i < stacks; i++) {
-        for (int j = 0; j < slices; j++) {
+         for (int j = 0; j < slices; j++) {
 
-            xA= radius * cos(nextBeta) * sin(alpha);
-            yA= radius * sin(nextBeta);
-            zA= radius * cos(nextBeta) * cos(alpha);
+            alpha = j * deslocacao_alpha;
             
+            xA = radius * cos(beta + deslocacao_beta) * sin(alpha);
+            yA = radius * sin(beta + deslocacao_beta);
+            zA = radius * cos(beta + deslocacao_beta) * cos(alpha);
+
             xB = radius * cos(beta) * sin(alpha);
             yB = radius * sin(beta);
             zB = radius * cos(beta) * cos(alpha);
 
-            xC = radius * cos(nextBeta) * sin(nextAlpha);
-            yC = radius * sin(nextBeta);
-            zC = radius * cos(nextBeta) * cos(nextAlpha);
+            xC = radius * cos(beta + deslocacao_beta) * sin(alpha + deslocacao_alpha);
+            yC = radius * sin(beta + deslocacao_beta);
+            zC = radius * cos(beta + deslocacao_beta) * cos(alpha + deslocacao_alpha);
 
-            xD = radius * cos(beta) * sin(nextAlpha);
+            xD = radius * cos(beta) * sin(alpha + deslocacao_alpha);
             yD = radius * sin(beta);
-            zD = radius * cos(beta) * cos(nextAlpha);
-            
-            glColor3f((1./slices)*i,0,1);
+            zD = radius * cos(beta) * cos(alpha + deslocacao_alpha);
+
+            glColor3f((1. / slices) * i, 0, 1);
             glVertex3f(xC, yC, zC);
             glVertex3f(xA, yA, zA);
             glVertex3f(xB, yB, zB);
-            
-            glColor3f((1./stacks)*i,0,1);
+
+            glColor3f((1. / stacks) * i, 0, 1);
             glVertex3f(xB, yB, zB);
             glVertex3f(xD, yD, zD);
             glVertex3f(xC, yC, zC);
-
-            alpha = nextAlpha;
-            nextAlpha += deslocacao_alpha;
+   
         }
-        beta = nextBeta;
-        nextBeta += deslocacao_beta;
+        beta += deslocacao_beta;
     }
     glEnd();
 }
@@ -302,6 +301,27 @@ void drawCone(float radius, float height, int slices, int stacks){
     glEnd();
 }
 
+void drawCube2(float x, float y, float z, int d) {
+    glBegin(GL_TRIANGLES);
+
+    float xShift = x / d;
+    float yShift = y / d;
+    float zShift = z / d;
+
+    for (int i = 0; i <= d; i++) {
+        for (int j = 0; j <= d; j++) {
+            for (int k = 0; k <= d; k++) {
+
+                glColor3f((1. / d) * i, 0, 1);
+
+                glVertex3f(xShift * i, yShift * j, zShift * k);
+            }
+        }
+    }
+
+    glEnd();
+}
+
 void renderScene(void) {
 
     // clear buffers
@@ -315,12 +335,18 @@ void renderScene(void) {
     
     drawAxis();
     glRotatef(angle1,0,1,0);
-    glRotatef(angle2,1,0,0);
+    glRotatef(angle2,0,0,1);
+    glRotatef(angle3,1,0,0);
     //drawPlane(2, 2);
-    drawCube(2,2,2,3);
+    drawCube2(2,2,2,3);
     //drawSphere(2, 100, 100);
     //drawCone(2,2,8,100);
-    //glutWireCone(2, 2, 100, 2);
+    //glutWireCone(6, 6, 4, 4);
+    //glColor3f(1,1,1);
+    //glutWireCone(4, 6, 4, 4);
+    
+    
+    
     
     // End of frame
     glutSwapBuffers();
@@ -347,6 +373,12 @@ void processSpecialKeys(int key, int xx, int yy) {
             break;
         case GLUT_KEY_DOWN:
             angle2-=5;
+        break;
+        case GLUT_KEY_F1:
+            angle3-=5;
+            break;
+        case GLUT_KEY_F2:
+            angle3+=5;
         break;
     }
     glutPostRedisplay();
