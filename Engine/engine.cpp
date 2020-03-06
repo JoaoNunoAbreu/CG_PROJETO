@@ -14,15 +14,17 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <map>
+#include <iterator>
+#include <algorithm>
 #include "tinyxml2.h"
 
 using namespace tinyxml2;
 using namespace std;
 
-// para o lookAt (??????)
-float radius = 5;
-float alpha = 0;
-float beta = 0;
+float radius = 20;
+float alpha = M_PI/4;
+float beta = M_PI/4;
 
 struct Ponto {
     float x;
@@ -30,7 +32,8 @@ struct Ponto {
     float z;
 };
 
-vector<Ponto> vertexes; // vertices lidos do ficheiro
+vector<Ponto> pontos; // pontos de uma primitiva.
+map<int,vector<Ponto>> primitivas;
 
 void draw(){
     
@@ -50,9 +53,28 @@ void draw(){
     glEnd();
     
     glBegin(GL_TRIANGLES);
-        for(int i = 0; i < vertexes.size(); i++) {
-            glVertex3f(vertexes[i].x, vertexes[i].y, vertexes[i].z);
+    
+    map<int,vector<Ponto>>::iterator it = primitivas.begin();
+    
+    int num_primitivas = primitivas.size();
+    int n = 0; // para cada primitiva ter a sua cor
+    
+    // Iterate over the map using Iterator till end.
+    while (it != primitivas.end()){
+        // Accessing KEY from element pointed by it.
+        // int inteiro = it->first; Pode ser útil ????????
+    
+        // Accessing VALUE from element pointed by it.
+        vector<Ponto> pontos = it->second;
+    
+        for(int i = 0; i < pontos.size(); i++){
+            glColor3f((1./num_primitivas)*n, 0, 1);
+            glVertex3f(pontos[i].x, pontos[i].y, pontos[i].z);
         }
+        // Increment the Iterator to point to next entry
+        it++;
+        n++;
+    }
     glEnd();
 }
 
@@ -92,7 +114,7 @@ void renderScene(void) {
     
     // set the camera
     glLoadIdentity();
-    gluLookAt(5, 5, 5,
+    gluLookAt(px,py,pz,
         0.0, 0.0, 0.0,
         0.0f, 1.0f, 0.0f);
     
@@ -106,6 +128,7 @@ void processKeys(unsigned char c, int xx, int yy) {
 }
 
 void processSpecialKeys(int key, int xx, int yy) {
+
     switch (key) {
     case GLUT_KEY_UP:
         if (beta < (M_PI / 2))
@@ -125,6 +148,47 @@ void processSpecialKeys(int key, int xx, int yy) {
         break;
     }
 
+    glutPostRedisplay();
+}
+
+void processMenuEvents(int option) {
+    switch (option) {
+    case 1:
+        glCullFace(GL_BACK);
+        break;
+    case 2:
+        glCullFace(GL_FRONT);
+        break;
+    case 3:
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        break;
+    case 4:
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        break;
+    default:
+        break;
+    }
+
+    glutPostRedisplay();
+}
+
+void createGLUTMenus() {
+
+    int menu;
+
+    // create the menu and
+    // tell glut that "processMenuEvents" will
+    // handle the events
+    menu = glutCreateMenu(processMenuEvents);
+
+    //add entries to our menu
+    glutAddMenuEntry("SEE FRONT", 1);
+    glutAddMenuEntry("SEE BACK", 2);
+    glutAddMenuEntry("SEE WIRED", 3);
+    glutAddMenuEntry("SEE SOLID", 4);
+
+    // attach the menu to the right button
+    glutAttachMenu(GLUT_RIGHT_BUTTON);
 }
 
 void readFile (string fich){
@@ -159,11 +223,9 @@ void readFile (string fich){
             s.erase(0, pos + delimiter.length());
             p.z = z;
             
-            //cout << p.x << " " << p.y << " " << p.z << "\n";
-            vertexes.push_back(p);
+            pontos.push_back(p);
         }
         else {
-            //cout << "Breaking...\n";
             break;
         }
     }
@@ -174,13 +236,15 @@ void readXML(string fich) {
     
     XMLDocument doc;
     XMLElement *root;
-
+    int i = 0;
     if (!(doc.LoadFile(fich.c_str()))) {
         root = doc.FirstChildElement();
         for (XMLElement *elem = root->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()) {
             string ficheiro = elem->Attribute("file");
             cout << "Ficheiro:" << ficheiro << " lido com sucesso" << endl;
             readFile(ficheiro);
+            primitivas.insert(pair<int,vector<Ponto>>(i, pontos));
+            i++; pontos.clear();
         }
     } else {
         cout << "Ficheiro XML não foi encontrado" << endl;
@@ -190,30 +254,31 @@ void readXML(string fich) {
 int main(int argc, char **argv){
     
     readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Engine/config.xml");
-    for(int i = 0; i < vertexes.size(); i++) {
-        cout << vertexes[i].x << " " << vertexes[i].y << " " << vertexes[i].z << "\n";
+    
+    for( const auto& pair : primitivas )
+    {
+        std::cout << "key: " << pair.first << "  value: [  " ;
+        for( Ponto p : pair.second ) cout << p.x << " " << p.y << " " << p.z << "\n";
+        std::cout << "]\n" ;
     }
     
-    // init GLUT and the window
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
     glutInitWindowPosition(100,100);
     glutInitWindowSize(1000,1000);
     glutCreateWindow("Fase 1");
             
-    // Required callback registry
     glutDisplayFunc(renderScene);
     glutReshapeFunc(changeSize);
     
-    // Callback registration for keyboard processing
     glutKeyboardFunc(processKeys);
     glutSpecialFunc(processSpecialKeys);
     
-    //  OpenGL settings
+    createGLUTMenus();
+    
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
     
-    // enter GLUT's main cycle
     glutMainLoop();
     
     return 1;
