@@ -14,16 +14,74 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include "tinyxml2/tinyxml2.h"
+#include "tinyxml2.h"
 
 using namespace tinyxml2;
 using namespace std;
 
+// para o lookAt (??????)
 float radius = 5;
 float alpha = 0;
 float beta = 0;
 
-/*void renderScene(void) {
+struct Ponto {
+    float x;
+    float y;
+    float z;
+};
+
+vector<Ponto> vertexes; //vertices lidos do ficheiro
+
+void draw(){
+    
+    glBegin(GL_TRIANGLES);
+    
+        // X axis in red
+        glColor3f(1.0f, 0.0f, 0.0f);
+        glVertex3f(0.0f, 0.0f, 0.0f);
+        glVertex3f(100.0f, 0.0f, 0.0f);
+        // Y Axis in Green
+        glColor3f(0.0f, 1.0f, 0.0f);
+        glVertex3f(0.0f, 0.0f, 0.0f);
+        glVertex3f(0.0f, 100.0f, 0.0f);
+        // Z Axis in Blue
+        glColor3f(0.0f, 0.0f, 1.0f);
+        glVertex3f(0.0f, 0.0f, 0.0f);
+        glVertex3f(0.0f, 0.0f, 100.0f);
+    
+    
+        for(int i = 0; i < vertexes.size(); i++) {
+            glVertex3f(vertexes[i].x, vertexes[i].y, vertexes[i].z);
+        }
+    glEnd();
+}
+
+void changeSize(int w, int h) {
+
+    // Prevent a divide by zero, when window is too short
+    // (you cant make a window with zero width).
+    if(h == 0)
+        h = 1;
+
+    // compute window's aspect ratio
+    float ratio = w * 1.0 / h;
+
+    // Set the projection matrix as current
+    glMatrixMode(GL_PROJECTION);
+    // Load Identity Matrix
+    glLoadIdentity();
+    
+    // Set the viewport to be the entire window
+    glViewport(0, 0, w, h);
+
+    // Set perspective
+    gluPerspective(45.0f ,ratio, 1.0f ,1000.0f);
+
+    // return to the model view matrix mode
+    glMatrixMode(GL_MODELVIEW);
+}
+
+void renderScene(void) {
 
     // clear buffers
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -38,6 +96,7 @@ float beta = 0;
         0.0, 0.0, 0.0,
         0.0f, 1.0f, 0.0f);
     
+    draw();
     // End of frame
     glutSwapBuffers();
 }
@@ -64,53 +123,82 @@ void processSpecialKeys(int key, int xx, int yy) {
 
 }
 
-static string getElementText(XMLElement *_element) {
-    string value;
-    if(_element != NULL) {
-        value = _element->GetText();
-    }
-      
-    return value;
-}*/
+void readFile (string fich){
+    string s;
+    ifstream infile;
+    infile.open (fich);
+    string token;
+    int pos = 0;
+    string delimiter = " ";
+    Ponto p;
+    float x,y,z;
+        while(!infile.eof()){
+           
+            getline(infile,s); // Saves the line in STRING.
+            cout << s; // Prints our STRING.
+        
+            pos = s.find(delimiter);
+            token = s.substr(0,pos);
+            x = atof(token.c_str());
+            s.erase(0, pos + delimiter.length());
+            p.x = x;
+
+            pos = s.find(delimiter);
+            token = s.substr(0,pos);
+            y = atof(token.c_str());
+            s.erase(0, pos + delimiter.length());
+            p.y = y;
+
+            pos = s.find(delimiter);
+            token = s.substr(0,pos);
+            z = atof(token.c_str());
+            s.erase(0, pos + delimiter.length());
+            p.z = z;
+
+            vertexes.push_back(p);
+        }
+    infile.close();
+}
 
 void readXML(string fich) {
     
-    static const char* xml =
-    "<?xml version=\"1.0\" encoding=\"utf-8\" ?>"
-    "<entries>"
-        "<entry name=\"My First Post\" age=\"52\">I believe every human has a finite number of heartbeats. I don't intend to waste any of mine</entry>"
-        "<entry name=\"The Second\" age=\"\">You know, being a test pilot isn't always the healthiest business in the world.</entry>"
-        "<entry>Entry</entry>"
-        "<entry name=\"The Third\" secretdata=\"9809832\">We have an infinite amount to learn both from nature and from each other</entry>"
-        "<entry name=\"Final Post...\" hidden=\"true\" age=\"3\">Across the sea of space, the stars are other suns.</entry>"
-    "</entries>";
-
     XMLDocument doc;
-    doc.Parse(xml);
-    
-    XMLHandle docHandle(&doc);
-    
-    XMLElement *entry = docHandle.FirstChildElement("entries").ToElement();
-    
-    if(entry){
-        for(XMLNode *node = entry->FirstChildElement(); node; node = node->NextSibling()){
-            XMLElement *e = node->ToElement();
+    XMLElement *root;
 
-            const char *name = e->Attribute("name");
-            if(name) cout<<name<<": ";
-            
-            cout<<e->GetText();
-            
-            int true_age = e->IntAttribute("age") + 50;
-            
-            cout<<" "<<true_age <<endl;
-            }
+    if (!(doc.LoadFile(fich.c_str()))) {
+        root = doc.FirstChildElement();
+        for (XMLElement *elem = root->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()) {
+            string ficheiro = elem->Attribute("file");
+            cout << "Ficheiro:" << ficheiro << " lido com sucesso" << endl;
+            readFile(ficheiro);
         }
+    } else {
+        cout << "Ficheiro XML não foi encontrado" << endl;
+    }
 }
 
-int main(){
+int main(int argc, char **argv){
+    //readXML("config.xml");
+    // init GLUT and the window
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
+    glutInitWindowPosition(100,100);
+    glutInitWindowSize(1000,1000);
+    glutCreateWindow("Fase 1");
+            
+    // Required callback registry
+    glutDisplayFunc(renderScene);
+    glutReshapeFunc(changeSize);
     
-    readXML("config.xml");
+    // Callback registration for keyboard processing
+    glutSpecialFunc(processSpecialKeys);
+    
+    //  OpenGL settings
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);
+        
+    // enter GLUT's main cycle
+    glutMainLoop();
     
     return 1;
 }

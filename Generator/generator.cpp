@@ -33,69 +33,74 @@ void drawPlane(float x, float z, string filename) {
     file.close();
 }
 
-void drawCube(float x, float y, float z, int divisoes, string filename) {
+void drawCube(float x, float y, float z, int d, string filename) {
     
     ofstream file(filename);
     if(file.is_open()){
-        // Face frontal
+        float xShift = x / d;
+        float yShift = y / d;
+        float zShift = z / d;
 
-        file << x/2  << " " << y/2 << " " << z/2 << "\n";
-        file << -x/2 << " " << y/2 << " " << z/2 << "\n";
-        file << -x/2 << " " << y << " " << z/2 << "\n";
+        for (int i = 0; i < d; i++) {
+            for (int j = 0; j < d; j++) {
+                for (int k = 0; k < d; k++) {
 
-        file << -x / 2 << " " << -y/2 << " " << z/2 << "\n";
-        file << x / 2 << " " << -y/2 << " " << z/2 << "\n";
-        file << x / 2 << " " << y/2 << " " << z/2 << "\n";
+                    // face tras
+                    file << "" << xShift * i        << " " << yShift * j        << " " << zShift * k            << "\n";
+                    file << "" << xShift * i        << " " << yShift * (j + 1)  << " " << zShift * k            << "\n";
+                    file << "" << xShift * (i + 1)  << " " << yShift * j        << " " << zShift * k            << "\n";
 
-        // Face direita
+                    file << "" << xShift * (i + 1)  << " " << yShift * j        << " " << zShift * k            << "\n";
+                    file << "" << xShift * i        << " " << yShift * (j+1)    << " " << zShift * k            << "\n";
+                    file << "" << xShift * (i+1)    << " " << yShift * (j+1)    << " " << zShift * k            << "\n";
+                    
+                    // face esquerda
+                    file << "" << xShift * i        << " " << yShift * j        << " " << zShift * k            << "\n";
+                    file << "" << xShift * i        << " " << yShift * j        << " " << zShift * (k + 1)      << "\n";
+                    file << "" << xShift * i        << " " << yShift * (j + 1)  << " " << zShift * k            << "\n";
 
-        file << x/2 << " " << y/2 << " " << -z/2 << "\n";
-        file << x/2 << " " << y/2 << " " << z/2 << "\n";
-        file << x/2 << " " << -y/2 << " " << z/2 << "\n";
+                    file << "" << xShift * i        << " " << yShift * (j + 1)  << " " << zShift * k            << "\n";
+                    file << "" << xShift * i        << " " << yShift * j        << " " << zShift * (k + 1)      << "\n";
+                    file << "" << xShift * i        << " " << yShift * (j+1)    << " " << zShift * (k+1)        << "\n";
+                    
+                    // face baixo
+                    file << "" << xShift * i        << " " << yShift * j        << " " << zShift * k            << "\n";
+                    file << "" << xShift * (i+1)    << " " << yShift * j        << " " << zShift * k            << "\n";
+                    file << "" << xShift * i        << " " << yShift * j        << " " << zShift * (k + 1)      << "\n";
 
-        file << x/2 << " " << -y/2 << " " << z/2 << "\n";
-        file << x/2 << " " << -y/2 << " " << -z/2 << "\n";
-        file << x/2 << " " << y/2 << " " << -z/2 << "\n";
-      
-        // Face de cima
+                    file << "" << xShift * i        << " " << yShift * j        << " " << zShift * (k + 1)      << "\n";
+                    file << "" << xShift * (i + 1)  << " " << yShift * j        << " " << zShift * k            << "\n";
+                    file << "" << xShift * (i+1)    << " " << yShift * j        << " " << zShift * (k+1)        << "\n";
+                    
+                    // face direita
+                    file << "" << xShift * (i+1)    << " " << yShift * j        << " " << zShift * k            << "\n";
+                    file << "" << xShift * (i + 1)  << " " << yShift * (j + 1)  << " " << zShift * k            << "\n";
+                    file << "" << xShift * (i+1)    << " " << yShift * j        << " " << zShift * (k+1)        << "\n";
 
-        file << x/2 << " " << y/2 << " " << z/2 << "\n";
-        file << x/2 << " " << y/2 << " " << -z/2 << "\n";
-        file << -x/2 << " " << y/2 << " " << -z/2 << "\n";
+                    file << "" << xShift * (i + 1)  << " " << yShift * j        << " " << zShift * (k + 1)      << "\n";
+                    file << "" << xShift * (i + 1)  << " " << yShift * (j + 1)  << " " << zShift * k            << "\n";
+                    file << "" << xShift * (i + 1)  << " " << yShift * (j + 1)  << " " << zShift * (k + 1)      << "\n";
 
-        file << -x/2 << " " << y/2 << " " << -z/2 << "\n";
-        file << -x/2 << " " << y/2 << " " << z/2 << "\n";
-        file << x/2 << " " << y/2 << " " << z/2 << "\n";
+                    // face frente
+                    file << "" << xShift * i        << " " << yShift * j        << " " << zShift * (k + 1)      << "\n";
+                    file << "" << xShift * (i + 1)  << " " << yShift * j        << " " << zShift * (k + 1)      << "\n";
+                    file << "" << xShift * i        << " " << yShift * (j + 1)  << " " << zShift * (k + 1)      << "\n";
 
-        // Face de trás
+                    file << "" << xShift * i        << " " << yShift * (j + 1)  << " " << zShift * (k + 1)      << "\n";
+                    file << "" << xShift * (i + 1)  << " " << yShift * j        << " " << zShift * (k + 1)      << "\n";
+                    file << "" << xShift * (i + 1)  << " " << yShift * (j + 1)  << " " << zShift * (k + 1)      << "\n";
 
-        file << -x/2 << " " << y/2 << " " << -z/2 << "\n";
-        file << x/2 << " " << y/2 << " " << -z/2 << "\n";
-        file << x/2 << " " << -y/2 << " " << -z/2 << "\n";
+                    // face cima
+                    file << "" << xShift * i        << " " << yShift * (j + 1)  << " " << zShift * k            << "\n";
+                    file << "" << xShift * i        << " " << yShift * (j + 1)  << " " << zShift * (k + 1)      << "\n";
+                    file << "" << xShift * (i + 1)  << " " << yShift * (j + 1)  << " " << zShift * k            << "\n";
 
-        file << x/2 << " " << -y/2 << " " << -z/2 << "\n";
-        file << -x/2 << " " << -y/2 << " " << -z/2 << "\n";
-        file << -x/2 << " " << y/ 2 << " " << -z/2 << "\n";
-
-        // Face esquerda
-
-        file << -x/2 << " " << y/2 << " " << -z/2 << "\n";
-        file << -x/2 << " " << -y/2 << " " << -z/2 << "\n";
-        file << -x/2 << " " << -y/2 << " " << z/2 << "\n";
-
-        file << -x/2 << " " << -y/2 << " " << z/2 << "\n";
-        file << -x/2 << " " << y/2 << " " << z/2 << "\n";
-        file << -x/2 << " " << y/2 << " " << -z/2 << "\n";
-
-        // Face de baixo
-
-        file << -x/2 << " " << -y/2 << " " << -z/2 << "\n";
-        file << x/2 << " " << -y/2 << " " << -z/2 << "\n";
-        file << x/2 << " " << -y/2 << " " << z/2 << "\n";
-
-        file << x/2 << " " << -y/2 << " " <<  z/2 << "\n";
-        file << -x/2 << " " << -y/2 << " " << z/2 << "\n";
-        file << -x/2 << " " << -y/2 << " " << -z/2 << "\n";
+                    file << "" << xShift * (i + 1)  << " " << yShift * (j + 1)  << " " << zShift * k            << "\n";
+                    file << "" << xShift * i        << " " << yShift * (j + 1)  << " " << zShift * (k + 1)      << "\n";
+                    file << "" << xShift * (i + 1)  << " " << yShift * (j + 1)  << " " << zShift * (k + 1)      << "\n";
+                }
+            }
+        }
     }
     file.close();
 }
