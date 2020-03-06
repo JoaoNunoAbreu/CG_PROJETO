@@ -22,7 +22,7 @@
 using namespace tinyxml2;
 using namespace std;
 
-float radius = 20;
+float r = 20;           // distância entre a câmara e o ponto de referência.
 float alpha = M_PI/4;
 float beta = M_PI/4;
 
@@ -32,8 +32,8 @@ struct Ponto {
     float z;
 };
 
-vector<Ponto> pontos; // pontos de uma primitiva.
-map<int,vector<Ponto>> primitivas;
+vector<Ponto> pontos;              // pontos de uma primitiva.
+map<int,vector<Ponto>> primitivas; // id das primitivas e os seus correspondentes vértices.
 
 void draw(){
     
@@ -59,19 +59,15 @@ void draw(){
     int num_primitivas = primitivas.size();
     int n = 0; // para cada primitiva ter a sua cor
     
-    // Iterate over the map using Iterator till end.
     while (it != primitivas.end()){
-        // Accessing KEY from element pointed by it.
         // int inteiro = it->first; Pode ser útil ????????
-    
-        // Accessing VALUE from element pointed by it.
+
         vector<Ponto> pontos = it->second;
     
         for(int i = 0; i < pontos.size(); i++){
             glColor3f((1./num_primitivas)*n, 0, 1);
             glVertex3f(pontos[i].x, pontos[i].y, pontos[i].z);
         }
-        // Increment the Iterator to point to next entry
         it++;
         n++;
     }
@@ -108,9 +104,10 @@ void renderScene(void) {
     // clear buffers
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    float px = radius * cos(beta) * sin(alpha);
-    float py = radius * sin(beta);
-    float pz = radius * cos(beta) * cos(alpha);
+    // transformações retiradas dos slides.
+    float px = r * cos(beta) * sin(alpha);
+    float py = r * sin(beta);
+    float pz = r * cos(beta) * cos(alpha);
     
     // set the camera
     glLoadIdentity();
@@ -130,24 +127,23 @@ void processKeys(unsigned char c, int xx, int yy) {
 void processSpecialKeys(int key, int xx, int yy) {
 
     switch (key) {
-    case GLUT_KEY_UP:
-        if (beta < (M_PI / 2))
-            beta += (float)M_PI / 50;
-        break;
-    case GLUT_KEY_DOWN:
-        if (beta > -(M_PI / 2))
-            beta -= (float)M_PI / 50;
-        break;
-    case GLUT_KEY_LEFT:
-        alpha -= (float)M_PI / 50;
-        break;
-    case GLUT_KEY_RIGHT:
-        alpha += (float)M_PI / 50;
-        break;
-    default:
-        break;
+        case GLUT_KEY_DOWN:
+            if (beta > -M_PI / 2)
+                beta -= (float) M_PI / 70;
+            break;
+        case GLUT_KEY_UP:
+            if (beta < M_PI / 2)
+                beta += (float) M_PI / 70;
+            break;
+        case GLUT_KEY_RIGHT:
+            alpha += (float) M_PI / 70;
+            break;
+        case GLUT_KEY_LEFT:
+            alpha -= (float) M_PI / 70;
+            break;
+        default:
+            break;
     }
-
     glutPostRedisplay();
 }
 
@@ -174,20 +170,13 @@ void processMenuEvents(int option) {
 
 void createGLUTMenus() {
 
-    int menu;
+    glutCreateMenu(processMenuEvents);
 
-    // create the menu and
-    // tell glut that "processMenuEvents" will
-    // handle the events
-    menu = glutCreateMenu(processMenuEvents);
-
-    //add entries to our menu
     glutAddMenuEntry("SEE FRONT", 1);
-    glutAddMenuEntry("SEE BACK", 2);
+    glutAddMenuEntry("SEE BACK" , 2);
     glutAddMenuEntry("SEE WIRED", 3);
     glutAddMenuEntry("SEE SOLID", 4);
 
-    // attach the menu to the right button
     glutAttachMenu(GLUT_RIGHT_BUTTON);
 }
 
@@ -202,7 +191,6 @@ void readFile (string fich){
     
     infile.open(fich);
     while(!infile.eof()){
-        
         getline(infile,s); // Saves the line in STRING.
         if(!s.empty()){
             pos = s.find(delimiter);
@@ -222,7 +210,6 @@ void readFile (string fich){
             z = atof(token.c_str());
             s.erase(0, pos + delimiter.length());
             p.z = z;
-            
             pontos.push_back(p);
         }
         else {
@@ -241,7 +228,7 @@ void readXML(string fich) {
         root = doc.FirstChildElement();
         for (XMLElement *elem = root->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()) {
             string ficheiro = elem->Attribute("file");
-            cout << "Ficheiro:" << ficheiro << " lido com sucesso" << endl;
+            cout << "Ficheiro: " << ficheiro << " lido com sucesso" << endl;
             readFile(ficheiro);
             primitivas.insert(pair<int,vector<Ponto>>(i, pontos));
             i++; pontos.clear();
@@ -255,12 +242,11 @@ int main(int argc, char **argv){
     
     readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Engine/config.xml");
     
-    for( const auto& pair : primitivas )
-    {
+    /*for( const auto& pair : primitivas ){
         std::cout << "key: " << pair.first << "  value: [  " ;
         for( Ponto p : pair.second ) cout << p.x << " " << p.y << " " << p.z << "\n";
         std::cout << "]\n" ;
-    }
+    }*/
     
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
