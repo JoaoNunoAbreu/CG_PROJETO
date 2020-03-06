@@ -30,12 +30,11 @@ struct Ponto {
     float z;
 };
 
-vector<Ponto> vertexes; //vertices lidos do ficheiro
+vector<Ponto> vertexes; // vertices lidos do ficheiro
 
 void draw(){
     
-    glBegin(GL_TRIANGLES);
-    
+    glBegin(GL_LINES);
         // X axis in red
         glColor3f(1.0f, 0.0f, 0.0f);
         glVertex3f(0.0f, 0.0f, 0.0f);
@@ -48,8 +47,9 @@ void draw(){
         glColor3f(0.0f, 0.0f, 1.0f);
         glVertex3f(0.0f, 0.0f, 0.0f);
         glVertex3f(0.0f, 0.0f, 100.0f);
+    glEnd();
     
-    
+    glBegin(GL_TRIANGLES);
         for(int i = 0; i < vertexes.size(); i++) {
             glVertex3f(vertexes[i].x, vertexes[i].y, vertexes[i].z);
         }
@@ -92,13 +92,17 @@ void renderScene(void) {
     
     // set the camera
     glLoadIdentity();
-    gluLookAt(px, py, pz,
+    gluLookAt(5, 5, 5,
         0.0, 0.0, 0.0,
         0.0f, 1.0f, 0.0f);
     
     draw();
     // End of frame
     glutSwapBuffers();
+}
+
+void processKeys(unsigned char c, int xx, int yy) {
+
 }
 
 void processSpecialKeys(int key, int xx, int yy) {
@@ -126,17 +130,17 @@ void processSpecialKeys(int key, int xx, int yy) {
 void readFile (string fich){
     string s;
     ifstream infile;
-    infile.open (fich);
     string token;
     int pos = 0;
     string delimiter = " ";
     Ponto p;
     float x,y,z;
-        while(!infile.eof()){
-           
-            getline(infile,s); // Saves the line in STRING.
-            cout << s; // Prints our STRING.
+    
+    infile.open(fich);
+    while(!infile.eof()){
         
+        getline(infile,s); // Saves the line in STRING.
+        if(!s.empty()){
             pos = s.find(delimiter);
             token = s.substr(0,pos);
             x = atof(token.c_str());
@@ -154,9 +158,15 @@ void readFile (string fich){
             z = atof(token.c_str());
             s.erase(0, pos + delimiter.length());
             p.z = z;
-
+            
+            //cout << p.x << " " << p.y << " " << p.z << "\n";
             vertexes.push_back(p);
         }
+        else {
+            //cout << "Breaking...\n";
+            break;
+        }
+    }
     infile.close();
 }
 
@@ -178,7 +188,12 @@ void readXML(string fich) {
 }
 
 int main(int argc, char **argv){
-    //readXML("config.xml");
+    
+    readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Engine/config.xml");
+    for(int i = 0; i < vertexes.size(); i++) {
+        cout << vertexes[i].x << " " << vertexes[i].y << " " << vertexes[i].z << "\n";
+    }
+    
     // init GLUT and the window
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
@@ -191,12 +206,13 @@ int main(int argc, char **argv){
     glutReshapeFunc(changeSize);
     
     // Callback registration for keyboard processing
+    glutKeyboardFunc(processKeys);
     glutSpecialFunc(processSpecialKeys);
     
     //  OpenGL settings
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
-        
+    
     // enter GLUT's main cycle
     glutMainLoop();
     

@@ -118,7 +118,7 @@ CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
 CMAKE_OSX_SYSROOT:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=class2
+CMAKE_PROJECT_NAME:STATIC=engine
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -140,10 +140,10 @@ CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //If set, runtime paths are not added when installing shared libraries,
 // but are added when building.
-CMAKE_SKIP_INSTALL_RPATH:BOOL=OFF
+CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
 
 //If set, runtime paths are not added when using shared libraries.
-CMAKE_SKIP_RPATH:BOOL=OFF
+CMAKE_SKIP_RPATH:BOOL=NO
 
 //Flags used by the linker during the creation of static libraries.
 CMAKE_STATIC_LINKER_FLAGS:STRING=
@@ -167,7 +167,7 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
-CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
+CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to a file.
 GLUT_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers
@@ -188,10 +188,10 @@ OPENGL_gl_LIBRARY:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/
 OPENGL_glu_LIBRARY:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/OpenGL.framework
 
 //Value Computed by CMake
-class2_BINARY_DIR:STATIC=/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build
+engine_BINARY_DIR:STATIC=/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build
 
 //Value Computed by CMake
-class2_SOURCE_DIR:STATIC=/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG
+engine_SOURCE_DIR:STATIC=/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG
 
 
 ########################
@@ -199,7 +199,7 @@ class2_SOURCE_DIR:STATIC=/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG
 ########################
 
 //Stored Xcode object GUID
-ALL_BUILD_GUID_CMAKE:INTERNAL=14F502B040374D5788277893
+ALL_BUILD_GUID_CMAKE:INTERNAL=C21411E57B0A4269BA54F1E8
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -332,9 +332,9 @@ OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_glu_LIBRARY
 OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
 //Stored Xcode object GUID
-PROJECT_class2_GUID_CMAKE:INTERNAL=F5E92F85A7FE420388B75843
+PROJECT_engine_GUID_CMAKE:INTERNAL=B90235CD057041BDA85046F4
 //Stored Xcode object GUID
-ZERO_CHECK_GUID_CMAKE:INTERNAL=55C50021F8494FC1853B66D2
+ZERO_CHECK_GUID_CMAKE:INTERNAL=532EB62AD89748D5AB1A1470
 //Stored Xcode object GUID
-class2_GUID_CMAKE:INTERNAL=155E16C56368422FA157B3DC
+engine_GUID_CMAKE:INTERNAL=F7E398AEF874441D92888B86
 

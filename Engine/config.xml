@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scene>
-	<model file="../Generator/sphere.3d" />
-	<model file="../Generator/plane.3d" />
+	<model file="/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Generator/sphere.3d" />
+	<model file="/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Generator/plane.3d" />
 </scene>
