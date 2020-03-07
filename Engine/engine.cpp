@@ -46,14 +46,15 @@ void draw(){
         glColor3f(0.0f, 1.0f, 0.0f);
         glVertex3f(0.0f, 0.0f, 0.0f);
         glVertex3f(0.0f, 100.0f, 0.0f);
-        // Z Axis in Blue
-        glColor3f(0.0f, 0.0f, 1.0f);
+        // Z Axis in Orange
+        glColor3f(1, 0.5, 0);
         glVertex3f(0.0f, 0.0f, 0.0f);
         glVertex3f(0.0f, 0.0f, 100.0f);
     glEnd();
     
-    glBegin(GL_TRIANGLES);
     
+    
+    glBegin(GL_TRIANGLES);
     map<int,vector<Ponto>>::iterator it = primitivas.begin();
     
     int num_primitivas = primitivas.size();
@@ -65,7 +66,7 @@ void draw(){
         vector<Ponto> pontos = it->second;
     
         for(int i = 0; i < pontos.size(); i++){
-            glColor3f((1./num_primitivas)*n, 0, 1);
+            glColor3f((1./num_primitivas)*n, 1, 1);
             glVertex3f(pontos[i].x, pontos[i].y, pontos[i].z);
         }
         it++;
@@ -241,12 +242,6 @@ void readXML(string fich) {
 int main(int argc, char **argv){
     
     readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Engine/config.xml");
-    
-    /*for( const auto& pair : primitivas ){
-        std::cout << "key: " << pair.first << "  value: [  " ;
-        for( Ponto p : pair.second ) cout << p.x << " " << p.y << " " << p.z << "\n";
-        std::cout << "]\n" ;
-    }*/
     
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
