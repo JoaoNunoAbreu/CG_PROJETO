@@ -13,56 +13,69 @@
 #include <math.h>
 
 #include <cstdlib>
+#include <iostream>
+using namespace std;
 
-#define ARVORES 100
+#define ARVORES 200
 
 float alfa = 0.0f, beta = 0.5f, radius = 100.0f;
 float camX, camY, camZ;
 float r = 50;
 
+
+void drawCircle(float r, int slices){
+    float angulo = (2*M_PI) /slices;
+    glBegin(GL_TRIANGLES);
+        for(int i = 0; i < slices; i++){
+            glVertex3f(0,0,0);
+            glVertex3f(r*sin(angulo*i),0,r*cos(angulo*i));
+            glVertex3f(r*sin(angulo*(i+1)),0,r*cos(angulo*(i+1)));
+        }
+    glEnd();
+}
+
+void drawCircles(){
+    
+    glColor3f(1, 0, 0);
+    drawCircle(35,100);
+    drawCircle(50,100);
+    drawCircle(100,100);
+    
+}
+
 void drawTrees(){
     
-    float rr;
     float alpha;
+    float rr;
     float x,z;
-    
     int i = 0;
     while(i < ARVORES){
         
-        rr = rand() * 150.0/ RAND_MAX;
-        alpha = rand() * 6.28 / RAND_MAX;
+        rr = rand() * (sqrt(2*pow(100,2)))/ RAND_MAX;
+        alpha = rand() * 2*M_PI / RAND_MAX;
 
         x = cos(alpha) * (rr + r);
+        cout << "VAlor do x = " << x << "\n";
         z = sin(alpha) * (rr + r);
         
         if(fabs(x) < 100 && fabs(z) < 100){
-        
             glPushMatrix();
             glRotatef(90, -1, 0, 0);
             glTranslatef(x, z, 0);
             glColor3f(1, 0.5, 0);
-            glutSolidCone(2,10,5,1);
+            glutSolidCone(2,10,50,50);
             glPopMatrix();
             
             glPushMatrix();
             glRotatef(90, -1, 0, 0);
             glTranslatef(x, z, 5);
             glColor3f(0.02, 0.41, 0.01);
-            glutSolidCone(5,10,5,1);
+            glutSolidCone(5,10,50,50);
             glPopMatrix();
             
             i++;
         }
     }
-}
-
-void drawDonut() {
-
-    glPushMatrix();
-    glTranslatef(0.0,0.5,0.0);
-    glColor3f(1.0f,0.0f,1.0f);
-    glutSolidTorus(0.5,1.25,8,16);
-    glPopMatrix();
 }
 
 void spherical2Cartesian() {
@@ -122,7 +135,7 @@ void renderScene(void) {
 		glVertex3f(100.0f, 0, 100.0f);
 	glEnd();
     
-    drawDonut();
+    drawCircles();
     drawTrees();
     
 	// End of frame
