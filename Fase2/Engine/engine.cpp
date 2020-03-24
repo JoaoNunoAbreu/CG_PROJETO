@@ -17,13 +17,18 @@
 #include <map>
 #include <iterator>
 #include <algorithm>
-#include "headers/tinyxml2.h"
+#include "headers/Rotacao.h"
 #include "headers/Transformacao.h"
+#include "headers/Translacao.h"
+#include "headers/Cor.h"
+#include "headers/Escala.h"
+#include "headers/tinyxml2.h"
+
 
 using namespace tinyxml2;
 using namespace std;
 
-float alfa = 0.7f, beta = 0.5f, radius = 100.0f;
+float alfa = 0.7f, beta = 0.5f, radius = 200.0f;
 float camX, camY, camZ;
 
 struct Ponto {
@@ -33,15 +38,16 @@ struct Ponto {
 };
 
 struct Grupo{
-    vector<Transformacao> transformations;
+    vector<Transformacao*> transformations;
     vector<Ponto> models;
     vector<Grupo> childgroups;
 };
 
 Grupo g;
 
-void draw(){
+void drawAxis(){
     
+    glPushMatrix();
     glBegin(GL_LINES);
         // X axis in red
         glColor3f(1.0f, 0.0f, 0.0f);
@@ -56,8 +62,27 @@ void draw(){
         glVertex3f(0.0f, 0.0f, 0.0f);
         glVertex3f(0.0f, 0.0f, 100.0f);
     glEnd();
+    glPopMatrix();
     
 }
+
+void draw(vector<Ponto> models){
+    
+    glBegin(GL_TRIANGLES);
+        for(int i = 0; i < models.size(); i++) {
+            glVertex3f(models[i].x, models[i].y, models[i].z);
+        }
+    glEnd();
+}
+
+void drawGroup(Grupo grupo){
+    glPushMatrix();
+    //for (auto &transformation : grupo.transformations) transformation->transform();
+    draw(grupo.models);
+    //for (auto &child : grupo.childgroups) drawGroup(child);
+    glPopMatrix();
+}
+
 
 void changeSize(int w, int h) {
 
@@ -97,7 +122,8 @@ void renderScene(void) {
         0.0, 0.0, 0.0,
         0.0f, 1.0f, 0.0f);
     
-    draw();
+    drawAxis();
+    drawGroup(g);
     
     // End of frame
     glutSwapBuffers();
@@ -183,7 +209,7 @@ void createGLUTMenus() {
     glutAttachMenu(GLUT_RIGHT_BUTTON);
 }
 
-void readFile (string filename){
+void readFile (Grupo grupo, string filename){
     
     ifstream infile;
     infile.open (filename);
@@ -224,10 +250,11 @@ void readFile (string filename){
     infile.close();
 }
 
-/*void parseGroup(XMLElement *group){
+void parseGroup(Grupo grupo, XMLElement *group){
 
     XMLElement * elem;
     float x,y,z,angle;
+    cout << "Chamada recursiva" << endl;
  
     // vai iterar o grupo
     for(elem = group->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()) {
@@ -235,40 +262,56 @@ void readFile (string filename){
         string tag = elem->Value();
         
         if(tag == "group"){
-            parseGroup(elem);
+            Grupo childGroup;
+            cout << "Entrou group" << endl;
+            grupo.childgroups.push_back(childGroup);
+            parseGroup(childGroup, elem);
         }
         else if(tag=="translate"){
             
+            cout << "Entrou translate" << endl;
             x = stof(elem->Attribute("X")); //Retira X
             y = stof(elem->Attribute("Y")); //Retira Y
             z = stof(elem->Attribute("Z")); //Retira Z
             Translacao *t = new Translacao(x,y,z);
-            g.transformations.push_back(t);
+            grupo.transformations.push_back(t);
         }
         else if(tag=="rotate"){
-  
-            angle =(elem->Attribute("angle")); //Retira angulo
-            x = (elem->Attribute("X"));  //Retira X
-            y = (elem->Attribute("Y")); //Retira Y
-            z = (elem->Attribute("Y")); //Retira Z
+            
+            cout << "Entrou rotate" << endl;
+            angle = stof(elem->Attribute("angle")); //Retira angulo
+            x = stof(elem->Attribute("X"));  //Retira X
+            y = stof(elem->Attribute("Y")); //Retira Y
+            z = stof(elem->Attribute("Y")); //Retira Z
+            Rotacao *r = new Rotacao(angle,x,y,z);
+            grupo.transformations.push_back(r);
         }
         else if(tag=="scale"){
-    
-            x = (elem->Attribute("X")); //Retira X
-            y = (elem->Attribute("Y")); //Retira Y
-            z = (elem->Attribute("Z")); //Retira Z
+            
+            cout << "Entrou scale" << endl;
+            x = stof(elem->Attribute("X")); //Retira X
+            y = stof(elem->Attribute("Y")); //Retira Y
+            z = stof(elem->Attribute("Z")); //Retira Z
+            Escala *e = new Escala(x,y,z);
+            grupo.transformations.push_back(e);
         }
         else if(tag =="colour"){
-            =(elem->Attribute("R")); //Retira R
-            =(elem->Attribute("G")); //Retira G
-            =(elem->Attribute("B")); //Retira B
+            cout << "Entrou color" << endl;
+            x = stof(elem->Attribute("R")); //Retira R
+            y = stof(elem->Attribute("G")); //Retira G
+            z = stof(elem->Attribute("B")); //Retira B
+            Cor *c = new Cor(x,y,z);
+            grupo.transformations.push_back(c);
         }
         else if(tag=="models"){
-   
+            
+            cout << "Entrou models" << endl;
             //PERCORRE MODELS
             for(XMLElement* models = group->FirstChildElement("models")->FirstChildElement("model"); models; models = models -> NextSiblingElement("model")){
-                string ficheiro = elem->Attribute("file");
-                readFile(ficheiro);
+                cout << "Entrou no ciclo" << endl;
+                string ficheiro = models->Attribute("file");
+                cout << "Ficheiro = " << ficheiro << endl;
+                readFile(grupo,ficheiro);
             }
   
         }
@@ -282,18 +325,18 @@ void readXML(string file){
 
     XMLDocument doc;
     if(!doc.LoadFile(file.c_str())){
- 
+        cout << "Ficheiro XML lido" << endl;
         XMLElement * root = doc.RootElement();  //obtem a tag scene
         XMLElement * group = root->FirstChildElement(); //obtem o primeiro grupo
-        parseGroup(group);
+        parseGroup(g,group);
     } else {
         cout << "Ficheiro XML não lido" << endl;
     }
-}*/
+}
 
 int main(int argc, char **argv){
     
-    //readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase2/Engine/config.xml");
+    readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase2/Engine/config2.xml");
     
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);

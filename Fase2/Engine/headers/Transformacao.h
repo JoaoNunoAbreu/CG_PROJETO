@@ -5,8 +5,7 @@
 class Transformacao {
 
 public:
-    virtual void transform();
-    virtual ~Transformacao();
+    virtual void transform() = 0;
 };
 
 #endif
