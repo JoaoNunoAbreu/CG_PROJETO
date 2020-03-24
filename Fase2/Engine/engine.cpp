@@ -17,14 +17,14 @@
 #include <map>
 #include <iterator>
 #include <algorithm>
-#include "tinyxml2.h"
+#include "headers/tinyxml2.h"
+#include "headers/Transformacao.h"
 
 using namespace tinyxml2;
 using namespace std;
 
-float r = 20;           // distância entre a câmara e o ponto de referência.
-float alpha = M_PI/4;
-float beta = M_PI/4;
+float alfa = 0.7f, beta = 0.5f, radius = 100.0f;
+float camX, camY, camZ;
 
 struct Ponto {
     float x;
@@ -32,8 +32,13 @@ struct Ponto {
     float z;
 };
 
-vector<Ponto> pontos;              // pontos de uma primitiva.
-map<int,vector<Ponto>> primitivas; // id das primitivas e os seus correspondentes vértices.
+struct Grupo{
+    vector<Transformacao> transformations;
+    vector<Ponto> models;
+    vector<Grupo> childgroups;
+};
+
+Grupo g;
 
 void draw(){
     
@@ -52,27 +57,6 @@ void draw(){
         glVertex3f(0.0f, 0.0f, 100.0f);
     glEnd();
     
-    
-    
-    glBegin(GL_TRIANGLES);
-    map<int,vector<Ponto>>::iterator it = primitivas.begin();
-    
-    int num_primitivas = primitivas.size();
-    int n = 0; // para cada primitiva ter a sua cor
-    
-    while (it != primitivas.end()){
-        // int inteiro = it->first; Pode ser útil ????????
-
-        vector<Ponto> pontos = it->second;
-    
-        for(int i = 0; i < pontos.size(); i++){
-            glColor3f((1./num_primitivas)*n, 1, 1);
-            glVertex3f(pontos[i].x, pontos[i].y, pontos[i].z);
-        }
-        it++;
-        n++;
-    }
-    glEnd();
 }
 
 void changeSize(int w, int h) {
@@ -106,20 +90,26 @@ void renderScene(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // transformações retiradas dos slides.
-    float px = r * cos(beta) * sin(alpha);
-    float py = r * sin(beta);
-    float pz = r * cos(beta) * cos(alpha);
     
     // set the camera
     glLoadIdentity();
-    gluLookAt(px,py,pz,
+    gluLookAt(camX,camY,camZ,
         0.0, 0.0, 0.0,
         0.0f, 1.0f, 0.0f);
     
     draw();
+    
     // End of frame
     glutSwapBuffers();
 }
+
+void spherical2Cartesian() {
+
+    camX = radius * cos(beta) * sin(alfa);
+    camY = radius * sin(beta);
+    camZ = radius * cos(beta) * cos(alfa);
+}
+
 
 void processKeys(unsigned char c, int xx, int yy) {
 
@@ -128,25 +118,37 @@ void processKeys(unsigned char c, int xx, int yy) {
 void processSpecialKeys(int key, int xx, int yy) {
 
     switch (key) {
-        case GLUT_KEY_DOWN:
-            if (beta > -M_PI / 2)
-                beta -= (float) M_PI / 70;
-            break;
-        case GLUT_KEY_UP:
-            if (beta < M_PI / 2)
-                beta += (float) M_PI / 70;
-            break;
-        case GLUT_KEY_RIGHT:
-            alpha += (float) M_PI / 70;
-            break;
-        case GLUT_KEY_LEFT:
-            alpha -= (float) M_PI / 70;
-            break;
-        default:
-            break;
+
+    case GLUT_KEY_RIGHT:
+        alfa -= 0.1; break;
+
+    case GLUT_KEY_LEFT:
+        alfa += 0.1; break;
+
+    case GLUT_KEY_UP:
+        beta += 0.1f;
+        if (beta > 1.5f)
+            beta = 1.5f;
+        break;
+
+    case GLUT_KEY_DOWN:
+        beta -= 0.1f;
+        if (beta < -1.5f)
+            beta = -1.5f;
+        break;
+
+    case GLUT_KEY_PAGE_DOWN: radius -= 5.0f;
+        if (radius < 1.0f)
+            radius = 1.0f;
+        break;
+
+    case GLUT_KEY_PAGE_UP: radius += 5.0f; break;
     }
+    spherical2Cartesian();
     glutPostRedisplay();
+
 }
+
 
 void processMenuEvents(int option) {
     switch (option) {
@@ -181,73 +183,123 @@ void createGLUTMenus() {
     glutAttachMenu(GLUT_RIGHT_BUTTON);
 }
 
-void readFile (string fich){
-    string s;
-    ifstream infile;
-    string token;
-    int pos = 0;
-    string delimiter = " ";
-    Ponto p;
-    float x,y,z;
+void readFile (string filename){
     
-    infile.open(fich);
+    ifstream infile;
+    infile.open (filename);
+
+    string s;
+    string token;
+    
+    size_t pos = 0; //size_t??
+    
+    string delimiter = " ";
+    
+    Ponto p;
+
     while(!infile.eof()){
+                
+        int i=0;
         getline(infile,s); // Saves the line in STRING.
-        if(!s.empty()){
-            pos = s.find(delimiter);
+        
+        while ((pos = s.find(delimiter)) != std::string::npos) {
+                
             token = s.substr(0,pos);
-            x = atof(token.c_str());
-            s.erase(0, pos + delimiter.length());
-            p.x = x;
+                
+            if (i==0){
+                p.x = atof(token.c_str());
+            }
 
-            pos = s.find(delimiter);
-            token = s.substr(0,pos);
-            y = atof(token.c_str());
+            else if(i==1){
+                p.y = atof(token.c_str());
+            }
             s.erase(0, pos + delimiter.length());
-            p.y = y;
-
-            pos = s.find(delimiter);
-            token = s.substr(0,pos);
-            z = atof(token.c_str());
-            s.erase(0, pos + delimiter.length());
-            p.z = z;
-            pontos.push_back(p);
+            i++;
+            
         }
-        else {
-            break;
-        }
+        p.z = atof(s.c_str());
+        g.models.push_back(p);
     }
+
     infile.close();
 }
 
-void readXML(string fich) {
-    
-    XMLDocument doc;
-    XMLElement *root;
-    int i = 0;
-    if (!(doc.LoadFile(fich.c_str()))) {
-        root = doc.FirstChildElement();
-        for (XMLElement *elem = root->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()) {
-            string ficheiro = elem->Attribute("file");
-            cout << "Ficheiro: " << ficheiro << " lido com sucesso" << endl;
-            readFile(ficheiro);
-            primitivas.insert(pair<int,vector<Ponto>>(i, pontos));
-            i++; pontos.clear();
+/*void parseGroup(XMLElement *group){
+
+    XMLElement * elem;
+    float x,y,z,angle;
+ 
+    // vai iterar o grupo
+    for(elem = group->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()) {
+
+        string tag = elem->Value();
+        
+        if(tag == "group"){
+            parseGroup(elem);
         }
-    } else {
-        cout << "Ficheiro XML não foi encontrado" << endl;
+        else if(tag=="translate"){
+            
+            x = stof(elem->Attribute("X")); //Retira X
+            y = stof(elem->Attribute("Y")); //Retira Y
+            z = stof(elem->Attribute("Z")); //Retira Z
+            Translacao *t = new Translacao(x,y,z);
+            g.transformations.push_back(t);
+        }
+        else if(tag=="rotate"){
+  
+            angle =(elem->Attribute("angle")); //Retira angulo
+            x = (elem->Attribute("X"));  //Retira X
+            y = (elem->Attribute("Y")); //Retira Y
+            z = (elem->Attribute("Y")); //Retira Z
+        }
+        else if(tag=="scale"){
+    
+            x = (elem->Attribute("X")); //Retira X
+            y = (elem->Attribute("Y")); //Retira Y
+            z = (elem->Attribute("Z")); //Retira Z
+        }
+        else if(tag =="colour"){
+            =(elem->Attribute("R")); //Retira R
+            =(elem->Attribute("G")); //Retira G
+            =(elem->Attribute("B")); //Retira B
+        }
+        else if(tag=="models"){
+   
+            //PERCORRE MODELS
+            for(XMLElement* models = group->FirstChildElement("models")->FirstChildElement("model"); models; models = models -> NextSiblingElement("model")){
+                string ficheiro = elem->Attribute("file");
+                readFile(ficheiro);
+            }
+  
+        }
+ 
     }
+
 }
+
+
+void readXML(string file){
+
+    XMLDocument doc;
+    if(!doc.LoadFile(file.c_str())){
+ 
+        XMLElement * root = doc.RootElement();  //obtem a tag scene
+        XMLElement * group = root->FirstChildElement(); //obtem o primeiro grupo
+        parseGroup(group);
+    } else {
+        cout << "Ficheiro XML não lido" << endl;
+    }
+}*/
 
 int main(int argc, char **argv){
     
-    readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Engine/config.xml");
+    //readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase2/Engine/config.xml");
     
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
     glutInitWindowPosition(100,100);
     glutInitWindowSize(1000,1000);
-    glutCreateWindow("Fase 1");
+    glutCreateWindow("Fase 2");
             
     glutDisplayFunc(renderScene);
     glutReshapeFunc(changeSize);
@@ -259,6 +311,8 @@ int main(int argc, char **argv){
     
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
+    
+    spherical2Cartesian();
     
     glutMainLoop();
     

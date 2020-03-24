@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scene>
-	<model file="/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Generator/sphere.3d" />
-	<model file="/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Generator/plane.3d" />
-    <model file="/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Generator/cube.3d" />
-    <model file="/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Generator/cone.3d" />
+	<model file="/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/Generator/sphere.3d" />
+	<model file="/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/Generator/plane.3d" />
+    <model file="/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/Generator/cube.3d" />
+    <model file="/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/Generator/cone.3d" />
 </scene>

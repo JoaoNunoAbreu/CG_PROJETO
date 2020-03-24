@@ -233,6 +233,136 @@ void drawCone(float radius, float height, int slices, int stacks, string filenam
     file.close();
 }
 
+void drawTorus(float ri, float re, int slices, int stacks, string filename) {
+    float alpha = 0;
+    float beta = 0;
+
+    float desAlpha = (2 * M_PI)/stacks;
+    float desBeta = (2 * M_PI)/slices;
+
+    float xA, yA, zA;
+    float xB, yB, zB;
+    float xC, yC, zC;
+    float xD, yD, zD;
+    float xE, yE, zE;
+    float xF, yF, zF;
+    float xG, yG, zG;
+    float xH, yH, zH;
+
+    ofstream file(filename);
+    if(file.is_open()){
+
+        for (int i = 0; i < stacks; i++) {
+
+            xB = (re + ri * cos(beta)) * cos(alpha);
+            yB = (re + ri * cos(beta)) * sin(alpha);
+            zB = ri * sin(beta); //B
+
+            xC = (re + ri * cos(beta)) * cos(alpha + desAlpha);
+            yC = (re + ri * cos(beta)) * sin(alpha + desAlpha);
+            zC = ri * sin(beta); // C
+
+            xA = (re + ri * cos(beta + M_PI)) * cos(alpha);
+            yA = (re + ri * cos(beta + M_PI)) * sin(alpha);
+            zA = ri * sin(beta + M_PI); // A
+
+            file << "" << xB << " " << yB << " " << zB << endl;
+            file << "" << xC << " " << yC << " " << zC << endl;
+            file << "" << xA << " " << yA << " " << zA << endl;
+
+            xA = (re + ri * cos(beta + M_PI)) * cos(alpha);
+            yA = (re + ri * cos(beta + M_PI)) * sin(alpha);
+            zA = ri * sin(beta + M_PI); // A
+
+            xC = (re + ri * cos(beta)) * cos(alpha + desAlpha);
+            yC = (re + ri * cos(beta)) * sin(alpha + desAlpha);
+            zC = ri * sin(beta); // C
+
+            xD = (re + ri * cos(beta + M_PI)) * cos(alpha + desAlpha);
+            yD = (re + ri * cos(beta + M_PI)) * sin(alpha + desAlpha);
+            zD = ri * sin(beta + M_PI); // D
+
+            file << "" << xA << " " << yA << " " << zA << endl;
+            file << "" << xC << " " << yC << " " << zC << endl;
+            file << "" << xD << " " << yD << " " << zD << endl;
+    
+
+            for (int j = 0;j < slices;j++) {
+            
+                xB = (re + ri * cos(beta)) * cos(alpha);
+                yB = (re + ri * cos(beta)) * sin(alpha);
+                zB = ri * sin(beta); //B
+
+                xF = (re + ri * cos(beta + desBeta)) * cos(alpha + desAlpha);
+                yF = (re + ri * cos(beta + desBeta)) * sin(alpha + desAlpha);
+                zF = ri * sin(beta + desBeta); // F
+
+                xE = (re + ri * cos(beta + desBeta)) * cos(alpha);
+                yE = (re + ri * cos(beta + desBeta)) * sin(alpha);
+                zE = ri * sin(beta + desBeta); //E
+
+                file << "" << xB << " " << yB << " " << zB << endl;
+                file << "" << xF << " " << yF << " " << zF << endl;
+                file << "" << xE << " " << yE << " " << zE << endl;
+
+
+                xB = (re + ri * cos(beta)) * cos(alpha);
+                yB = (re + ri * cos(beta)) * sin(alpha);
+                zB = ri * sin(beta); //B
+
+                xC = (re + ri * cos(beta)) * cos(alpha + desAlpha);
+                yC = (re + ri * cos(beta)) * sin(alpha + desAlpha);
+                zC = ri * sin(beta); // C
+
+                xF = (re + ri * cos(beta + M_PI)) * cos(alpha);
+                yF = (re + ri * cos(beta + M_PI)) * sin(alpha);
+                zF = ri * sin(beta + M_PI); // F
+
+                file << "" << xB << " " << yB << " " << zB << endl;
+                file << "" << xC << " " << yC << " " << zC << endl;
+                file << "" << xF << " " << yF << " " << zF << endl;
+
+
+                xB = (re + ri * cos(beta)) * cos(alpha);
+                yB = (re + ri * cos(beta)) * sin(alpha);
+                zB = ri * sin(beta); //B
+
+                xG = (re + ri * cos(beta - desBeta)) * cos(alpha);
+                yG = (re + ri * cos(beta - desBeta)) * sin(alpha);
+                zG = ri * sin(beta - desBeta); //G
+
+                xC = (re + ri * cos(beta)) * cos(alpha + desAlpha);
+                yC = (re + ri * cos(beta)) * sin(alpha + desAlpha);
+                zC = ri * sin(beta); // C
+
+                file << "" << xB << " " << yB << " " << zB << endl;
+                file << "" << xG << " " << yG << " " << zG << endl;
+                file << "" << xC << " " << yC << " " << zC << endl;
+
+                xC = (re + ri * cos(beta)) * cos(alpha + desAlpha);
+                yC = (re + ri * cos(beta)) * sin(alpha + desAlpha);
+                zC = ri * sin(beta); // C
+
+                xG = (re + ri * cos(beta - desBeta)) * cos(alpha);
+                yG = (re + ri * cos(beta - desBeta)) * sin(alpha);
+                zG = ri * sin(beta - desBeta); //G
+
+                xH = (re + ri * cos(beta - desBeta)) * cos(alpha + desAlpha);
+                yH = (re + ri * cos(beta - desBeta)) * sin(alpha + desAlpha);
+                zH = ri * sin(beta - desBeta); // H
+
+                file << "" << xC << " " << yC << " " << zC << endl;
+                file << "" << xG << " " << yG << " " << zG << endl;
+                file << "" << xH << " " << yH << " " << zH << endl;
+            
+                beta += desBeta;
+            }
+            alpha += desAlpha;
+        }
+    }
+    file.close();
+}
+
 int main(int argc, char **argv) {
 
     
@@ -241,6 +371,7 @@ int main(int argc, char **argv) {
         generator cube x y z divisoes cube.3d
         generator sphere r slices stacks sphere.3d
         generator cone r h slices stacks cone.3d
+        generator torus ri re slices stacks torus.3d
      */
     
     if(argc == 5 && !strcmp(argv[1],"plane")){
@@ -254,6 +385,9 @@ int main(int argc, char **argv) {
     }
     else if (argc == 7 && !strcmp(argv[1],"cone")){
         drawCone(atof(argv[2]),atof(argv[3]),atoi(argv[4]),atoi(argv[5]),argv[6]);
+    }
+    else if(argc == 7 && !strcmp(argv[1],"torus")){
+        drawTorus(atof(argv[2]),atof(argv[3]),atof(argv[4]),atof(argv[5]),argv[6]);
     }
     
     return 1;
