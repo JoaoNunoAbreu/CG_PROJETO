@@ -17,6 +17,7 @@
 #include <map>
 #include <iterator>
 #include <algorithm>
+#include <filesystem>
 #include "headers/Rotacao.h"
 #include "headers/Transformacao.h"
 #include "headers/Translacao.h"
@@ -28,6 +29,7 @@
 
 using namespace tinyxml2;
 using namespace std;
+namespace fs = std::__fs::filesystem;
 
 float alfa = 0.7f, beta = 0.5f, radius = 200.0f;
 float camX, camY, camZ;
@@ -297,7 +299,7 @@ void readXML(string file){
 
 int main(int argc, char **argv){
     
-    readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase2/Engine/config.xml");
+    readXML("config.xml");
     
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);

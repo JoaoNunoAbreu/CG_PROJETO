@@ -374,20 +374,28 @@ int main(int argc, char **argv) {
         generator torus ri re slices stacks torus.3d
      */
     
+    string x = "../build/Debug/";
+    string a;
+    
     if(argc == 5 && !strcmp(argv[1],"plane")){
-        drawPlane(atof(argv[2]),atof(argv[3]),argv[4]);
+        a = x + argv[4];
+        drawPlane(atof(argv[2]),atof(argv[3]),a);
     }
     else if(argc == 7 && !strcmp(argv[1],"cube")){
-        drawCube(atof(argv[2]),atof(argv[3]),atof(argv[4]),atoi(argv[5]),argv[6]);
+        a = x + argv[6];
+        drawCube(atof(argv[2]),atof(argv[3]),atof(argv[4]),atoi(argv[5]),a);
     }
     else if(argc == 6 && !strcmp(argv[1],"sphere")){
-        drawSphere(atof(argv[2]),atoi(argv[3]),atoi(argv[4]),argv[5]);
+        a = x + argv[5];
+        drawSphere(atof(argv[2]),atoi(argv[3]),atoi(argv[4]),a);
     }
     else if (argc == 7 && !strcmp(argv[1],"cone")){
-        drawCone(atof(argv[2]),atof(argv[3]),atoi(argv[4]),atoi(argv[5]),argv[6]);
+        a = x + argv[6];
+        drawCone(atof(argv[2]),atof(argv[3]),atoi(argv[4]),atoi(argv[5]),a);
     }
     else if(argc == 7 && !strcmp(argv[1],"torus")){
-        drawTorus(atof(argv[2]),atof(argv[3]),atof(argv[4]),atof(argv[5]),argv[6]);
+        a = x + argv[6];
+        drawTorus(atof(argv[2]),atof(argv[3]),atof(argv[4]),atof(argv[5]),a);
     }
     
     return 1;
