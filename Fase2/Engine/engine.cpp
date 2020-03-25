@@ -23,6 +23,7 @@
 #include "headers/Cor.h"
 #include "headers/Escala.h"
 #include "headers/tinyxml2.h"
+#include "headers/Grupo.h"
 
 
 using namespace tinyxml2;
@@ -30,18 +31,6 @@ using namespace std;
 
 float alfa = 0.7f, beta = 0.5f, radius = 200.0f;
 float camX, camY, camZ;
-
-struct Ponto {
-    float x;
-    float y;
-    float z;
-};
-
-struct Grupo{
-    vector<Transformacao*> transformations;
-    vector<Ponto> models;
-    vector<Grupo> childgroups;
-};
 
 Grupo g;
 
@@ -65,24 +54,6 @@ void drawAxis(){
     glPopMatrix();
     
 }
-
-void draw(vector<Ponto> models){
-    
-    glBegin(GL_TRIANGLES);
-        for(int i = 0; i < models.size(); i++) {
-            glVertex3f(models[i].x, models[i].y, models[i].z);
-        }
-    glEnd();
-}
-
-void drawGroup(Grupo grupo){
-    glPushMatrix();
-    //for (auto &transformation : grupo.transformations) transformation->transform();
-    draw(grupo.models);
-    //for (auto &child : grupo.childgroups) drawGroup(child);
-    glPopMatrix();
-}
-
 
 void changeSize(int w, int h) {
 
@@ -122,8 +93,8 @@ void renderScene(void) {
         0.0, 0.0, 0.0,
         0.0f, 1.0f, 0.0f);
     
-    drawAxis();
-    drawGroup(g);
+    //drawAxis();
+    g.drawGroup();
     
     // End of frame
     glutSwapBuffers();
@@ -209,7 +180,7 @@ void createGLUTMenus() {
     glutAttachMenu(GLUT_RIGHT_BUTTON);
 }
 
-void readFile (Grupo grupo, string filename){
+void readFile (Grupo &grupo, string filename){
     
     ifstream infile;
     infile.open (filename);
@@ -217,11 +188,12 @@ void readFile (Grupo grupo, string filename){
     string s;
     string token;
     
-    size_t pos = 0; //size_t??
+    size_t pos = 0;
     
     string delimiter = " ";
-    
+    cout << "Ficheiro = " << filename << endl;
     Ponto p;
+    vector<Ponto> res;
 
     while(!infile.eof()){
                 
@@ -244,17 +216,17 @@ void readFile (Grupo grupo, string filename){
             
         }
         p.z = atof(s.c_str());
-        g.models.push_back(p);
+        res.push_back(p);
     }
 
+    grupo.addModel(res);
     infile.close();
 }
 
-void parseGroup(Grupo grupo, XMLElement *group){
+void parseGroup(Grupo &grupo, XMLElement *group){
 
     XMLElement * elem;
     float x,y,z,angle;
-    cout << "Chamada recursiva" << endl;
  
     // vai iterar o grupo
     for(elem = group->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()) {
@@ -263,61 +235,50 @@ void parseGroup(Grupo grupo, XMLElement *group){
         
         if(tag == "group"){
             Grupo childGroup;
-            cout << "Entrou group" << endl;
-            grupo.childgroups.push_back(childGroup);
             parseGroup(childGroup, elem);
+            grupo.addChilds(childGroup);
         }
         else if(tag=="translate"){
             
-            cout << "Entrou translate" << endl;
             x = stof(elem->Attribute("X")); //Retira X
             y = stof(elem->Attribute("Y")); //Retira Y
             z = stof(elem->Attribute("Z")); //Retira Z
             Translacao *t = new Translacao(x,y,z);
-            grupo.transformations.push_back(t);
+            grupo.addTransformation(t);
         }
         else if(tag=="rotate"){
             
-            cout << "Entrou rotate" << endl;
             angle = stof(elem->Attribute("angle")); //Retira angulo
             x = stof(elem->Attribute("X"));  //Retira X
             y = stof(elem->Attribute("Y")); //Retira Y
             z = stof(elem->Attribute("Y")); //Retira Z
             Rotacao *r = new Rotacao(angle,x,y,z);
-            grupo.transformations.push_back(r);
+            grupo.addTransformation(r);
         }
         else if(tag=="scale"){
             
-            cout << "Entrou scale" << endl;
             x = stof(elem->Attribute("X")); //Retira X
             y = stof(elem->Attribute("Y")); //Retira Y
             z = stof(elem->Attribute("Z")); //Retira Z
             Escala *e = new Escala(x,y,z);
-            grupo.transformations.push_back(e);
+            grupo.addTransformation(e);
         }
         else if(tag =="colour"){
-            cout << "Entrou color" << endl;
             x = stof(elem->Attribute("R")); //Retira R
             y = stof(elem->Attribute("G")); //Retira G
             z = stof(elem->Attribute("B")); //Retira B
             Cor *c = new Cor(x,y,z);
-            grupo.transformations.push_back(c);
+            grupo.addTransformation(c);
         }
         else if(tag=="models"){
             
-            cout << "Entrou models" << endl;
             //PERCORRE MODELS
             for(XMLElement* models = group->FirstChildElement("models")->FirstChildElement("model"); models; models = models -> NextSiblingElement("model")){
-                cout << "Entrou no ciclo" << endl;
                 string ficheiro = models->Attribute("file");
-                cout << "Ficheiro = " << ficheiro << endl;
                 readFile(grupo,ficheiro);
             }
-  
         }
- 
     }
-
 }
 
 
@@ -336,7 +297,7 @@ void readXML(string file){
 
 int main(int argc, char **argv){
     
-    readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase2/Engine/config2.xml");
+    readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase2/Engine/config.xml");
     
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);

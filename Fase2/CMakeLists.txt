@@ -7,7 +7,7 @@ PROJECT(engine)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-add_executable(${PROJECT_NAME} Engine/engine.cpp Engine/tinyxml2.cpp Engine/Cor.cpp Engine/Escala.cpp Engine/Translacao.cpp Engine/Rotacao.cpp)
+add_executable(${PROJECT_NAME} Engine/engine.cpp Engine/tinyxml2.cpp Engine/Cor.cpp Engine/Escala.cpp Engine/Translacao.cpp Engine/Rotacao.cpp Engine/Grupo.cpp)
 
 include_directories(headers)
 find_package(OpenGL REQUIRED)

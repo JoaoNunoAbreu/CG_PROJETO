@@ -8,15 +8,15 @@
 #endif
 
 Cor::Cor() {
-    red = 1.0;
-    green = 1.0;
-    blue = 1.0;
+    red = 0.0;
+    green = 0.0;
+    blue = 0.0;
 }
 
 Cor::Cor(float r, float g, float b) {
-    red = r;
-    green = g;
-    blue = b;
+    red = r/255.0f;
+    green = g/255.0f;
+    blue = b/255.0f;
 }
 
 float Cor :: getR(){return red;}
