@@ -7,7 +7,7 @@ PROJECT(engine)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-add_executable(${PROJECT_NAME} Engine/engine.cpp Engine/tinyxml2.cpp Engine/Cor.cpp Engine/Escala.cpp Engine/Translacao.cpp Engine/Rotacao.cpp Engine/Grupo.cpp)
+add_executable(${PROJECT_NAME} src/Engine/engine.cpp src/Engine/tinyxml2.cpp src/Engine/Cor.cpp src/Engine/Escala.cpp src/Engine/Translacao.cpp src/Engine/Rotacao.cpp src/Engine/Grupo.cpp)
 
 include_directories(headers)
 find_package(OpenGL REQUIRED)
@@ -69,3 +69,4 @@ endif(WIN32)
 file(COPY ${CMAKE_SOURCE_DIR}/sphere.3d DESTINATION ${CMAKE_BINARY_DIR})
 file(COPY ${CMAKE_SOURCE_DIR}/torus.3d DESTINATION ${CMAKE_BINARY_DIR})
 file(COPY ${CMAKE_SOURCE_DIR}/config.xml DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ${CMAKE_SOURCE_DIR}/teapot_patch.patch DESTINATION ${CMAKE_BINARY_DIR})
