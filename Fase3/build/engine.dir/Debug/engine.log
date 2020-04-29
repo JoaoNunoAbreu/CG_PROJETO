@@ -1,0 +1,3 @@
+﻿  engine.cpp
+C:\Users\tiago\Desktop\Fase2\Engine\engine.cpp(109,9): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  engine.vcxproj -> C:\Users\tiago\Desktop\Fase2\build\Debug\engine.exe
