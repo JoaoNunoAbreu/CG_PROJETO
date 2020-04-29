@@ -1,11 +1,14 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
+#include <stdio.h>
 #define GL_SILENCE_DEPRECATION
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
 #include <windows.h>
+#include <direct.h>
 #include <GL/glew.h>
 #include <GL/glut.h>
-#include <direct.h>
-
+#endif
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include <iostream>
@@ -24,7 +27,6 @@
 #include "headers/tinyxml2.h"
 #include "headers/Grupo.h"
 #include "../include/Ponto.h"
-
 
 using namespace tinyxml2;
 using namespace std;
@@ -337,28 +339,24 @@ void readXML(string file){
 
 
 int main(int argc, char **argv){
-    
-
-    
-    
-  
-
+   
     glutInit(&argc, argv);
   
-  
-    
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
     glutInitWindowPosition(100,100);
     glutInitWindowSize(1000,1000);
     glutCreateWindow("Fase 3");
     
-   
+    #ifndef __APPLE__
+    // init GLEW
     GLenum err = glewInit();
     if (err != GLEW_OK) {
         cout << "Glew está com problemas" << endl;
         cout << glewGetErrorString(err) << endl;
         return 0;
     }
+    #endif
+
     readXML("config.xml");
 
 

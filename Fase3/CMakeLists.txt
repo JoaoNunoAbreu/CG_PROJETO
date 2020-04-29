@@ -3,6 +3,11 @@ cmake_minimum_required(VERSION 3.5)
 set (CMAKE_CXX_STANDARD 11)
 
 # Project Name
+Project(generator)
+add_executable(${PROJECT_NAME} src/Generator/generator.cpp src/include/Ponto.h)
+
+
+# Project Name
 PROJECT(engine)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
@@ -44,6 +49,12 @@ if  (WIN32)
 	
 	set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
 	
+	file(COPY ${CMAKE_SOURCE_DIR}/files/3d/sphere.3d DESTINATION ${CMAKE_BINARY_DIR})
+	file(COPY ${CMAKE_SOURCE_DIR}/files/3d/torus.3d DESTINATION ${CMAKE_BINARY_DIR})
+	file(COPY ${CMAKE_SOURCE_DIR}/files/3d/teapot.3d DESTINATION ${CMAKE_BINARY_DIR})
+	file(COPY ${CMAKE_SOURCE_DIR}/config.xml DESTINATION ${CMAKE_BINARY_DIR})
+	file(COPY ${CMAKE_SOURCE_DIR}/files/input_files/teapot.patch DESTINATION ${CMAKE_BINARY_DIR})
+	
 else (WIN32) #Linux and Mac
 
 	set( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} Wno-deprecated")
@@ -62,11 +73,11 @@ else (WIN32) #Linux and Mac
 	if(NOT GLUT_FOUND)
 	   message(ERROR ": GLUT not found!")
 	endif(NOT GLUT_FOUND)
+
+	file(COPY ${CMAKE_SOURCE_DIR}/files/3d/sphere.3d DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+	file(COPY ${CMAKE_SOURCE_DIR}/files/3d/torus.3d DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+	file(COPY ${CMAKE_SOURCE_DIR}/files/3d/teapot.3d DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+	file(COPY ${CMAKE_SOURCE_DIR}/config.xml DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+	file(COPY ${CMAKE_SOURCE_DIR}/files/input_files/teapot.patch DESTINATION ${CMAKE_BINARY_DIR}/Debug)
 	
 endif(WIN32)
-
-
-file(COPY ${CMAKE_SOURCE_DIR}/sphere.3d DESTINATION ${CMAKE_BINARY_DIR})
-file(COPY ${CMAKE_SOURCE_DIR}/torus.3d DESTINATION ${CMAKE_BINARY_DIR})
-file(COPY ${CMAKE_SOURCE_DIR}/config.xml DESTINATION ${CMAKE_BINARY_DIR})
-file(COPY ${CMAKE_SOURCE_DIR}/teapot_patch.patch DESTINATION ${CMAKE_BINARY_DIR})

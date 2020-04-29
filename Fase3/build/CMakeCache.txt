@@ -71,7 +71,7 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/engine
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/generator
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.25.28610/bin/Hostx64/x86/link.exe
@@ -193,6 +193,12 @@ engine_BINARY_DIR:STATIC=C:/Users/tiago/Desktop/uni/CG_PROJETO/Fase3/build
 
 //Value Computed by CMake
 engine_SOURCE_DIR:STATIC=C:/Users/tiago/Desktop/uni/CG_PROJETO/Fase3
+
+//Value Computed by CMake
+generator_BINARY_DIR:STATIC=C:/Users/tiago/Desktop/uni/CG_PROJETO/Fase3/build
+
+//Value Computed by CMake
+generator_SOURCE_DIR:STATIC=C:/Users/tiago/Desktop/uni/CG_PROJETO/Fase3
 
 
 ########################

@@ -9,7 +9,7 @@
 #include <iostream>
 #include "../include/Ponto.h"
 
-constexpr auto INDEX_PER_PATCH = 16;;
+constexpr auto INDEX_PER_PATCH = 16;
 
 using namespace std;
 
@@ -448,7 +448,7 @@ void generateBezierPatches(vector<int>& indices, vector<Ponto>& control_points, 
     }
     /* Abertura do ficheiro para onde vai escrever os pontos */
     ofstream file(fileToWrite);
-
+   
     if (file.is_open()) {
         for (Ponto p : bezier_points) {
             file << p.x << " " << p.y << " " << p.z << endl;
@@ -479,7 +479,7 @@ void readBezierPatches(string fileName, int tessellation, string fileToWrite) {
     infile.open(fileName);
 
     if (infile.is_open()) {
-
+    
         /* Percorre linha a linha ate EOF */
         while (getline(infile, line)) {
 
@@ -551,7 +551,9 @@ int main(int argc, char** argv) {
         generator teapot <ficheiro_patch> <tesselation> <nome ficheiro a escrever(.3d)> 
      */
 
-    string x = "../";
+    string x = "../../files/3d/";
+    string d = "../../files/input_files/";
+    string c;
     string a;
 
     if (argc == 5 && !strcmp(argv[1], "plane")) {
@@ -576,7 +578,8 @@ int main(int argc, char** argv) {
     }
     else if (argc == 5 && !strcmp(argv[1], "teapot")) {
         a = x + argv[4];
-        readBezierPatches(argv[2], atoi(argv[3]), a);
+        string c = d + argv[2];
+        readBezierPatches(c, atoi(argv[3]), a);
     }
 
     return 1;

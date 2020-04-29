@@ -1,10 +1,1 @@
-﻿  engine.cpp
-C:\Users\tiago\Desktop\uni\CG_PROJETO\Fase3\src\Engine\engine.cpp(110,9): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  tinyxml2.cpp
-  Cor.cpp
-  Escala.cpp
-  Translacao.cpp
-  Rotacao.cpp
-  Grupo.cpp
-  Generating Code...
-  engine.vcxproj -> C:\Users\tiago\Desktop\uni\CG_PROJETO\Fase3\build\Release\engine.exe
+﻿  engine.vcxproj -> C:\Users\tiago\Desktop\uni\CG_PROJETO\Fase3\build\Release\engine.exe
