@@ -542,34 +542,35 @@ void readBezierPatches(string fileName, int tessellation, string fileToWrite) {
 int main(int argc, char** argv) {
 
 
-    /* EXEMPLO:
+    /*  API:
+        EXEMPLO:
         generator plane <x> <z> <plane.3d>
         generator cube <x> <y> <z> <divisoes> <cube.3d>
         generator sphere <r> <slices> <stacks> <sphere.3d>
         generator cone <r> <h> <slices> <stacks> <cone.3d>
         generator torus <ri> <re> <slices> <stacks> <torus.3d>
-        generator teapot <ficheiro_patch> <tesselation> <nome ficheiro a escrever(.3d)> 
+        generator teapot <ficheiro_patch> <tessellation> <nome ficheiro a escrever(.3d)> 
      */
 
-    string x = "../../files/3d/";
-    string d = "../../files/input_files/";
+    string prefix1 = "../../files/3d/";
+    string prefix2 = "../../files/input_files/";
     string c;
     string a;
 
     if (argc == 5 && !strcmp(argv[1], "plane")) {
-        a = x + argv[4];
+        a = prefix1 + argv[4];
         drawPlane(atof(argv[2]), atof(argv[3]), a);
     }
     else if (argc == 7 && !strcmp(argv[1], "cube")) {
-        a = x + argv[6];
+        a = prefix1 + argv[6];
         drawCube(atof(argv[2]), atof(argv[3]), atof(argv[4]), atoi(argv[5]), a);
     }
     else if (argc == 6 && !strcmp(argv[1], "sphere")) {
-        a = x + argv[5];
+        a = prefix1 + argv[5];
         drawSphere(atof(argv[2]), atoi(argv[3]), atoi(argv[4]), a);
     }
     else if (argc == 7 && !strcmp(argv[1], "cone")) {
-        a = x + argv[6];
+        a = prefix1 + argv[6];
         drawCone(atof(argv[2]), atof(argv[3]), atoi(argv[4]), atoi(argv[5]), a);
     }
     else if (argc == 7 && !strcmp(argv[1], "torus")) {
@@ -578,7 +579,7 @@ int main(int argc, char** argv) {
     }
     else if (argc == 5 && !strcmp(argv[1], "teapot")) {
         a = x + argv[4];
-        string c = d + argv[2];
+        c = prefix2 + argv[2];
         readBezierPatches(c, atoi(argv[3]), a);
     }
 
