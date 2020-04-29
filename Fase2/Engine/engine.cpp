@@ -29,7 +29,6 @@
 
 using namespace tinyxml2;
 using namespace std;
-namespace fs = std::__fs::filesystem;
 
 float alfa = 0.7f, beta = 0.5f, radius = 200.0f;
 float camX, camY, camZ;

@@ -11,7 +11,7 @@
 
         <!--mercurio-->
         <group>
-            <translate X="10.8775" Y="0" Z="0" />
+            <translate X="20.8775" Y="0" Z="0" />
             <colour R="219" G="170" B="0" />
             <scale X="0.3525" Y="0.3525" Z="0.3525" />
             <models>
@@ -20,7 +20,7 @@
         </group>
          <group>
             <!--venus-->
-             <translate X="19.9233" Y="0" Z="9.0897" />
+             <translate X="29.9233" Y="0" Z="19.0897" />
              <colour R="254" G="198" B="115" />
              <scale X="0.8790" Y="0.8790" Z="0.8790" />
              <models>
@@ -29,7 +29,7 @@
          </group>
          <group>
              <!--terra -->
-             <translate X="33.8061" Y="0" Z="21.25" />
+             <translate X="43.8061" Y="0" Z="31.25" />
              <colour R="0" G="0" B="220" />
              <scale X="0.8865" Y="0.8865" Z="0.8865" />
              <models>
@@ -38,7 +38,7 @@
              <group>
               <!--   lua-->
                  <rotate angle="2" X="0" Y="1" Z="1"/>
-                 <translate X="0" Y="0.25" Z="3"/>
+                 <translate X="0" Y="10.25" Z="13"/>
                  <colour R="255" G="255" B="255" />
                  <scale X="0.30" Y="0.30" Z="0.30" />
                  <models>
@@ -48,7 +48,7 @@
          </group>
          <group>
              <!-- marte -->
-                  <translate X="40.9523" Y="0" Z="15.5806" />
+                  <translate X="50.9523" Y="0" Z="25.5806" />
                   <colour R="254" G="135" B="1" />
                   <scale X="0.3720" Y="0.3720" Z="0.3720" />
                   <models>
@@ -57,7 +57,7 @@
               </group>
         <group>
             <!-- jupiter -->
-                    <translate X="51.12987" Y="0" Z="37.1480" />
+                    <translate X="61.12987" Y="0" Z="47.1480" />
                     <colour R="231" G="232" B="197" />
                     <scale X="2.5" Y="2.5" Z="2.5" />
                     <models>
@@ -106,7 +106,7 @@
                 <group>
                     <!--saturno -->
                     <translate X="77.5005" Y="0" Z="-21.3021" />
-                    <colour R="255" G="223" B="161" />
+                    <colour R="255" G="150" B="80" />
                     <scale X="1.995" Y="1.995" Z="1.995" />
                         <models>
                             <model file="sphere.3d"/>
@@ -114,8 +114,8 @@
                     <!--anel-->
                     <group>
                         <rotate angle="70" X="1" Y="0" Z="0"/>
-                        <colour R="255" G="10" B="100" />
-                        <scale X="0.5" Y="0.5" Z="0.0"/>
+                        <colour R="255" G="200" B="80" />
+                        <scale X="0.6" Y="0.6" Z="0.0"/>
                         <models>
                             <model file="torus.3d" />
                         </models>
@@ -140,6 +140,15 @@
             <models>
                 <model file="sphere.3d"/>
             </models>
+            <!--anel-->
+                    <group>
+                        <rotate angle="70" X="-1" Y="0" Z="0"/>
+                        <colour R="255" G="200" B="80" />
+                        <scale X="0.5" Y="0.5" Z="0.0"/>
+                        <models>
+                            <model file="torus.3d" />
+                        </models>
+                    </group>
         </group>
         <group>
             <!--neptuno-->
@@ -152,7 +161,7 @@
             <!-- satelite Titânia-->
           <group>
               <rotate angle="1" X="0" Y="3" Z="1"/>
-              <translate X="0" Y="1" Z="3.75" />
+              <translate X="0" Y="11" Z="13.75" />
               <colour R="39" G="100" B="5" />
               <scale X="0.15" Y="0.15" Z="0.15" />
               <models>

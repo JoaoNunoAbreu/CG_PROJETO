@@ -241,7 +241,7 @@ void readXML(string fich) {
 
 int main(int argc, char **argv){
     
-    readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Engine/config.xml");
+    readXML("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/Engine/config.xml");
     
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);

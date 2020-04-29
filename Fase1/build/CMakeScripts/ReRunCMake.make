@@ -92,12 +92,12 @@ TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Cont
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.8/Modules/Platform/Darwin-Initialize.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.8/Modules/Platform/Darwin.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Applications/CMake.app/Contents/share/cmake-3.8/Modules/Platform/UnixPaths.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/CMakeLists.txt))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CMakeCCompiler.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CMakeCXXCompiler.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/3.8.0-rc1/CMakeSystem.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.c))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/feature_tests.cxx))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/CMakeLists.txt))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/build/CMakeFiles/3.8.0-rc1/CMakeCCompiler.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/build/CMakeFiles/3.8.0-rc1/CMakeCXXCompiler.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/build/CMakeFiles/3.8.0-rc1/CMakeSystem.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/build/CMakeFiles/feature_tests.c))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/build/CMakeFiles/feature_tests.cxx))
 
-/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build/CMakeFiles/cmake.check_cache: $(TARGETS)
-	/Applications/CMake.app/Contents/bin/cmake -H/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG -B/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/build
+/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/build/CMakeFiles/cmake.check_cache: $(TARGETS)
+	/Applications/CMake.app/Contents/bin/cmake -H/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1 -B/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase1/build
