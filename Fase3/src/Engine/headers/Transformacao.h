@@ -5,7 +5,7 @@
 class Transformacao {
 
 public:
-    virtual void transform() = 0;
+    virtual void transform(float tempo) = 0;
 };
 
 #endif

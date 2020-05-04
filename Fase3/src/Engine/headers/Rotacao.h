@@ -6,13 +6,14 @@ class Rotacao : public Transformacao{
 
 private:
     float angle;
+    float time;
     float x;
     float y;
     float z;
 
 public:
     Rotacao();
-    Rotacao(float angle, float x, float y, float z);
+    Rotacao(float angle, float time, float x, float y, float z);
     float getAngle();
     float getX();
     float getY();
@@ -21,6 +22,6 @@ public:
     void setX(float x);
     void setY(float y);
     void setZ(float z);
-    void transform();
+    void transform(float tempo);
 };
 #endif

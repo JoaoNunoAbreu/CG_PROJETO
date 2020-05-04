@@ -16,6 +16,9 @@
     <ClCompile Include="C:\Users\tiago\Desktop\uni\CG_PROJETO\Fase3\src\Engine\Translacao.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\tiago\Desktop\uni\CG_PROJETO\Fase3\src\Engine\CatmullRomCurve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\tiago\Desktop\uni\CG_PROJETO\Fase3\src\Engine\Rotacao.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

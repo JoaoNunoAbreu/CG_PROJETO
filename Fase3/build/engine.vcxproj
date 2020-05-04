@@ -321,6 +321,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\tiago\Desktop\uni\CG_PROJETO\Fase3\src\Engine\Cor.cpp" />
     <ClCompile Include="C:\Users\tiago\Desktop\uni\CG_PROJETO\Fase3\src\Engine\Escala.cpp" />
     <ClCompile Include="C:\Users\tiago\Desktop\uni\CG_PROJETO\Fase3\src\Engine\Translacao.cpp" />
+    <ClCompile Include="C:\Users\tiago\Desktop\uni\CG_PROJETO\Fase3\src\Engine\CatmullRomCurve.cpp" />
     <ClCompile Include="C:\Users\tiago\Desktop\uni\CG_PROJETO\Fase3\src\Engine\Rotacao.cpp" />
     <ClCompile Include="C:\Users\tiago\Desktop\uni\CG_PROJETO\Fase3\src\Engine\Grupo.cpp" />
   </ItemGroup>

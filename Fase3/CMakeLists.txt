@@ -12,7 +12,7 @@ PROJECT(engine)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-add_executable(${PROJECT_NAME} src/Engine/engine.cpp src/Engine/tinyxml2.cpp src/Engine/Cor.cpp src/Engine/Escala.cpp src/Engine/Translacao.cpp src/Engine/Rotacao.cpp src/Engine/Grupo.cpp)
+add_executable(${PROJECT_NAME} src/Engine/engine.cpp src/Engine/tinyxml2.cpp src/Engine/Cor.cpp src/Engine/Escala.cpp src/Engine/Translacao.cpp src/Engine/CatmullRomCurve.cpp src/Engine/Rotacao.cpp src/Engine/Grupo.cpp)
 
 include_directories(headers)
 find_package(OpenGL REQUIRED)

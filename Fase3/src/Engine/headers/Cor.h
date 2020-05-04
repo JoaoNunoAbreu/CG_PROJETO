@@ -19,6 +19,6 @@ public:
     void setR(float r);
     void setG(float g);
     void setB(float b);
-    void transform();
+    void transform(float tempo);
 };
 #endif
