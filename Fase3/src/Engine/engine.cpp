@@ -158,12 +158,13 @@ void processSpecialKeys(int key, int xx, int yy) {
         break;
 
     case GLUT_KEY_PAGE_UP: radius += 5.0f; break;
+    
+    
     }
     spherical2Cartesian();
     glutPostRedisplay();
 
 }
-
 
 void processMenuEvents(int option) {
     switch (option) {
@@ -262,23 +263,6 @@ void readFile (Grupo &grupo, string filename){
 
             infile.close();
         }
-}
-
-void geraVBO(Grupo& grupo,vector<float>&res) {
-    
-    // gera VBO
-    GLuint buffer;
-    VBO v;
-
-    glGenBuffers(1, &buffer);
-    glBindBuffer(GL_ARRAY_BUFFER, buffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * res.size(), res.data(), GL_STATIC_DRAW);
-
-    v.size = res.size() / 3;
-    v.vertices = buffer;
-
-    grupo.addModel(v);
-
 }
 
 
@@ -404,7 +388,6 @@ void readXML(string file){
 }
 
 
-
 int main(int argc, char **argv){
    
     glutInit(&argc, argv);
@@ -424,7 +407,7 @@ int main(int argc, char **argv){
     }
     #endif
 
-    readXML("config2.xml");
+    readXML("config.xml");
 
 
     glutDisplayFunc(renderScene);

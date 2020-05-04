@@ -49,8 +49,8 @@ void  Translacao :: transform(float tempo){
         static float Y[3] = { 0, 1, 0 };
         float Z[3];
         float pos[3];
-        float x = (time / 1000000);
-        tm = tempo * x;
+        float x = (time * 1000); 
+        tm = tempo / x;
         getGlobalCatmullRomPoint(tm, controlpoints, res, deriv);
 
         glTranslatef(res[0], res[1], res[2]);
