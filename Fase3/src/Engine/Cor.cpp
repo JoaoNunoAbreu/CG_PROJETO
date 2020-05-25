@@ -25,4 +25,4 @@ float Cor :: getB(){return blue;}
 void  Cor :: setR(float r){red = r;}
 void  Cor :: setG(float g){green = g;}
 void  Cor :: setB(float b){blue = b;}
-void  Cor :: transform(){glColor3f(red,green,blue);}
+void  Cor :: transform(float tempo){glColor3f(red,green,blue);}

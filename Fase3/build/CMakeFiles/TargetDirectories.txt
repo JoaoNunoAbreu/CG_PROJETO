@@ -1,3 +1,0 @@
-C:/Users/tiago/Desktop/uni/CG_PROJETO/Fase3/build/CMakeFiles/engine.dir
-C:/Users/tiago/Desktop/uni/CG_PROJETO/Fase3/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/tiago/Desktop/uni/CG_PROJETO/Fase3/build/CMakeFiles/ZERO_CHECK.dir

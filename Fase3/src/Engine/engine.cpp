@@ -1,11 +1,14 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
+#include <stdio.h>
 #define GL_SILENCE_DEPRECATION
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
 #include <windows.h>
+#include <direct.h>
 #include <GL/glew.h>
 #include <GL/glut.h>
-#include <direct.h>
-
+#endif
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include <iostream>
@@ -24,7 +27,7 @@
 #include "headers/tinyxml2.h"
 #include "headers/Grupo.h"
 #include "../include/Ponto.h"
-
+#include "headers/CatmullRomCurve.h"
 
 using namespace tinyxml2;
 using namespace std;
@@ -86,7 +89,7 @@ void renderScene(void) {
     float fps;
     int time;
     char s[64];
-
+    time = glutGet(GLUT_ELAPSED_TIME);
     // clear buffers
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -99,10 +102,10 @@ void renderScene(void) {
         0.0f, 1.0f, 0.0f);
     
     //drawAxis();
-    g.drawGroup();
+    g.drawGroup(time);
     
     frame++;
-    time = glutGet(GLUT_ELAPSED_TIME);
+   
     if (time - timebase > 1000) {
         fps = frame * 1000.0 / (time - timebase);
         timebase = time;
@@ -155,12 +158,13 @@ void processSpecialKeys(int key, int xx, int yy) {
         break;
 
     case GLUT_KEY_PAGE_UP: radius += 5.0f; break;
+    
+    
     }
     spherical2Cartesian();
     glutPostRedisplay();
 
 }
-
 
 void processMenuEvents(int option) {
     switch (option) {
@@ -211,10 +215,9 @@ void readFile (Grupo &grupo, string filename){
 
             string delimiter = " ";
            
-
             glEnableClientState(GL_VERTEX_ARRAY);
 
-            vector<float> res;
+            vector<float> model;
        
             float x, y, z;
 
@@ -222,38 +225,38 @@ void readFile (Grupo &grupo, string filename){
 
                 int i = 0;
                 getline(infile, s); // Saves the line in STRING.
-                //cout << "s = " << s << endl;
+                // cout << "s = " << s << endl;
                 while ((pos = s.find(delimiter)) != std::string::npos) {
 
                     token = s.substr(0, pos);
 
                     if (i == 0) {
                         x = atof(token.c_str());
-                        res.push_back(x);
-                       // cout << "pontosX = " << p.x << endl;
+                        model.push_back(x);
                     }
 
                     else if (i == 1) {
                         y = atof(token.c_str());
-                        res.push_back(y);
-                       // cout << "pontosY = " << p.y << endl;
+                        model.push_back(y);
                     }
                     s.erase(0, pos + delimiter.length());
                     i++;
                 }
                 z = atof(s.c_str());
-                //cout << "pontosZ = " << p.z << endl;
-                res.push_back(z);
+             
+                model.push_back(z);
             }
 
+            // gera VBO
+            int size = model.size();
             GLuint buffer;
             VBO v;
 
             glGenBuffers(1, &buffer);
             glBindBuffer(GL_ARRAY_BUFFER, buffer);
-            glBufferData(GL_ARRAY_BUFFER, sizeof(float) * res.size(), res.data(), GL_STATIC_DRAW);
+            glBufferData(GL_ARRAY_BUFFER, sizeof(float) * model.size(), model.data(), GL_STATIC_DRAW);
 
-            v.size = res.size() / 3;
+            v.size = model.size()/3 ;
             v.vertices = buffer;
 
             grupo.addModel(v);
@@ -262,10 +265,34 @@ void readFile (Grupo &grupo, string filename){
         }
 }
 
+
+void loadControlPoints(vector<Ponto>& controlpoints, XMLElement* elem) {
+    
+    XMLElement* elem2;
+
+    for (elem2 = elem->FirstChildElement(); elem2 != NULL; elem2 = elem2->NextSiblingElement()) {
+        string tag = elem2->Value();
+        Ponto p;
+
+        p.x = stof(elem2->Attribute("X")); //Retira X
+        p.y = stof(elem2->Attribute("Y")); //Retira Y
+        p.z = stof(elem2->Attribute("Z")); //Retira Z
+       
+        controlpoints.push_back(p);
+    }
+    
+    if (controlpoints.size() < 4) { //garante que a catmull tem no minimo quatro pontos de controlo.
+        cout << "Pontos insuficientes" << endl;
+        return;
+    }
+}
+
+
 void parseGroup(Grupo &grupo, XMLElement *group){
 
     XMLElement * elem;
-    float x,y,z,angle;
+    float x=0,y=0.0f,z=0.0f,angle=0.0f;
+
  
     // vai iterar o grupo
     for(elem = group->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()) {
@@ -273,29 +300,55 @@ void parseGroup(Grupo &grupo, XMLElement *group){
         string tag = elem->Value();
         
         if(tag == "group"){
+       
             Grupo childGroup;
             parseGroup(childGroup, elem);
             grupo.addChilds(childGroup);
         }
         else if(tag=="translate"){
+            vector<Ponto> controlPoints;
+            float tempo = 0.0f;
+            int flag = 0;
+         
             
-            x = stof(elem->Attribute("X")); //Retira X
-            y = stof(elem->Attribute("Y")); //Retira Y
-            z = stof(elem->Attribute("Z")); //Retira Z
-            Translacao *t = new Translacao(x,y,z);
+            if ((elem->Attribute("time"))) {
+                tempo = stof(elem->Attribute("time"));
+                loadControlPoints(controlPoints, elem);
+                flag = 1;
+            }
+            
+            if (!flag) {
+                x = stof(elem->Attribute("X")); //Retira X
+                y = stof(elem->Attribute("Y")); //Retira Y
+                z = stof(elem->Attribute("Z")); //Retira Z
+            }
+
+            Translacao *t = new Translacao(x,y,z,tempo,controlPoints);
+     
             grupo.addTransformation(t);
         }
         else if(tag=="rotate"){
-            
+          
+            float tempo = 0.0f;
+            int flag = 0;
+
+            if ((elem->Attribute("time"))) {
+                tempo = stof(elem->Attribute("time"));
+                flag = 1;
+            }
+
+            if(!flag)
             angle = stof(elem->Attribute("angle")); //Retira angulo
+
             x = stof(elem->Attribute("X"));  //Retira X
             y = stof(elem->Attribute("Y")); //Retira Y
-            z = stof(elem->Attribute("Y")); //Retira Z
-            Rotacao *r = new Rotacao(angle,x,y,z);
+            z = stof(elem->Attribute("Z")); //Retira Z
+
+            Rotacao *r = new Rotacao(angle,tempo,x,y,z);
             grupo.addTransformation(r);
         }
         else if(tag=="scale"){
-            
+        
             x = stof(elem->Attribute("X")); //Retira X
             y = stof(elem->Attribute("Y")); //Retira Y
             z = stof(elem->Attribute("Z")); //Retira Z
@@ -303,6 +356,7 @@ void parseGroup(Grupo &grupo, XMLElement *group){
             grupo.addTransformation(e);
         }
         else if(tag =="colour"){
+        
             x = stof(elem->Attribute("R")); //Retira R
             y = stof(elem->Attribute("G")); //Retira G
             z = stof(elem->Attribute("B")); //Retira B
@@ -310,7 +364,6 @@ void parseGroup(Grupo &grupo, XMLElement *group){
             grupo.addTransformation(c);
         }
         else if(tag=="models"){
-            
             //PERCORRE MODELS
             for(XMLElement* models = group->FirstChildElement("models")->FirstChildElement("model"); models; models = models -> NextSiblingElement("model")){
                 string ficheiro = models->Attribute("file");
@@ -335,30 +388,25 @@ void readXML(string file){
 }
 
 
-
 int main(int argc, char **argv){
-    
-
-    
-    
-  
-
+   
     glutInit(&argc, argv);
   
-  
-    
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
     glutInitWindowPosition(100,100);
     glutInitWindowSize(1000,1000);
     glutCreateWindow("Fase 3");
     
-   
+    #ifndef __APPLE__
+    // init GLEW
     GLenum err = glewInit();
     if (err != GLEW_OK) {
         cout << "Glew está com problemas" << endl;
         cout << glewGetErrorString(err) << endl;
         return 0;
     }
+    #endif
+
     readXML("config.xml");
 
 

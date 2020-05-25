@@ -24,4 +24,4 @@ float Escala :: getZ(){ return z; }
 void  Escala :: setX(float x1){x = x1;}
 void  Escala :: setY(float y1){y = y1;}
 void  Escala :: setZ(float z1){z = z1;}
-void  Escala :: transform(){glScalef(x,y,z);}
+void  Escala :: transform(float tempo){glScalef(x,y,z);}

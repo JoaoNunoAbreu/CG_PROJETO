@@ -27,7 +27,7 @@ public:
 public:
     Grupo() {};
     ~Grupo() {};
-    void drawGroup();
+    void drawGroup(float tempo);
     void draw(VBO models);
     void addTransformation(Transformacao* t);
     void addModel(VBO v);
