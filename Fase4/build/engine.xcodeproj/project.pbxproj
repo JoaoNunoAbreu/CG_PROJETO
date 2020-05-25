@@ -1,0 +1,904 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		D09521F479D04FD39BD43225 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4916CAB2A13740538ED33FE2 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				471F2C58E6B841F485BCF0CE /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		E553EF2EE20B4CDD9D43592A /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 028759FEBA7A453388293ECD /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				2F5EC41F525143C4A1FD5E52 /* CMake Rules */,
+			);
+			dependencies = (
+				77ED5E07E963424F82089F49 /* PBXTargetDependency */,
+				9B2310F0F5684EF1920D37D3 /* PBXTargetDependency */,
+				0EB15F94F76C4ADC8226A4F8 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		18253EDF144F4869B1A8073E /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Rotacao.cpp */ = {isa = PBXBuildFile; fileRef = 6DE5D3506196442C92EB2DC2 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Rotacao.cpp */; };
+		4068ABE0A2BC4C5DBA7DDA6C /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Escala.cpp */ = {isa = PBXBuildFile; fileRef = 81E76BCAD28144B086B5C98A /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Escala.cpp */; };
+		48A802342AFB450D9803421A /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Translacao.cpp */ = {isa = PBXBuildFile; fileRef = 37053D18CDE84373A6B3923C /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Translacao.cpp */; };
+		5241E47FB21E44BFB3D589B1 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/include/Ponto.h */ = {isa = PBXBuildFile; fileRef = 2AD1A60F4FC24E978C28AD5F /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/include/Ponto.h */; };
+		710B02139A4C4375AB7CE7BF /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 0DEC8A96DBC441D99BA47102 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/CMakeLists.txt */; };
+		7708D231B7464F1F957D04EE /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Generator/generator.cpp */ = {isa = PBXBuildFile; fileRef = 956FEA2098844088BA70D317 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Generator/generator.cpp */; };
+		82414AD8455C4430B09C5943 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Cor.cpp */ = {isa = PBXBuildFile; fileRef = CEA136579EDD4F2E8264BBE4 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Cor.cpp */; };
+		89FBEDA439194D51B5450894 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/engine.cpp */ = {isa = PBXBuildFile; fileRef = 70B91278E6A942F3B0B65C12 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/engine.cpp */; };
+		97E3366019C9480986AE90BB /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/CatmullRomCurve.cpp */ = {isa = PBXBuildFile; fileRef = 2B2C9AC658AF4485AB0946D1 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/CatmullRomCurve.cpp */; };
+		A0E00B64772B4580BC4DA9E2 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 279108459DF74EE0875B63A6 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/CMakeLists.txt */; };
+		BE69A53E04594CA6BE877F88 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/tinyxml2.cpp */ = {isa = PBXBuildFile; fileRef = 8728D9DC84BE4100AF9408A0 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/tinyxml2.cpp */; };
+		EBC40470DE8D4001ADABCADB /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Grupo.cpp */ = {isa = PBXBuildFile; fileRef = FB042C971A44473A80A8E35F /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Grupo.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		55A3F90C735043FA91770E4D /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		66BB15C7C1DA4C67A6CD208A = {
+			isa = PBXBuildStyle;
+		};
+		7EF1390141C547798FB6F04A /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		82F95CB0A0594611993421DF /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		DA9C28AD865E4E21B951AB33 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		46152AD2761E4C19B056832D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28AE0304EC184B899C1685D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D09521F479D04FD39BD43225;
+			remoteInfo = ZERO_CHECK;
+		};
+		49B217C05E3649CC850D40F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28AE0304EC184B899C1685D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 988AEDB792EC44D1BF620A39;
+			remoteInfo = engine;
+		};
+		CFCB4A8AFF7D4494B9058FA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28AE0304EC184B899C1685D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D09521F479D04FD39BD43225;
+			remoteInfo = ZERO_CHECK;
+		};
+		E5478DB5F5114945A2B98A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28AE0304EC184B899C1685D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6DC8CEB35D94E309ADCDF19;
+			remoteInfo = generator;
+		};
+		FBD53A1404074D6BA72286BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28AE0304EC184B899C1685D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D09521F479D04FD39BD43225;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		031BFB1E609B4FD499B281BA /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0DEC8A96DBC441D99BA47102 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		279108459DF74EE0875B63A6 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2AD1A60F4FC24E978C28AD5F /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/include/Ponto.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Ponto.h; path = src/include/Ponto.h; sourceTree = SOURCE_ROOT; };
+		2B2C9AC658AF4485AB0946D1 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/CatmullRomCurve.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CatmullRomCurve.cpp; path = src/Engine/CatmullRomCurve.cpp; sourceTree = SOURCE_ROOT; };
+		30A966CE83EC4CA3B9CA8611 /* generator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = generator; sourceTree = BUILT_PRODUCTS_DIR; };
+		37053D18CDE84373A6B3923C /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Translacao.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Translacao.cpp; path = src/Engine/Translacao.cpp; sourceTree = SOURCE_ROOT; };
+		6DE5D3506196442C92EB2DC2 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Rotacao.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Rotacao.cpp; path = src/Engine/Rotacao.cpp; sourceTree = SOURCE_ROOT; };
+		70B91278E6A942F3B0B65C12 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/engine.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = engine.cpp; path = src/Engine/engine.cpp; sourceTree = SOURCE_ROOT; };
+		81E76BCAD28144B086B5C98A /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Escala.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Escala.cpp; path = src/Engine/Escala.cpp; sourceTree = SOURCE_ROOT; };
+		8728D9DC84BE4100AF9408A0 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/tinyxml2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxml2.cpp; path = src/Engine/tinyxml2.cpp; sourceTree = SOURCE_ROOT; };
+		920639E5110F4524A5782F7F /* engine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = engine; sourceTree = BUILT_PRODUCTS_DIR; };
+		956FEA2098844088BA70D317 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Generator/generator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = generator.cpp; path = src/Generator/generator.cpp; sourceTree = SOURCE_ROOT; };
+		CEA136579EDD4F2E8264BBE4 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Cor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Cor.cpp; path = src/Engine/Cor.cpp; sourceTree = SOURCE_ROOT; };
+		FB042C971A44473A80A8E35F /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Grupo.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Grupo.cpp; path = src/Engine/Grupo.cpp; sourceTree = SOURCE_ROOT; };
+		FCBCC91C93984A3497A5904B /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0B2B3C90514F4BCB99CF5902 /* generator */ = {
+			isa = PBXGroup;
+			children = (
+				CBA9AFF455DA403EB02D8259 /* Source Files */,
+				299638A883974CF5A5C88F2A /* Header Files */,
+				279108459DF74EE0875B63A6 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/CMakeLists.txt */,
+			);
+			name = generator;
+			sourceTree = "<group>";
+		};
+		0E2061D24E974612A85311AB /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		299638A883974CF5A5C88F2A /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AD1A60F4FC24E978C28AD5F /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/include/Ponto.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		2FF39A1058CF494086DC7C8F /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B2C9AC658AF4485AB0946D1 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/CatmullRomCurve.cpp */,
+				CEA136579EDD4F2E8264BBE4 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Cor.cpp */,
+				81E76BCAD28144B086B5C98A /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Escala.cpp */,
+				FB042C971A44473A80A8E35F /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Grupo.cpp */,
+				6DE5D3506196442C92EB2DC2 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Rotacao.cpp */,
+				37053D18CDE84373A6B3923C /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Translacao.cpp */,
+				70B91278E6A942F3B0B65C12 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/engine.cpp */,
+				8728D9DC84BE4100AF9408A0 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/tinyxml2.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		36136B7695A44FDF821AA734 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				9DE82503D5A3459A8EB5F140 /* CMake Rules */,
+				FCBCC91C93984A3497A5904B /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		460ADBB1FDC44177B451290C /* engine */ = {
+			isa = PBXGroup;
+			children = (
+				2FF39A1058CF494086DC7C8F /* Source Files */,
+				0DEC8A96DBC441D99BA47102 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/CMakeLists.txt */,
+			);
+			name = engine;
+			sourceTree = "<group>";
+		};
+		644D48E65BBA477C89DEA26A /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				0E2061D24E974612A85311AB /* CMake Rules */,
+				031BFB1E609B4FD499B281BA /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		9DE82503D5A3459A8EB5F140 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		B50D1654BE674E8395797065 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				920639E5110F4524A5782F7F /* engine */,
+				30A966CE83EC4CA3B9CA8611 /* generator */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8D2EFC705794B6DBEEBC545 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				460ADBB1FDC44177B451290C /* engine */,
+				0B2B3C90514F4BCB99CF5902 /* generator */,
+				36136B7695A44FDF821AA734 /* ALL_BUILD */,
+				644D48E65BBA477C89DEA26A /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		CBA9AFF455DA403EB02D8259 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				956FEA2098844088BA70D317 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Generator/generator.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		EBC1A3A4DC1B45EB80905E4D = {
+			isa = PBXGroup;
+			children = (
+				B8D2EFC705794B6DBEEBC545 /* Sources */,
+				FCC2D8C567A24A71B2858CA0 /* Resources */,
+				B50D1654BE674E8395797065 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCC2D8C567A24A71B2858CA0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		988AEDB792EC44D1BF620A39 /* engine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BFB9BC49CE8418FB4AAA34D /* Build configuration list for PBXNativeTarget "engine" */;
+			buildPhases = (
+				52AEEAC4BF154C2C8795CB26 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				319934FBC61D40ABB750D2F8 /* PBXTargetDependency */,
+			);
+			name = engine;
+			productName = engine;
+			productReference = 920639E5110F4524A5782F7F /* engine */;
+			productType = "com.apple.product-type.tool";
+		};
+		C6DC8CEB35D94E309ADCDF19 /* generator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 918B8207752344DE81BB5199 /* Build configuration list for PBXNativeTarget "generator" */;
+			buildPhases = (
+				DB6C11E4F8994077AA9E6BC7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ECAE75489C14218A2B0C055 /* PBXTargetDependency */,
+			);
+			name = generator;
+			productName = generator;
+			productReference = 30A966CE83EC4CA3B9CA8611 /* generator */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28AE0304EC184B899C1685D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1130;
+			};
+			buildConfigurationList = 19B3F609452E41B6A0406BAF /* Build configuration list for PBXProject "engine" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				7EF1390141C547798FB6F04A /* Debug */,
+				82F95CB0A0594611993421DF /* Release */,
+				55A3F90C735043FA91770E4D /* MinSizeRel */,
+				DA9C28AD865E4E21B951AB33 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = EBC1A3A4DC1B45EB80905E4D;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				E553EF2EE20B4CDD9D43592A /* ALL_BUILD */,
+				D09521F479D04FD39BD43225 /* ZERO_CHECK */,
+				988AEDB792EC44D1BF620A39 /* engine */,
+				C6DC8CEB35D94E309ADCDF19 /* generator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F5EC41F525143C4A1FD5E52 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build -f /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		471F2C58E6B841F485BCF0CE /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build -f /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		A80F3947E58843839E4C9385 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		BD8A2B7468E449CCBD5243F4 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52AEEAC4BF154C2C8795CB26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97E3366019C9480986AE90BB /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/CatmullRomCurve.cpp */,
+				82414AD8455C4430B09C5943 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Cor.cpp */,
+				4068ABE0A2BC4C5DBA7DDA6C /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Escala.cpp */,
+				EBC40470DE8D4001ADABCADB /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Grupo.cpp */,
+				18253EDF144F4869B1A8073E /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Rotacao.cpp */,
+				48A802342AFB450D9803421A /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/Translacao.cpp */,
+				89FBEDA439194D51B5450894 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/engine.cpp */,
+				BE69A53E04594CA6BE877F88 /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Engine/tinyxml2.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6C11E4F8994077AA9E6BC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7708D231B7464F1F957D04EE /* /Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/src/Generator/generator.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0EB15F94F76C4ADC8226A4F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D09521F479D04FD39BD43225 /* ZERO_CHECK */;
+			targetProxy = 46152AD2761E4C19B056832D /* PBXContainerItemProxy */;
+		};
+		1ECAE75489C14218A2B0C055 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D09521F479D04FD39BD43225 /* ZERO_CHECK */;
+			targetProxy = CFCB4A8AFF7D4494B9058FA3 /* PBXContainerItemProxy */;
+		};
+		319934FBC61D40ABB750D2F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D09521F479D04FD39BD43225 /* ZERO_CHECK */;
+			targetProxy = FBD53A1404074D6BA72286BF /* PBXContainerItemProxy */;
+		};
+		77ED5E07E963424F82089F49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6DC8CEB35D94E309ADCDF19 /* generator */;
+			targetProxy = E5478DB5F5114945A2B98A38 /* PBXContainerItemProxy */;
+		};
+		9B2310F0F5684EF1920D37D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 988AEDB792EC44D1BF620A39 /* engine */;
+			targetProxy = 49B217C05E3649CC850D40F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01C83DB8C3684B458DA0B9CF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		0B92444C95EC4F7DA75924BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build/build";
+			};
+			name = Debug;
+		};
+		2619AC4B08F842CE8CE65E68 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		26D0D0F18CF4401A8A398284 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		324594B6F77D487DAE19E903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		3CAEF4B38BD64D0AB4157BF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11' -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = generator;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		409EDF98864E4878B3921C5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build/build";
+			};
+			name = Release;
+		};
+		496FF1A6B5074C6CB7903CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		7889CF6CB89246CEB63761D8 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build/build";
+			};
+			name = MinSizeRel;
+		};
+		989FB39D5E7E40328CC9C8EA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++11' -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -framework OpenGL -framework GLUT -framework Cocoa";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = engine;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A41B72A86F8A4A18B4BBAE40 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		B0DECF6FFB424B9A90F76BE0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11' -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = generator;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B1849034D51E4F66B587DD25 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B448645671B94C72A8EB0225 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		BB5BFE0E26F049E085EC0BC4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++11' -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = generator;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D201ADCA0EBD45F583461BB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11' -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -framework OpenGL -framework GLUT -framework Cocoa";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = engine;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		E4A89991AE4D4D03A64D8A7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11' -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = generator;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		E7116F294E7B4CD392692BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		E88C497A7C234E27BB8A7823 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11' -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -framework OpenGL -framework GLUT -framework Cocoa";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = engine;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F90744A33C72409EAE48BB8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11' -I/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -framework OpenGL -framework GLUT -framework Cocoa";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = engine;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase4/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		028759FEBA7A453388293ECD /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				324594B6F77D487DAE19E903 /* Debug */,
+				B448645671B94C72A8EB0225 /* Release */,
+				2619AC4B08F842CE8CE65E68 /* MinSizeRel */,
+				B1849034D51E4F66B587DD25 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0BFB9BC49CE8418FB4AAA34D /* Build configuration list for PBXNativeTarget "engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F90744A33C72409EAE48BB8E /* Debug */,
+				D201ADCA0EBD45F583461BB2 /* Release */,
+				E88C497A7C234E27BB8A7823 /* MinSizeRel */,
+				989FB39D5E7E40328CC9C8EA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		19B3F609452E41B6A0406BAF /* Build configuration list for PBXProject "engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B92444C95EC4F7DA75924BA /* Debug */,
+				409EDF98864E4878B3921C5C /* Release */,
+				7889CF6CB89246CEB63761D8 /* MinSizeRel */,
+				A41B72A86F8A4A18B4BBAE40 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4916CAB2A13740538ED33FE2 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				496FF1A6B5074C6CB7903CAD /* Debug */,
+				E7116F294E7B4CD392692BD2 /* Release */,
+				26D0D0F18CF4401A8A398284 /* MinSizeRel */,
+				01C83DB8C3684B458DA0B9CF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		918B8207752344DE81BB5199 /* Build configuration list for PBXNativeTarget "generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CAEF4B38BD64D0AB4157BF1 /* Debug */,
+				E4A89991AE4D4D03A64D8A7D /* Release */,
+				B0DECF6FFB424B9A90F76BE0 /* MinSizeRel */,
+				BB5BFE0E26F049E085EC0BC4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28AE0304EC184B899C1685D4 /* Project object */;
+}
