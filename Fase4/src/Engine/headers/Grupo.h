@@ -14,8 +14,12 @@
 using namespace std;
 
 struct VBO {
-    int size;
+    int size_vertices;
     GLuint vertices;
+    int size_normals;
+    GLuint normals;
+    int size_tex;
+    GLuint texCoords;
 };
 
 

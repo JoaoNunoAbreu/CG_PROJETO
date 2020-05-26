@@ -193,7 +193,11 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 txD = (slices+1) * texture_slices_step;
                 tyD = (stacks) * texture_stacks_step;
 
+<<<<<<< HEAD
                /* ----------------------------------- C - A - B ------------------------------------ */
+=======
+                /* ----------------------------------- C - A - B ------------------------------------ */
+>>>>>>> cf5c895b0ec7a487d1cc0c12c9aea716f1cda6d5
                 
                 file << "" << xC  << " " << yC  << " " << zC  << endl;
                 file << "" << nxC << " " << nyC << " " << nzC << endl;
