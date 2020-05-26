@@ -8,6 +8,8 @@
 #include <vector>
 #include <iostream>
 #include "../Common/Ponto.h"
+#include "../Common/Normal.h"
+#include "../Common/Textura.h"
 #include "headers/BezierPatch.h"
 
 constexpr auto INDEX_PER_PATCH = 16;
@@ -193,11 +195,9 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 txD = (slices+1) * texture_slices_step;
                 tyD = (stacks) * texture_stacks_step;
 
-<<<<<<< HEAD
-               /* ----------------------------------- C - A - B ------------------------------------ */
-=======
+
                 /* ----------------------------------- C - A - B ------------------------------------ */
->>>>>>> cf5c895b0ec7a487d1cc0c12c9aea716f1cda6d5
+
                 
                 file << "" << xC  << " " << yC  << " " << zC  << endl;
                 file << "" << nxC << " " << nyC << " " << nzC << endl;
@@ -437,6 +437,7 @@ void generateBezierPatches(vector<int>& indices, vector<Ponto>& control_points, 
 
     vector<Ponto> bezier_points;
     vector<Normal> bezier_normals;
+    vector<Textura> bezier_textures;
 
     /* Cria vetor com os pontos do patch correspondente*/
     for (int patch = 0; patch < numPatches; patch++) {
@@ -457,34 +458,46 @@ void generateBezierPatches(vector<int>& indices, vector<Ponto>& control_points, 
 
                 Ponto bezier_patch_point;
                 Normal bezier_patch_normal;
+                Textura bezier_patch_texture;
 
                 bezier_patch_point = generateBezierPoint(patch_points, u, v);
                 bezier_patch_normal = normalBezier(patch_points, u, v);
+                bezier_patch_texture.x=u;bezier_patch_texture.y=v;
                 bezier_points.push_back(bezier_patch_point);
                 bezier_normals.push_back(bezier_patch_normal);
+                bezier_textures.push_back(bezier_patch_texture);
 
                 bezier_patch_point = generateBezierPoint(patch_points, u + tess, v);
                 bezier_patch_normal = normalBezier(patch_points, u + tess, v);
+                bezier_patch_texture.x=u+tess;bezier_patch_texture.y=v;
                 bezier_points.push_back(bezier_patch_point);
                 bezier_normals.push_back(bezier_patch_normal);
+                bezier_textures.push_back(bezier_patch_texture);
 
                 bezier_patch_point = generateBezierPoint(patch_points, u, v + tess);
                 bezier_patch_normal = normalBezier(patch_points, u, v + tess);
+                bezier_patch_texture.x=u;bezier_patch_texture.y=v+tess;
                 bezier_points.push_back(bezier_patch_point);
                 bezier_normals.push_back(bezier_patch_normal);
+                bezier_textures.push_back(bezier_patch_texture);
                 
                 bezier_points.push_back(bezier_patch_point);
                 bezier_normals.push_back(bezier_patch_normal);
+                bezier_textures.push_back(bezier_patch_texture);
 
                 bezier_patch_point = generateBezierPoint(patch_points, u + tess, v);
                 bezier_patch_normal = normalBezier(patch_points, u + tess , v);
+                bezier_patch_texture.x=u+tess;bezier_patch_texture.y=v;
                 bezier_points.push_back(bezier_patch_point);
                 bezier_normals.push_back(bezier_patch_normal);
+                bezier_textures.push_back(bezier_patch_texture);
 
                 bezier_patch_point = generateBezierPoint(patch_points, u + tess, v + tess);
                 bezier_patch_normal = normalBezier(patch_points, u + tess, v + tess);
+                bezier_patch_texture.x=u+tess;bezier_patch_texture.y=v+tess;
                 bezier_points.push_back(bezier_patch_point);
                 bezier_normals.push_back(bezier_patch_normal);
+                bezier_textures.push_back(bezier_patch_texture);
             }
         }
     }
@@ -495,6 +508,7 @@ void generateBezierPatches(vector<int>& indices, vector<Ponto>& control_points, 
         for (int i=0;i<bezier_points.size();i++) {
             file << bezier_points[i].x << " " << bezier_points[i].y << " " << bezier_points[i].z << endl;
             file << bezier_normals[i].x << " " << bezier_normals[i].y << " " << bezier_normals[i].z << endl;
+            file << bezier_textures[i].x << " " << bezier_textures[i].y << endl;
         
        }
     }
