@@ -7,7 +7,8 @@
 #include <cstdlib>
 #include <vector>
 #include <iostream>
-#include "../include/Ponto.h"
+#include "../Common/Ponto.h"
+#include "headers/BezierPatch.h"
 
 constexpr auto INDEX_PER_PATCH = 16;
 
@@ -151,8 +152,8 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 nyA = sin(beta + deslocacao_beta);
                 nzA = cos(beta + deslocacao_beta) * cos(alpha);
                 
-                txA = slice * texture_slices_step;
-                tyA = (stack+1) * texture_stacks_step;
+                txA = slices * texture_slices_step;
+                tyA = (stacks+1) * texture_stacks_step;
 
                 /* --------------------------------- Ponto B --------------------------------- */
                 xB = radius * cos(beta) * sin(alpha);
@@ -163,8 +164,8 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 nyB = sin(beta);
                 nzB = cos(beta) * cos(alpha);
                 
-                txB = slice * texture_slices_step;
-                tyB = stack * texture_stacks_step;
+                txB = slices * texture_slices_step;
+                tyB = stacks * texture_stacks_step;
                 
                 /* --------------------------------- Ponto C --------------------------------- */
                 
@@ -176,8 +177,8 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 nyC = sin(beta + deslocacao_beta);
                 nzC = cos(beta + deslocacao_beta) * cos(alpha + deslocacao_alpha);
                 
-                txC = (slice+1) * texture_slices_step;
-                tyC = (stack+1) * texture_stacks_step;
+                txC = (slices+1) * texture_slices_step;
+                tyC = (stacks+1) * texture_stacks_step;
                 
                 /* --------------------------------- Ponto D --------------------------------- */
                     
@@ -189,16 +190,36 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 nyD = sin(beta);
                 nzD = cos(beta) * cos(alpha + deslocacao_alpha);
                 
-                txD = (slice+1) * texture_slices_step;
-                tyD = (stack) * texture_stacks_step;
+                txD = (slices+1) * texture_slices_step;
+                tyD = (stacks) * texture_stacks_step;
 
-                file << "" << xC << " " << yC << " " << zC << "\n";
-                file << "" << xA << " " << yA << " " << zA << "\n";
-                file << "" << xB << " " << yB << " " << zB << "\n";
+               /* ----------------------------------- C - A - B ------------------------------------ */
+                
+                file << "" << xC  << " " << yC  << " " << zC  << endl;
+                file << "" << nxC << " " << nyC << " " << nzC << endl;
+                file << "" << txC << " " << tyC << endl;
+                
+                file << "" << xA  << " " << yA  << " " << zA  << endl;
+                file << "" << nxA << " " << nyA << " " << nzA << endl;
+                file << "" << txA << " " << tyA << endl;
+                
+                file << "" << xB  << " " << yB  << " " << zB  << endl;
+                file << "" << nxB << " " << nyB << " " << nzB << endl;
+                file << "" << txB << " " << tyB << endl;
+                
+                /* ----------------------------------- B - D - C -------------------------------- */
 
-                file << "" << xB << " " << yB << " " << zB << "\n";
-                file << "" << xD << " " << yD << " " << zD << "\n";
-                file << "" << xC << " " << yC << " " << zC << "\n";
+                file << "" << xB  << " " << yB  << " " << zB  << endl;
+                file << "" << nxB << " " << nyB << " " << nzB << endl;
+                file << "" << txB << " " << tyB << endl;
+                
+                file << "" << xD  << " " << yD  << " " << zD  << endl;
+                file << "" << nxD << " " << nyD << " " << nzD << endl;
+                file << "" << txD << " " << tyD << endl;
+                
+                file << "" << xC  << " " << yC  << " " << zC  << endl;
+                file << "" << nxC << " " << nyC << " " << nzC << endl;
+                file << "" << txC << " " << tyC << endl;
 
             }
             beta += deslocacao_beta;
@@ -407,58 +428,11 @@ void drawTorus(float ri, float re, int slices, int stacks, string filename) {
     file.close();
 }
 
-void multMatrixVector(float* m, float* v, float* res) {
-
-    for (int j = 0; j < 4; ++j) {
-        res[j] = 0;
-        for (int k = 0; k < 4; ++k) {
-            res[j] += v[k] * m[j * 4 + k];
-        }
-    }
-}
-
-Ponto generateBezierPoint(vector<Ponto>& patch_points, float u, float v) {
-
-    float M[16] = { -1, 3, -3, 1, 3, -6, 3, 0, -3, 3, 0, 0, 1, 0, 0, 0 };
-
-    float U[4] = { u * u * u, u * u, u, 1 };
-    float V[4] = { v * v * v, v * v, v, 1 };
-
-    float UM[4];
-    float MV[4];
-    //3 -> x,y,z
-    float UMPontos[3][4];
-    float PontoBezier[3];
-
-    Ponto pontoGerado;
-
-    //U x M
-    multMatrixVector(M, U, UM);
-    //M x V
-    multMatrixVector(M, V, MV);
-    
-    for (int j = 0; j < 4; j++) {
-        UMPontos[0][j] = UM[0] * patch_points[j * 4 + 0].x + UM[1] * patch_points[j * 4 + 1].x
-            + UM[2] * patch_points[j * 4 + 2].x + UM[3] * patch_points[j * 4 + 3].x;
-        UMPontos[1][j] = UM[0] * patch_points[j * 4 + 0].y + UM[1] * patch_points[j * 4 + 1].y
-            + UM[2] * patch_points[j * 4 + 2].y + UM[3] * patch_points[j * 4 + 3].y;
-        UMPontos[2][j] = UM[0] * patch_points[j * 4 + 0].z + UM[1] * patch_points[j * 4 + 1].z
-            + UM[2] * patch_points[j * 4 + 2].z + UM[3] * patch_points[j * 4 + 3].z;
-    }
-
-    //UMcoordenadasXYZ x MV
-    for (int i = 0; i < 3; i++) {
-        PontoBezier[i] = UMPontos[i][0] * MV[0] + UMPontos[i][1] * MV[1] + UMPontos[i][2] * MV[2] + UMPontos[i][3] * MV[3];
-    }
-
-    pontoGerado.x = PontoBezier[0]; pontoGerado.y = PontoBezier[1]; pontoGerado.z = PontoBezier[2];
-
-    return pontoGerado;
-}
 
 void generateBezierPatches(vector<int>& indices, vector<Ponto>& control_points, int numPatches, int tessellation, string fileToWrite) {
 
     vector<Ponto> bezier_points;
+    vector<Normal> bezier_normals;
 
     /* Cria vetor com os pontos do patch correspondente*/
     for (int patch = 0; patch < numPatches; patch++) {
@@ -478,18 +452,35 @@ void generateBezierPatches(vector<int>& indices, vector<Ponto>& control_points, 
                 float v = j * tess;
 
                 Ponto bezier_patch_point;
+                Normal bezier_patch_normal;
 
                 bezier_patch_point = generateBezierPoint(patch_points, u, v);
+                bezier_patch_normal = normalBezier(patch_points, u, v);
                 bezier_points.push_back(bezier_patch_point);
+                bezier_normals.push_back(bezier_patch_normal);
+
                 bezier_patch_point = generateBezierPoint(patch_points, u + tess, v);
+                bezier_patch_normal = normalBezier(patch_points, u + tess, v);
                 bezier_points.push_back(bezier_patch_point);
+                bezier_normals.push_back(bezier_patch_normal);
+
                 bezier_patch_point = generateBezierPoint(patch_points, u, v + tess);
+                bezier_patch_normal = normalBezier(patch_points, u, v + tess);
                 bezier_points.push_back(bezier_patch_point);
+                bezier_normals.push_back(bezier_patch_normal);
+                
                 bezier_points.push_back(bezier_patch_point);
+                bezier_normals.push_back(bezier_patch_normal);
+
                 bezier_patch_point = generateBezierPoint(patch_points, u + tess, v);
+                bezier_patch_normal = normalBezier(patch_points, u + tess , v);
                 bezier_points.push_back(bezier_patch_point);
+                bezier_normals.push_back(bezier_patch_normal);
+
                 bezier_patch_point = generateBezierPoint(patch_points, u + tess, v + tess);
+                bezier_patch_normal = normalBezier(patch_points, u + tess, v + tess);
                 bezier_points.push_back(bezier_patch_point);
+                bezier_normals.push_back(bezier_patch_normal);
             }
         }
     }
@@ -497,9 +488,11 @@ void generateBezierPatches(vector<int>& indices, vector<Ponto>& control_points, 
     ofstream file(fileToWrite);
    
     if (file.is_open()) {
-        for (Ponto p : bezier_points) {
-            file << p.x << " " << p.y << " " << p.z << endl;
-        }
+        for (int i=0;i<bezier_points.size();i++) {
+            file << bezier_points[i].x << " " << bezier_points[i].y << " " << bezier_points[i].z << endl;
+            file << bezier_normals[i].x << " " << bezier_normals[i].y << " " << bezier_normals[i].z << endl;
+        
+       }
     }
     file.close();
 }
@@ -621,11 +614,11 @@ int main(int argc, char** argv) {
         drawCone(atof(argv[2]), atof(argv[3]), atoi(argv[4]), atoi(argv[5]), a);
     }
     else if (argc == 7 && !strcmp(argv[1], "torus")) {
-        a = x + argv[6];
+        a = prefix1 + argv[6];
         drawTorus(atof(argv[2]), atof(argv[3]), atof(argv[4]), atof(argv[5]), a);
     }
     else if (argc == 5 && !strcmp(argv[1], "teapot")) {
-        a = x + argv[4];
+        a = prefix2 + argv[4];
         c = prefix2 + argv[2];
         readBezierPatches(c, atoi(argv[3]), a);
     }
