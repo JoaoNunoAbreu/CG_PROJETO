@@ -39,27 +39,6 @@ int timebase = 0, frame = 0;
 
 Grupo g;
 
-void drawAxis(){
-    
-    glPushMatrix();
-    glBegin(GL_LINES);
-        // X axis in red
-        glColor3f(1.0f, 0.0f, 0.0f);
-        glVertex3f(0.0f, 0.0f, 0.0f);
-        glVertex3f(100.0f, 0.0f, 0.0f);
-        // Y Axis in Green
-        glColor3f(0.0f, 1.0f, 0.0f);
-        glVertex3f(0.0f, 0.0f, 0.0f);
-        glVertex3f(0.0f, 100.0f, 0.0f);
-        // Z Axis in Orange
-        glColor3f(1, 0.5, 0);
-        glVertex3f(0.0f, 0.0f, 0.0f);
-        glVertex3f(0.0f, 0.0f, 100.0f);
-    glEnd();
-    glPopMatrix();
-    
-}
-
 void changeSize(int w, int h) {
 
     // Prevent a divide by zero, when window is too short
@@ -203,66 +182,86 @@ void readFile (Grupo &grupo, string filename){
     
     ifstream infile;
    
-        infile.open(filename);
-        if (infile.is_open()) {
+    infile.open(filename);
+    if (infile.is_open()) {
 
-            cout << "Ficheiro = " << filename << endl;
+        cout << "Ficheiro = " << filename << endl;
 
-            string s;
-            string token;
+        string s;
+        string token;
+        size_t pos = 0;
 
-            size_t pos = 0;
-
-            string delimiter = " ";
+        string delimiter = " ";
            
-            glEnableClientState(GL_VERTEX_ARRAY);
+        glEnableClientState(GL_VERTEX_ARRAY);
 
-            vector<float> model;
-       
-            float x, y, z;
+        vector<float> model;
+        vector<float> normal;
+        vector<float> textura;
+        float x, y, z;
+        
+        int type = 0; // 0 - coords, 1 - normal, 2 - textura
 
-            while (!infile.eof()) {
+        while (!infile.eof()) {
 
-                int i = 0;
-                getline(infile, s); // Saves the line in STRING.
-                // cout << "s = " << s << endl;
-                while ((pos = s.find(delimiter)) != std::string::npos) {
+            int i = 0;
+            getline(infile, s);
+            // cout << "s = " << s << endl;
+            while ((pos = s.find(delimiter)) != std::string::npos) {
 
-                    token = s.substr(0, pos);
+                token = s.substr(0, pos);
 
-                    if (i == 0) {
-                        x = atof(token.c_str());
-                        model.push_back(x);
-                    }
-
-                    else if (i == 1) {
-                        y = atof(token.c_str());
-                        model.push_back(y);
-                    }
-                    s.erase(0, pos + delimiter.length());
-                    i++;
+                if (i == 0) {
+                    x = atof(token.c_str());
+                    if(type == 0) model.push_back(x);
+                    if(type == 1) normal.push_back(x);
+                    if(type == 2) textura.push_back(x);
                 }
-                z = atof(s.c_str());
-             
-                model.push_back(z);
+
+                else if (i == 1) {
+                    y = atof(token.c_str());
+                    if(type == 0) model.push_back(y);
+                    if(type == 1) normal.push_back(y);
+                    if(type == 2) textura.push_back(y);
+                }
+                s.erase(0, pos + delimiter.length());
+                i++;
             }
-
-            // gera VBO
-            int size = model.size();
-            GLuint buffer;
-            VBO v;
-
-            glGenBuffers(1, &buffer);
-            glBindBuffer(GL_ARRAY_BUFFER, buffer);
-            glBufferData(GL_ARRAY_BUFFER, sizeof(float) * model.size(), model.data(), GL_STATIC_DRAW);
-
-            v.size = model.size()/3 ;
-            v.vertices = buffer;
-
-            grupo.addModel(v);
-
-            infile.close();
+            z = atof(s.c_str());
+             
+            if(type == 0) model.push_back(z);
+            if(type == 1) normal.push_back(z);
+            if(type == 2) textura.push_back(z);
+            
+            if(type == 2) type = 0;
+            else type++;
         }
+
+        // gera VBO
+        GLuint vecbuf, normbuf, texbuf;
+        VBO v;
+
+        glGenBuffers(1, &vecbuf);
+        glBindBuffer(GL_ARRAY_BUFFER, vecbuf);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(float) * model.size(), model.data(), GL_STATIC_DRAW);
+        glGenBuffers(1, &normbuf);
+        glBindBuffer(GL_ARRAY_BUFFER, normbuf);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(float) * normal.size(), normal.data(), GL_STATIC_DRAW);
+        glGenBuffers(1, &texbuf);
+        glBindBuffer(GL_ARRAY_BUFFER, texbuf);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(float) * textura.size(), textura.data(), GL_STATIC_DRAW);
+
+        v.size_vertices = model.size()/3 ;
+        v.vertices = vecbuf;
+        v.size_normals = normal.size()/3;
+        v.normals = normbuf;
+        v.size_tex = textura.size() / 3;
+        v.texCoords = texbuf;
+
+        grupo.addModel(v);
+
+        infile.close();
+    }
 }
 
 
@@ -387,6 +386,20 @@ void readXML(string file){
     }
 }
 
+void initGL() {
+
+    // alguns settings para OpenGL
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);
+
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_NORMAL_ARRAY);
+    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+
+    glEnable(GL_TEXTURE_2D);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+}
 
 int main(int argc, char **argv){
    
@@ -395,7 +408,7 @@ int main(int argc, char **argv){
     glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
     glutInitWindowPosition(100,100);
     glutInitWindowSize(1000,1000);
-    glutCreateWindow("Fase 3");
+    glutCreateWindow("Fase 4");
     
     #ifndef __APPLE__
     // init GLEW
@@ -409,7 +422,6 @@ int main(int argc, char **argv){
 
     readXML("config.xml");
 
-
     glutDisplayFunc(renderScene);
     glutReshapeFunc(changeSize);
     glutIdleFunc(renderScene);
@@ -418,15 +430,10 @@ int main(int argc, char **argv){
     glutSpecialFunc(processSpecialKeys);
     
     createGLUTMenus();
-
-   
-
-    glEnable(GL_DEPTH_TEST);
-    glEnable(GL_CULL_FACE);
     
     spherical2Cartesian();
 
-  
+    initGL();
 
     glutMainLoop();
     
