@@ -636,7 +636,7 @@ int main(int argc, char** argv) {
         drawTorus(atof(argv[2]), atof(argv[3]), atof(argv[4]), atof(argv[5]), a);
     }
     else if (argc == 5 && !strcmp(argv[1], "teapot")) {
-        a = prefix2 + argv[4];
+        a = prefix1 + argv[4];
         c = prefix2 + argv[2];
         readBezierPatches(c, atoi(argv[3]), a);
     }
