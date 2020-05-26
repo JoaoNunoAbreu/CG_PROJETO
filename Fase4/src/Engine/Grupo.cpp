@@ -14,6 +14,7 @@ void Grupo :: draw(VBO models){
     // cout << "GLuint " <<models.vertices<< endl;
     // cout << "Nº vert " << models.size << endl;
     //Desenha VBO
+    
     glBindBuffer(GL_ARRAY_BUFFER, models.vertices);
     glVertexPointer(3, GL_FLOAT, 0, 0);
     glDrawArrays(GL_TRIANGLES, 0, models.size);
