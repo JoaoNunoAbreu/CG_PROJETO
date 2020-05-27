@@ -4,7 +4,7 @@ set (CMAKE_CXX_STANDARD 11)
 
 # Project Name
 Project(generator)
-add_executable(${PROJECT_NAME} src/Generator/generator.cpp src/include/Ponto.h)
+add_executable(${PROJECT_NAME} src/Generator/generator.cpp src/Common/Ponto.h)
 
 
 # Project Name
