@@ -1,6 +1,7 @@
 #ifndef Grupo_H
 #define Grupo_H
 #include "Transformacao.h"
+#include "Model.h"
 #define GL_SILENCE_DEPRECATION
 #ifdef __APPLE__
 #include <GLUT/glut.h>
@@ -13,28 +14,18 @@
 #include <vector>
 using namespace std;
 
-struct VBO {
-    int size_vertices;
-    GLuint vertices;
-    int size_normals;
-    GLuint normals;
-    int size_tex;
-    GLuint texCoords;
-};
-
-
 class Grupo {
 public:
     vector<Transformacao*> transformations;
-    vector<VBO> models;
+    vector<Model> models;
     vector<Grupo> childgroups;
 public:
     Grupo() {};
     ~Grupo() {};
     void drawGroup(float tempo);
-    void draw(VBO models);
+    void draw(Model models);
     void addTransformation(Transformacao* t);
-    void addModel(VBO v);
+    void addModel(Model v);
     void addChilds(Grupo t);
 };
 #endif

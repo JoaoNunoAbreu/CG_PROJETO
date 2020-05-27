@@ -1,7 +1,7 @@
 #ifndef CatmullRomCurve_H
 #define CatmullRomCurve_H
 
-#include "../../include/Ponto.h"
+#include "../../Common/Ponto.h"
 #include <vector>
 #include <math.h>
 using namespace std;

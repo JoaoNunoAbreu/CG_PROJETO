@@ -1,7 +1,7 @@
 #ifndef TRANSLACAO_H
 #define TRANSLACAO_H
 #include "Transformacao.h"
-#include "../../include/Ponto.h"
+#include "../../Common/Ponto.h"
 #include <vector>
 #include "CatmullRomCurve.h"
 

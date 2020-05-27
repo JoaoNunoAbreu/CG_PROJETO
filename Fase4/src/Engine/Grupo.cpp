@@ -9,22 +9,22 @@ void Grupo :: drawGroup(float tempo){
     glPopMatrix();
 }
 
-void Grupo :: draw(VBO models){
+void Grupo :: draw(Model models){
     
     // cout << "GLuint " <<models.vertices<< endl;
     // cout << "Nº vert " << models.size << endl;
     //Desenha VBO
     
-    glBindBuffer(GL_ARRAY_BUFFER, models.vertices);
+    /*glBindBuffer(GL_ARRAY_BUFFER, models.vertices);
     glVertexPointer(3, GL_FLOAT, 0, 0);
-    glDrawArrays(GL_TRIANGLES, 0, models.size);
+    glDrawArrays(GL_TRIANGLES, 0, models.size_vertices);*/
 }
 
 void Grupo :: addTransformation(Transformacao* t){
     transformations.push_back(t);
 }
 
-void Grupo :: addModel(VBO v){
+void Grupo :: addModel(Model v){
     models.push_back(v);
 }
 

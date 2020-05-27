@@ -26,7 +26,7 @@
 #include "headers/Escala.h"
 #include "headers/tinyxml2.h"
 #include "headers/Grupo.h"
-#include "../include/Ponto.h"
+#include "../Common/Ponto.h"
 #include "headers/CatmullRomCurve.h"
 
 using namespace tinyxml2;
@@ -192,8 +192,6 @@ void readFile (Grupo &grupo, string filename){
         size_t pos = 0;
 
         string delimiter = " ";
-           
-        glEnableClientState(GL_VERTEX_ARRAY);
 
         vector<float> model;
         vector<float> normal;
@@ -231,7 +229,6 @@ void readFile (Grupo &grupo, string filename){
              
             if(type == 0) model.push_back(z);
             if(type == 1) normal.push_back(z);
-            if(type == 2) textura.push_back(z);
             
             if(type == 2) type = 0;
             else type++;
@@ -420,6 +417,8 @@ int main(int argc, char **argv){
     }
     #endif
 
+    initGL();
+    
     readXML("config.xml");
 
     glutDisplayFunc(renderScene);
@@ -432,8 +431,6 @@ int main(int argc, char **argv){
     createGLUTMenus();
     
     spherical2Cartesian();
-
-    initGL();
 
     glutMainLoop();
     
