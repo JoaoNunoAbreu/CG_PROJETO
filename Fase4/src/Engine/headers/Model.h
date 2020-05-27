@@ -34,8 +34,17 @@ private:
     float ambient[4], diffuse[4], specular[4], emissive[4], shininess;
 public:
     Model() {};
-    Model(int texFlag, string primitive, string texture, float *amb, float *diff, float * spec, float *emiss, float shin);
+    Model(int texFlag, VBO v, string texture, float *amb, float *diff, float * spec, float *emiss, float shin);
     ~Model() {};
+
+    void setTexFlag(int texFlag);
+    void setVBO(VBO v);
+    void setTexture(string texture);
+    void setAmbient(float* ambient);
+    void setDiffuse(float* diffuse);
+    void setSpecular(float* specular);
+    void setEmissive(float* emissive);
+    void setShininess(float shininess);
     void drawModel();
 };
 #endif

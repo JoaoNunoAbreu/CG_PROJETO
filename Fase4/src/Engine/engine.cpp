@@ -183,7 +183,7 @@ void createGLUTMenus() {
     glutAttachMenu(GLUT_RIGHT_BUTTON);
 }
 
-void readFile (Grupo &grupo, string filename){
+void readFile (Grupo &grupo, string filename, Model& modelo){
     
     ifstream infile;
    
@@ -260,8 +260,8 @@ void readFile (Grupo &grupo, string filename){
         v.size_tex = textura.size() / 3;
         v.texCoords = texbuf;
 
-        grupo.addModel(v);
-
+        modelo.setVBO(v);
+        
         infile.close();
     }
 }
@@ -346,6 +346,42 @@ void loadLights(Grupo& grupo, XMLElement* elem) {
 }
 
 
+void loadModels(Grupo& grupo, XMLElement* elem, Model& modelo) {
+    int texFlag = 0;
+    float amb[4] = { 0.2f, 0.2f, 0.2f, 1.0f };
+    float diff[4] = { 0.8f, 0.8f, 0.8f, 1.0f };
+    float spec[4] = { 0.0f, 0.0f, 0.0f, 1.0f };
+    float emiss[4] = { 0.0f, 0.0f, 0.0f, 1.0f };
+    float shin = 0.0f;
+    
+    const XMLAttribute* attr; // atributos de model
+
+    // percorre atributos do model
+    for (attr = elem->FirstAttribute(); attr; attr = attr->Next()) {
+        string atrib = attr->Name();
+        if(atrib=="texture") {texFlag = 1;/* falta load texture*/}
+        if (atrib == "diffR")      diff[0]  = stof(attr->Value());
+        if (atrib == "diffG")      diff[1]  = stof(attr->Value());
+        if (atrib == "diffB")      diff[2]  = stof(attr->Value());
+        if (atrib == "specR")      spec[0] = stof(attr->Value());
+        if (atrib == "specR")      spec[1] = stof(attr->Value());
+        if (atrib == "specR")      spec[2] = stof(attr->Value());
+        if (atrib == "ambR")       amb[0]  = stof(attr->Value());
+        if (atrib == "ambG")       amb[1]  = stof(attr->Value());
+        if (atrib == "ambB")       amb[2]  = stof(attr->Value());
+        if (atrib == "emisR")      emiss[0]  = stof(attr->Value());
+        if (atrib == "emisG")      emiss[1]  = stof(attr->Value());
+        if (atrib == "emisB")      emiss[2]  = stof(attr->Value());
+    }
+    
+    modelo.setTexFlag(texFlag);
+    modelo.setAmbient(amb);
+    modelo.setDiffuse(diff);
+    modelo.setSpecular(spec);
+    modelo.setEmissive(emiss);
+    modelo.setShininess(shin);
+}
+
 void parseGroup(Grupo& grupo, XMLElement* group) {
 
     XMLElement* elem;
@@ -414,8 +450,11 @@ void parseGroup(Grupo& grupo, XMLElement* group) {
         else if (tag == "models") {
             //PERCORRE MODELS
             for (XMLElement* models = group->FirstChildElement("models")->FirstChildElement("model"); models; models = models->NextSiblingElement("model")) {
+                Model m; // Cada iteração de model cria um novo aqui
                 string ficheiro = models->Attribute("file");
-                readFile(grupo, ficheiro);
+                readFile(grupo, ficheiro,m); // preenche os VBO's do Modelo m passado por argumento
+                loadModels(grupo, models, m); // preenche os restos dos campos do Modelo
+                grupo.addModel(m); //
             }
         }
     }
