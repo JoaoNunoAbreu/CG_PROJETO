@@ -28,9 +28,12 @@
 #include "headers/Grupo.h"
 #include "../Common/Ponto.h"
 #include "headers/CatmullRomCurve.h"
+#include "headers/Light.h"
+#include "headers/Model.h"
 
 using namespace tinyxml2;
 using namespace std;
+
 
 float alfa = 0.7f, beta = 0.5f, radius = 200.0f;
 float camX, camY, camZ;
@@ -38,6 +41,8 @@ float camX, camY, camZ;
 int timebase = 0, frame = 0;
 
 Grupo g;
+vector<Light> lights;
+
 
 void changeSize(int w, int h) {
 
@@ -283,87 +288,134 @@ void loadControlPoints(vector<Ponto>& controlpoints, XMLElement* elem) {
     }
 }
 
+void loadLights(Grupo& grupo, XMLElement* elem) {
 
-void parseGroup(Grupo &grupo, XMLElement *group){
+    XMLElement* elem2;  // lights
+    const XMLAttribute* attr; // atributos de light
+    int light_number = 0;
 
-    XMLElement * elem;
-    float x=0,y=0.0f,z=0.0f,angle=0.0f;
+    // percorre lights
+    for (elem2 = elem->FirstChildElement(); elem2 != NULL; elem2 = elem2->NextSiblingElement()) {
 
- 
+        int type = 0;  // POINT ,DIRECTIONAL, SPOTLIGHT
+        float position[4] = { 0.0f, 0.0f, 1.0f, 0.0f };     // Posição da luz
+        float ambient[4] = { 0.0f, 0.0f, 0.0f, 1.0f };      // Cor ambiente da luz
+        float diffuse[4] = { 1.0f, 1.0f, 1.0f, 1.0f };      // Cor difusa da luz
+        float specular[4] = { 1.0f, 1.0f, 1.0f, 1.0f };     // Cor ambiente da luz
+        float spotDirection[3] = { 0.0f, 0.0f, -1.0f };     // Direção da spot light
+        float cutoff = 180.0f;
+
+        // percorre atributos das lights
+        for (attr = elem->FirstAttribute(); attr; attr = attr->Next()) {
+
+            string atrib = attr->Name();
+
+            if (atrib == "type") {
+                string tipo = attr->Value();
+
+                if (tipo == "POINT") type = 0;
+                else if (tipo == "DIRECTIONAL") type = 1;
+                else if (tipo == "SPOTLIGHT") type = 2;
+            }
+
+            if (atrib == "diffR")      diffuse[0]  = stof(attr->Value());
+            if (atrib == "diffG")      diffuse[1]  = stof(attr->Value());
+            if (atrib == "diffB")      diffuse[2]  = stof(attr->Value());
+            if (atrib == "specR")      specular[0] = stof(attr->Value());
+            if (atrib == "specR")      specular[1] = stof(attr->Value());
+            if (atrib == "specR")      specular[2] = stof(attr->Value());
+            if (atrib == "posX")       position[0] = stof(attr->Value());
+            if (atrib == "posY")       position[1] = stof(attr->Value());
+            if (atrib == "posZ")       position[2] = stof(attr->Value());
+            if (atrib == "ambR")       ambient[0]  = stof(attr->Value());
+            if (atrib == "ambG")       ambient[1]  = stof(attr->Value());
+            if (atrib == "ambB")       ambient[2]  = stof(attr->Value());
+            if (atrib == "spotDirX")   spotDirection[0] = stof(attr->Value());
+            if (atrib == "spotDirY")   spotDirection[1] = stof(attr->Value());
+            if (atrib == "spotDirZ")   spotDirection[2] = stof(attr->Value());
+            if (atrib == "cutoff")     cutoff = stof(attr->Value());
+
+        }
+        
+        Light light(type, light_number, position, ambient, diffuse, specular, spotDirection, cutoff);
+        lights.push_back(light);
+        glEnable(light_number + GL_LIGHT0);
+        light_number++;
+        if (light_number > 8) cout << "Numero max de luzes e 8" << endl;
+    }
+}
+
+
+void parseGroup(Grupo& grupo, XMLElement* group) {
+
+    XMLElement* elem;
+    float x = 0, y = 0.0f, z = 0.0f, angle = 0.0f;
+
     // vai iterar o grupo
-    for(elem = group->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()) {
+    for (elem = group->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement()) {
 
         string tag = elem->Value();
-        
-        if(tag == "group"){
-       
+
+        if (tag == "group") {
             Grupo childGroup;
             parseGroup(childGroup, elem);
             grupo.addChilds(childGroup);
         }
-        else if(tag=="translate"){
+        else if (tag == "translate") {
             vector<Ponto> controlPoints;
             float tempo = 0.0f;
             int flag = 0;
-         
-            
             if ((elem->Attribute("time"))) {
                 tempo = stof(elem->Attribute("time"));
                 loadControlPoints(controlPoints, elem);
                 flag = 1;
             }
-            
             if (!flag) {
                 x = stof(elem->Attribute("X")); //Retira X
                 y = stof(elem->Attribute("Y")); //Retira Y
                 z = stof(elem->Attribute("Z")); //Retira Z
             }
-
-            Translacao *t = new Translacao(x,y,z,tempo,controlPoints);
-     
+            Translacao* t = new Translacao(x, y, z, tempo, controlPoints);
             grupo.addTransformation(t);
         }
-        else if(tag=="rotate"){
-          
+        else if (tag == "rotate") {
             float tempo = 0.0f;
             int flag = 0;
-
             if ((elem->Attribute("time"))) {
                 tempo = stof(elem->Attribute("time"));
                 flag = 1;
             }
-
-            if(!flag)
-            angle = stof(elem->Attribute("angle")); //Retira angulo
+            if (!flag)
+                angle = stof(elem->Attribute("angle")); //Retira angulo
 
             x = stof(elem->Attribute("X"));  //Retira X
             y = stof(elem->Attribute("Y")); //Retira Y
             z = stof(elem->Attribute("Z")); //Retira Z
-
-            Rotacao *r = new Rotacao(angle,tempo,x,y,z);
+            Rotacao* r = new Rotacao(angle, tempo, x, y, z);
             grupo.addTransformation(r);
         }
-        else if(tag=="scale"){
-        
+        else if (tag == "scale") {
             x = stof(elem->Attribute("X")); //Retira X
             y = stof(elem->Attribute("Y")); //Retira Y
             z = stof(elem->Attribute("Z")); //Retira Z
-            Escala *e = new Escala(x,y,z);
+            Escala* e = new Escala(x, y, z);
             grupo.addTransformation(e);
         }
-        else if(tag =="colour"){
-        
+        else if (tag == "colour") {
             x = stof(elem->Attribute("R")); //Retira R
             y = stof(elem->Attribute("G")); //Retira G
             z = stof(elem->Attribute("B")); //Retira B
-            Cor *c = new Cor(x,y,z);
-            grupo.addTransformation(c);
+            Cor* c = new Cor(x, y, z);
+            grupo.addTransformation(c);  // Guarda cor
         }
-        else if(tag=="models"){
+        else if (tag == "lights") {
+            loadLights(grupo, elem);
+        }
+        else if (tag == "models") {
             //PERCORRE MODELS
-            for(XMLElement* models = group->FirstChildElement("models")->FirstChildElement("model"); models; models = models -> NextSiblingElement("model")){
+            for (XMLElement* models = group->FirstChildElement("models")->FirstChildElement("model"); models; models = models->NextSiblingElement("model")) {
                 string ficheiro = models->Attribute("file");
-                readFile(grupo,ficheiro);
+                readFile(grupo, ficheiro);
             }
         }
     }
