@@ -9,6 +9,6 @@ private:
 public:
     Light();
     Light(int type, int number, float *pos, float *amb, float *diff, float *spec, float *spot, float cutoff);
-    void turnUpTheLight();
+    void turnOn();
 };
 #endif

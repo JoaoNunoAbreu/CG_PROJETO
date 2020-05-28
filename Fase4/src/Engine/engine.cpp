@@ -26,10 +26,11 @@
 #include "headers/Escala.h"
 #include "headers/tinyxml2.h"
 #include "headers/Grupo.h"
-#include "../Common/Ponto.h"
 #include "headers/CatmullRomCurve.h"
 #include "headers/Light.h"
 #include "headers/Model.h"
+#include "headers/il.h"
+#include "../Common/Ponto.h"
 
 using namespace tinyxml2;
 using namespace std;
@@ -85,7 +86,7 @@ void renderScene(void) {
         0.0, 0.0, 0.0,
         0.0f, 1.0f, 0.0f);
     
-    //drawAxis();
+    for (auto light : lights) light.turnOn();
     g.drawGroup(time);
     
     frame++;
@@ -198,7 +199,7 @@ void readFile (Grupo &grupo, string filename, Model& modelo){
 
         string delimiter = " ";
 
-        vector<float> model;
+        vector<float> vertices;
         vector<float> normal;
         vector<float> textura;
         float x, y, z;
@@ -216,14 +217,14 @@ void readFile (Grupo &grupo, string filename, Model& modelo){
 
                 if (i == 0) {
                     x = atof(token.c_str());
-                    if(type == 0) model.push_back(x);
+                    if(type == 0) vertices.push_back(x);
                     if(type == 1) normal.push_back(x);
                     if(type == 2) textura.push_back(x);
                 }
 
                 else if (i == 1) {
                     y = atof(token.c_str());
-                    if(type == 0) model.push_back(y);
+                    if(type == 0) vertices.push_back(y);
                     if(type == 1) normal.push_back(y);
                     if(type == 2) textura.push_back(y);
                 }
@@ -232,7 +233,7 @@ void readFile (Grupo &grupo, string filename, Model& modelo){
             }
             z = atof(s.c_str());
              
-            if(type == 0) model.push_back(z);
+            if(type == 0) vertices.push_back(z);
             if(type == 1) normal.push_back(z);
             
             if(type == 2) type = 0;
@@ -245,7 +246,7 @@ void readFile (Grupo &grupo, string filename, Model& modelo){
 
         glGenBuffers(1, &vecbuf);
         glBindBuffer(GL_ARRAY_BUFFER, vecbuf);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(float) * model.size(), model.data(), GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(float) * vertices.size(), vertices.data(), GL_STATIC_DRAW);
         glGenBuffers(1, &normbuf);
         glBindBuffer(GL_ARRAY_BUFFER, normbuf);
         glBufferData(GL_ARRAY_BUFFER, sizeof(float) * normal.size(), normal.data(), GL_STATIC_DRAW);
@@ -253,7 +254,7 @@ void readFile (Grupo &grupo, string filename, Model& modelo){
         glBindBuffer(GL_ARRAY_BUFFER, texbuf);
         glBufferData(GL_ARRAY_BUFFER, sizeof(float) * textura.size(), textura.data(), GL_STATIC_DRAW);
 
-        v.size_vertices = model.size()/3 ;
+        v.size_vertices = vertices.size()/3 ;
         v.vertices = vecbuf;
         v.size_normals = normal.size()/3;
         v.normals = normbuf;
@@ -359,7 +360,13 @@ void loadModels(Grupo& grupo, XMLElement* elem, Model& modelo) {
     // percorre atributos do model
     for (attr = elem->FirstAttribute(); attr; attr = attr->Next()) {
         string atrib = attr->Name();
-        if(atrib=="texture") {texFlag = 1;/* falta load texture*/}
+        
+        if(atrib=="texture") {
+            texFlag = 1;
+            /* falta load texture*/
+            
+        }
+        
         if (atrib == "diffR")      diff[0]  = stof(attr->Value());
         if (atrib == "diffG")      diff[1]  = stof(attr->Value());
         if (atrib == "diffB")      diff[2]  = stof(attr->Value());
@@ -380,6 +387,41 @@ void loadModels(Grupo& grupo, XMLElement* elem, Model& modelo) {
     modelo.setSpecular(spec);
     modelo.setEmissive(emiss);
     modelo.setShininess(shin);
+}
+
+void loadTexture(Model& modelo, string textureName) {
+
+    unsigned int t, tw, th;
+    unsigned char *texData;
+    unsigned int texID;
+
+    ilInit();
+    ilEnable(IL_ORIGIN_SET);
+    ilOriginFunc(IL_ORIGIN_LOWER_LEFT);
+    ilGenImages(1, &t);
+    ilBindImage(t);
+    ilLoadImage((ILstring)textureName.c_str());
+    tw = ilGetInteger(IL_IMAGE_WIDTH);
+    th = ilGetInteger(IL_IMAGE_HEIGHT);
+    ilConvertImage(IL_RGBA, IL_UNSIGNED_BYTE);
+    texData = ilGetData();
+
+    glGenTextures(1, &texID);
+
+    glBindTexture(GL_TEXTURE_2D, texID);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, tw, th, 0, GL_RGBA, GL_UNSIGNED_BYTE, texData);
+    glGenerateMipmap(GL_TEXTURE_2D);
+
+    glBindTexture(GL_TEXTURE_2D, 0);
+
+    cout << "Loaded texture: " << textureName << endl;
+    modelo.setTexture(texID);
 }
 
 void parseGroup(Grupo& grupo, XMLElement* group) {
@@ -451,9 +493,13 @@ void parseGroup(Grupo& grupo, XMLElement* group) {
             //PERCORRE MODELS
             for (XMLElement* models = group->FirstChildElement("models")->FirstChildElement("model"); models; models = models->NextSiblingElement("model")) {
                 Model m; // Cada iteração de model cria um novo aqui
+                m.init();
                 string ficheiro = models->Attribute("file");
                 readFile(grupo, ficheiro,m); // preenche os VBO's do Modelo m passado por argumento
-                loadModels(grupo, models, m); // preenche os restos dos campos do Modelo
+                /*loadModels(grupo, models, m); // preenche os restos dos campos do Modelo
+                string tex_filename = "";
+                if(models->Attribute("texture")) tex_filename = models->Attribute("texture");
+                loadTexture(m,tex_filename);*/
                 grupo.addModel(m); //
             }
         }
@@ -507,8 +553,6 @@ int main(int argc, char **argv){
         return 0;
     }
     #endif
-
-    initGL();
     
     readXML("config.xml");
 
@@ -520,6 +564,8 @@ int main(int argc, char **argv){
     glutSpecialFunc(processSpecialKeys);
     
     createGLUTMenus();
+    
+    initGL();
     
     spherical2Cartesian();
 

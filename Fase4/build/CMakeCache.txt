@@ -178,6 +178,18 @@ GLUT_cocoa_LIBRARY:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms
 //GLUT library for OSX
 GLUT_glut_LIBRARY:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework
 
+//The file that corresponds to the il (system?) utility library.
+ILUT_LIBRARIES:FILEPATH=/usr/local/lib/libILUT.dylib
+
+//The file that corresponds to the il utility library.
+ILU_LIBRARIES:FILEPATH=/usr/local/lib/libILU.dylib
+
+//The path to the directory that contains il.h
+IL_INCLUDE_DIR:PATH=/usr/local/include/IL
+
+//The file that corresponds to the base il library.
+IL_LIBRARIES:FILEPATH=/usr/local/lib/libIL.dylib
+
 //Include for OpenGL on OS X
 OPENGL_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/OpenGL.framework
 
@@ -323,6 +335,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding DevIL
+FIND_PACKAGE_MESSAGE_DETAILS_DevIL:INTERNAL=[/usr/local/lib/libIL.dylib][/usr/local/lib/libILU.dylib][/usr/local/include/IL][v()]
 //Details about finding GLUT
 FIND_PACKAGE_MESSAGE_DETAILS_GLUT:INTERNAL=[/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework][/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GLUT.framework/Headers][v()]
 //Details about finding OpenGL

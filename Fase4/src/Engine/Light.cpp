@@ -18,7 +18,7 @@ Light::Light(int type, int number, float *pos, float *amb, float *diff, float *s
         Light::cutoff = cutoff;
     }
 }
-void Light::turnUpTheLight() {
+void Light::turnOn() {
     if (type == 1) position[3] = 0;
     else position[3] = 1;
 

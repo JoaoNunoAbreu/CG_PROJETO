@@ -12,7 +12,7 @@ PROJECT(engine)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-add_executable(${PROJECT_NAME} src/Engine/engine.cpp src/Engine/tinyxml2.cpp src/Engine/Cor.cpp src/Engine/Escala.cpp src/Engine/Translacao.cpp src/Engine/CatmullRomCurve.cpp src/Engine/Rotacao.cpp src/Engine/Grupo.cpp)
+add_executable(${PROJECT_NAME} src/Engine/engine.cpp src/Engine/tinyxml2.cpp src/Engine/Cor.cpp src/Engine/Escala.cpp src/Engine/Translacao.cpp src/Engine/CatmullRomCurve.cpp src/Engine/Rotacao.cpp src/Engine/Grupo.cpp src/Engine/Light.cpp src/Engine/Model.cpp)
 
 include_directories(headers)
 find_package(OpenGL REQUIRED)
@@ -37,24 +37,42 @@ if  (WIN32)
 		message(ERROR ": GLEW not found")
 	endif (NOT EXISTS "${TOOLKITS_FOLDER}/glew/GL/glew.h" OR NOT EXISTS "${TOOLKITS_FOLDER}/glew/glew32.lib")	
 	
-	include_directories(${TOOLKITS_FOLDER}/glut ${TOOLKITS_FOLDER}/glew)
+	if (NOT EXISTS "${TOOLKITS_FOLDER}/devil/IL/il.h" OR NOT EXISTS "${TOOLKITS_FOLDER}/devil/devIL.lib")
+		message(ERROR ": DevIL not found")
+	endif (NOT EXISTS "${TOOLKITS_FOLDER}/devil/IL/il.h" OR NOT EXISTS "${TOOLKITS_FOLDER}/devil/devIL.lib")	
+	
+	include_directories(${TOOLKITS_FOLDER}/glut ${TOOLKITS_FOLDER}/glew ${TOOLKITS_FOLDER}/devil)
 	target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} 
 										  ${TOOLKITS_FOLDER}/glut/glut32.lib 
+										  ${TOOLKITS_FOLDER}/devil/devIL.lib
 										  ${TOOLKITS_FOLDER}/glew/glew32.lib )
 	
-	if (EXISTS "${TOOLKITS_FOLDER}/glut/glut32.dll" AND EXISTS "${TOOLKITS_FOLDER}/glew/glew32.dll")
+	if (EXISTS "${TOOLKITS_FOLDER}/glut/glut32.dll" AND EXISTS "${TOOLKITS_FOLDER}/glew/glew32.dll"
+													AND EXISTS "${TOOLKITS_FOLDER}/devil/devil.dll")
 		file(COPY ${TOOLKITS_FOLDER}/glut/glut32.dll DESTINATION ${CMAKE_BINARY_DIR})
+		file(COPY ${TOOLKITS_FOLDER}/devil/devil.dll DESTINATION ${CMAKE_BINARY_DIR})
 		file(COPY ${TOOLKITS_FOLDER}/glew/glew32.dll DESTINATION ${CMAKE_BINARY_DIR})
-	endif(EXISTS "${TOOLKITS_FOLDER}/glut/glut32.dll" AND EXISTS "${TOOLKITS_FOLDER}/glew/glew32.dll")	
+	endif(EXISTS "${TOOLKITS_FOLDER}/glut/glut32.dll" AND EXISTS "${TOOLKITS_FOLDER}/glew/glew32.dll"
+													AND EXISTS "${TOOLKITS_FOLDER}/devil/devil.dll")
 	
 	set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
-	
+
 	file(COPY ${CMAKE_SOURCE_DIR}/files/3d/sphere.3d DESTINATION ${CMAKE_BINARY_DIR})
-	file(COPY ${CMAKE_SOURCE_DIR}/files/3d/torus.3d DESTINATION ${CMAKE_BINARY_DIR})
-	file(COPY ${CMAKE_SOURCE_DIR}/files/3d/teapot.3d DESTINATION ${CMAKE_BINARY_DIR})
-	file(COPY ${CMAKE_SOURCE_DIR}/config.xml DESTINATION ${CMAKE_BINARY_DIR})
-	file(COPY ${CMAKE_SOURCE_DIR}/files/input_files/teapot.patch DESTINATION ${CMAKE_BINARY_DIR})
-	
+    file(COPY ${CMAKE_SOURCE_DIR}/files/3d/torus.3d DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/files/3d/teapot.3d DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/config.xml DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/files/input_files/teapot.patch DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/earthmap.jpg DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/jupitermap.jpg DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/marsmap.jpg DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/mercurymap.jpg DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/moonmap.jpg DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/neptunemap.jpg DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/saturnmap.jpg DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/sunmap.jpg DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/uranusmap.jpg DESTINATION ${CMAKE_BINARY_DIR})
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/venusmap.jpg DESTINATION ${CMAKE_BINARY_DIR})
+	 
 else (WIN32) #Linux and Mac
 
 	set( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} Wno-deprecated")
@@ -69,15 +87,29 @@ else (WIN32) #Linux and Mac
 		link_libraries(${GLEW_LIBRARIES})
 	endif(NOT APPLE)
 	
-	target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} )
+	find_package(DevIL REQUIRED)
+	link_libraries(${IL_LIBRARIES} )
+	include_directories(${IL_INCLUDE_DIR})
+
+	target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${GLEW_LIBRARY} ${IL_LIBRARIES})
 	if(NOT GLUT_FOUND)
 	   message(ERROR ": GLUT not found!")
 	endif(NOT GLUT_FOUND)
-
+	
 	file(COPY ${CMAKE_SOURCE_DIR}/files/3d/sphere.3d DESTINATION ${CMAKE_BINARY_DIR}/Debug)
-	file(COPY ${CMAKE_SOURCE_DIR}/files/3d/torus.3d DESTINATION ${CMAKE_BINARY_DIR}/Debug)
-	file(COPY ${CMAKE_SOURCE_DIR}/files/3d/teapot.3d DESTINATION ${CMAKE_BINARY_DIR}/Debug)
-	file(COPY ${CMAKE_SOURCE_DIR}/config.xml DESTINATION ${CMAKE_BINARY_DIR}/Debug)
-	file(COPY ${CMAKE_SOURCE_DIR}/files/input_files/teapot.patch DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/3d/torus.3d DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/3d/teapot.3d DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/config.xml DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/input_files/teapot.patch DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/earthmap.jpg DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/jupitermap.jpg DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/marsmap.jpg DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/mercurymap.jpg DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/moonmap.jpg DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/neptunemap.jpg DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/saturnmap.jpg DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/sunmap.jpg DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/uranusmap.jpg DESTINATION ${CMAKE_BINARY_DIR}/Debug)
+    file(COPY ${CMAKE_SOURCE_DIR}/files/textures/venusmap.jpg DESTINATION ${CMAKE_BINARY_DIR}/Debug)
 	
 endif(WIN32)

@@ -1,0 +1,4 @@
+/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase3/build/CMakeFiles/rebuild_cache.dir
+/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase3/build/CMakeFiles/edit_cache.dir
+/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase3/build/CMakeFiles/engine.dir
+/Users/joaonunoabreu/Desktop/2ºSemestre/PROJETOS/CG/Fase3/build/CMakeFiles/generator.dir

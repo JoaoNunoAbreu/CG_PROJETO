@@ -28,18 +28,17 @@ struct VBO {
 
 class Model {
 private:
-    int texFlag; // 0->color, 1->texture
+    int texFlag; // 0 -> color, 1 -> texture
     VBO v;
-    string texture;
+    GLuint texture;
     float ambient[4], diffuse[4], specular[4], emissive[4], shininess;
 public:
     Model() {};
-    Model(int texFlag, VBO v, string texture, float *amb, float *diff, float * spec, float *emiss, float shin);
     ~Model() {};
 
     void setTexFlag(int texFlag);
     void setVBO(VBO v);
-    void setTexture(string texture);
+    void setTexture(GLuint texture);
     void setAmbient(float* ambient);
     void setDiffuse(float* diffuse);
     void setSpecular(float* specular);

@@ -1,7 +1,7 @@
 <scene>
     <!--sol-->
     <group>
-  <scale X="2.5" Y="2.5" Z="2.5" />
+    <scale X="2.5" Y="2.5" Z="2.5" />
         <group>
             <colour R="251" G="119" B="9" />
             <scale X="10" Y="10" Z="10"/>
