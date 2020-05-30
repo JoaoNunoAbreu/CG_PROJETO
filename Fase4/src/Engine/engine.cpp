@@ -370,14 +370,15 @@ void loadModels(Grupo& grupo, XMLElement* elem,int& texFlag, float *amb[],float 
         if (atrib == "diffG")      (*diff)[1]   = stof(attr->Value());
         if (atrib == "diffB")      (*diff)[2]   = stof(attr->Value());
         if (atrib == "specR")      (*spec)[0]   = stof(attr->Value());
-        if (atrib == "specR")      (*spec)[1]   = stof(attr->Value());
-        if (atrib == "specR")      (*spec)[2]   = stof(attr->Value());
+        if (atrib == "specG")      (*spec)[1]   = stof(attr->Value());
+        if (atrib == "specB")      (*spec)[2]   = stof(attr->Value());
         if (atrib == "ambR")       (*amb)[0]    = stof(attr->Value());
         if (atrib == "ambG")       (*amb)[1]    = stof(attr->Value());
         if (atrib == "ambB")       (*amb)[2]    = stof(attr->Value());
         if (atrib == "emisR")      (*emiss)[0]  = stof(attr->Value());
         if (atrib == "emisG")      (*emiss)[1]  = stof(attr->Value());
         if (atrib == "emisB")      (*emiss)[2]  = stof(attr->Value());
+        if (atrib == "shineness")  shin         = stof(attr->Value());
     }
 }
 
