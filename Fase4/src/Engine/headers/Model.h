@@ -35,6 +35,8 @@ private:
 public:
     Model() {};
     ~Model() {};
+    Model(VBO v);
+    Model(int texFlag, VBO v, GLuint texture, float *amb, float *diff, float * spec, float *emiss, float shin);
 
     void setTexFlag(int texFlag);
     void setVBO(VBO v);

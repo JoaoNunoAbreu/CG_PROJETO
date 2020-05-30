@@ -7,8 +7,6 @@
 #include <cstdlib>
 #include <vector>
 #include <iostream>
-#include "../Common/Ponto.h"
-#include "../Common/Normal.h"
 #include "../Common/Textura.h"
 #include "headers/BezierPatch.h"
 
@@ -123,20 +121,20 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
     float texture_stacks_step = 1.0 / (float) stacks;
     float texture_slices_step = 1.0 / (float) slices;
 
-    float xA, yA, zA;      // Ponto A - canto superior esquerdo
-    float xB, yB, zB;      // Ponto B - canto inferior esquerdo
-    float xC, yC, zC;      // Ponto C - canto superior direito
-    float xD, yD, zD;      // Ponto D - canto inferior direito
+    float xA = 0, yA = 0, zA = 0;      // Ponto A - canto superior esquerdo
+    float xB = 0, yB = 0, zB = 0;      // Ponto B - canto inferior esquerdo
+    float xC = 0, yC = 0, zC = 0;      // Ponto C - canto superior direito
+    float xD = 0, yD = 0, zD = 0;      // Ponto D - canto inferior direito
     
-    float nxA, nyA, nzA;   // Ponto A - canto superior esquerdo
-    float nxB, nyB, nzB;   // Ponto B - canto inferior esquerdo
-    float nxC, nyC, nzC;   // Ponto C - canto superior direito
-    float nxD, nyD, nzD;   // Ponto D - canto inferior direito
+    float nxA = 0, nyA = 0, nzA = 0;   // Ponto A - canto superior esquerdo
+    float nxB = 0, nyB = 0, nzB = 0;   // Ponto B - canto inferior esquerdo
+    float nxC = 0, nyC = 0, nzC = 0;   // Ponto C - canto superior direito
+    float nxD = 0, nyD = 0, nzD = 0;   // Ponto D - canto inferior direito
     
-    float txA, tyA;        // Ponto A - canto superior esquerdo
-    float txB, tyB;        // Ponto B - canto inferior esquerdo
-    float txC, tyC;        // Ponto C - canto superior direito
-    float txD, tyD;        // Ponto D - canto inferior direito
+    float txA = 0, tyA = 0;        // Ponto A - canto superior esquerdo
+    float txB = 0, tyB = 0;        // Ponto B - canto inferior esquerdo
+    float txC = 0, tyC = 0;        // Ponto C - canto superior direito
+    float txD = 0, tyD = 0;        // Ponto D - canto inferior direito
 
     ofstream file(filename);
     if (file.is_open()) {
@@ -146,6 +144,7 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 alpha = j * deslocacao_alpha;
 
                 /* --------------------------------- Ponto A --------------------------------- */
+
                 xA = radius * cos(beta + deslocacao_beta) * sin(alpha);
                 yA = radius * sin(beta + deslocacao_beta);
                 zA = radius * cos(beta + deslocacao_beta) * cos(alpha);
@@ -154,10 +153,11 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 nyA = sin(beta + deslocacao_beta);
                 nzA = cos(beta + deslocacao_beta) * cos(alpha);
                 
-                txA = slices * texture_slices_step;
-                tyA = (stacks+1) * texture_stacks_step;
+                txA = j * texture_slices_step;
+                tyA = (i+1) * texture_stacks_step;
 
                 /* --------------------------------- Ponto B --------------------------------- */
+
                 xB = radius * cos(beta) * sin(alpha);
                 yB = radius * sin(beta);
                 zB = radius * cos(beta) * cos(alpha);
@@ -166,8 +166,8 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 nyB = sin(beta);
                 nzB = cos(beta) * cos(alpha);
                 
-                txB = slices * texture_slices_step;
-                tyB = stacks * texture_stacks_step;
+                txB = j * texture_slices_step;
+                tyB = i * texture_stacks_step;
                 
                 /* --------------------------------- Ponto C --------------------------------- */
                 
@@ -179,8 +179,8 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 nyC = sin(beta + deslocacao_beta);
                 nzC = cos(beta + deslocacao_beta) * cos(alpha + deslocacao_alpha);
                 
-                txC = (slices+1) * texture_slices_step;
-                tyC = (stacks+1) * texture_stacks_step;
+                txC = (j+1) * texture_slices_step;
+                tyC = (i+1) * texture_stacks_step;
                 
                 /* --------------------------------- Ponto D --------------------------------- */
                     
@@ -192,17 +192,12 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 nyD = sin(beta);
                 nzD = cos(beta) * cos(alpha + deslocacao_alpha);
                 
-                txD = (slices+1) * texture_slices_step;
-                tyD = (stacks) * texture_stacks_step;
+                txD = (j+1) * texture_slices_step;
+                tyD = (i) * texture_stacks_step;
 
 
-                /* ----------------------------------- C - A - B ------------------------------------ */
+                /* ----------------------------------- A - B - C ------------------------------------ */
 
-                
-                file << "" << xC  << " " << yC  << " " << zC  << endl;
-                file << "" << nxC << " " << nyC << " " << nzC << endl;
-                file << "" << txC << " " << tyC << endl;
-                
                 file << "" << xA  << " " << yA  << " " << zA  << endl;
                 file << "" << nxA << " " << nyA << " " << nzA << endl;
                 file << "" << txA << " " << tyA << endl;
@@ -210,8 +205,16 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 file << "" << xB  << " " << yB  << " " << zB  << endl;
                 file << "" << nxB << " " << nyB << " " << nzB << endl;
                 file << "" << txB << " " << tyB << endl;
+
+                file << "" << xC  << " " << yC  << " " << zC  << endl;
+                file << "" << nxC << " " << nyC << " " << nzC << endl;
+                file << "" << txC << " " << tyC << endl;
                 
-                /* ----------------------------------- B - D - C -------------------------------- */
+                /* ----------------------------------- C - B - D -------------------------------- */
+
+                file << "" << xC  << " " << yC  << " " << zC  << endl;
+                file << "" << nxC << " " << nyC << " " << nzC << endl;
+                file << "" << txC << " " << tyC << endl;
 
                 file << "" << xB  << " " << yB  << " " << zB  << endl;
                 file << "" << nxB << " " << nyB << " " << nzB << endl;
@@ -220,10 +223,6 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 file << "" << xD  << " " << yD  << " " << zD  << endl;
                 file << "" << nxD << " " << nyD << " " << nzD << endl;
                 file << "" << txD << " " << tyD << endl;
-                
-                file << "" << xC  << " " << yC  << " " << zC  << endl;
-                file << "" << nxC << " " << nyC << " " << nzC << endl;
-                file << "" << txC << " " << tyC << endl;
 
             }
             beta += deslocacao_beta;

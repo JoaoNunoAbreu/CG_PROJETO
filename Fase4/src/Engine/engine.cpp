@@ -86,7 +86,7 @@ void renderScene(void) {
         0.0, 0.0, 0.0,
         0.0f, 1.0f, 0.0f);
     
-    for (auto light : lights) light.turnOn();
+    //for (auto light : lights) light.turnOn();
     g.drawGroup(time);
     
     frame++;
@@ -184,7 +184,7 @@ void createGLUTMenus() {
     glutAttachMenu(GLUT_RIGHT_BUTTON);
 }
 
-void readFile (Grupo &grupo, string filename, Model& modelo){
+void readFile (Grupo &grupo, string filename, VBO& v){
     
     ifstream infile;
    
@@ -242,7 +242,6 @@ void readFile (Grupo &grupo, string filename, Model& modelo){
 
         // gera VBO
         GLuint vecbuf, normbuf, texbuf;
-        VBO v;
 
         glGenBuffers(1, &vecbuf);
         glBindBuffer(GL_ARRAY_BUFFER, vecbuf);
@@ -254,14 +253,14 @@ void readFile (Grupo &grupo, string filename, Model& modelo){
         glBindBuffer(GL_ARRAY_BUFFER, texbuf);
         glBufferData(GL_ARRAY_BUFFER, sizeof(float) * textura.size(), textura.data(), GL_STATIC_DRAW);
 
+        cout << "All sizes: vertices = " << vertices.size()/3 << ", normals = " << normal.size()/3 << ", texturas = " << textura.size()/2 << endl;
+        
         v.size_vertices = vertices.size()/3 ;
         v.vertices = vecbuf;
         v.size_normals = normal.size()/3;
         v.normals = normbuf;
-        v.size_tex = textura.size() / 3;
+        v.size_tex = textura.size() / 2;
         v.texCoords = texbuf;
-
-        modelo.setVBO(v);
         
         infile.close();
     }
@@ -347,57 +346,46 @@ void loadLights(Grupo& grupo, XMLElement* elem) {
 }
 
 
-void loadModels(Grupo& grupo, XMLElement* elem, Model& modelo) {
-    int texFlag = 0;
-    float amb[4] = { 0.2f, 0.2f, 0.2f, 1.0f };
-    float diff[4] = { 0.8f, 0.8f, 0.8f, 1.0f };
-    float spec[4] = { 0.0f, 0.0f, 0.0f, 1.0f };
-    float emiss[4] = { 0.0f, 0.0f, 0.0f, 1.0f };
-    float shin = 0.0f;
+void loadModels(Grupo& grupo, XMLElement* elem,int& texFlag, float *amb[],float *diff[],float *spec[],float *emiss[],float& shin,string& tex_filename) {
     
     const XMLAttribute* attr; // atributos de model
-
+    *amb = new float[4];
+    *diff = new float[4];
+    *spec = new float[4];
+    *emiss = new float[4];
+    
+    (*amb)[0] = 0.2f;    (*amb)[1] = 0.2f;   (*amb)[2] = 0.2f;   (*amb)[3] = 1.0f;
+    (*diff)[0] = 0.8f;   (*diff)[1] = 0.8f;  (*diff)[2] = 0.8f;  (*diff)[3] = 1.0f;
+    (*spec)[0] = 0.0f;   (*spec)[1] = 0.0f;  (*spec)[2] = 0.0f;  (*spec)[3] = 1.0f;
+    (*emiss)[0] = 0.0f;  (*emiss)[1] = 0.0f; (*emiss)[2] = 0.0f; (*emiss)[3] = 1.0f;
+    
     // percorre atributos do model
     for (attr = elem->FirstAttribute(); attr; attr = attr->Next()) {
         string atrib = attr->Name();
         
-        if(atrib=="texture") {
-            texFlag = 1;
-            /* falta load texture*/
-            
-        }
-        
-        if (atrib == "diffR")      diff[0]  = stof(attr->Value());
-        if (atrib == "diffG")      diff[1]  = stof(attr->Value());
-        if (atrib == "diffB")      diff[2]  = stof(attr->Value());
-        if (atrib == "specR")      spec[0] = stof(attr->Value());
-        if (atrib == "specR")      spec[1] = stof(attr->Value());
-        if (atrib == "specR")      spec[2] = stof(attr->Value());
-        if (atrib == "ambR")       amb[0]  = stof(attr->Value());
-        if (atrib == "ambG")       amb[1]  = stof(attr->Value());
-        if (atrib == "ambB")       amb[2]  = stof(attr->Value());
-        if (atrib == "emisR")      emiss[0]  = stof(attr->Value());
-        if (atrib == "emisG")      emiss[1]  = stof(attr->Value());
-        if (atrib == "emisB")      emiss[2]  = stof(attr->Value());
+        if (atrib == "texture")    {texFlag = 1; tex_filename = attr->Value();}
+        if (atrib == "diffR")      (*diff)[0]   = stof(attr->Value());
+        if (atrib == "diffG")      (*diff)[1]   = stof(attr->Value());
+        if (atrib == "diffB")      (*diff)[2]   = stof(attr->Value());
+        if (atrib == "specR")      (*spec)[0]   = stof(attr->Value());
+        if (atrib == "specR")      (*spec)[1]   = stof(attr->Value());
+        if (atrib == "specR")      (*spec)[2]   = stof(attr->Value());
+        if (atrib == "ambR")       (*amb)[0]    = stof(attr->Value());
+        if (atrib == "ambG")       (*amb)[1]    = stof(attr->Value());
+        if (atrib == "ambB")       (*amb)[2]    = stof(attr->Value());
+        if (atrib == "emisR")      (*emiss)[0]  = stof(attr->Value());
+        if (atrib == "emisG")      (*emiss)[1]  = stof(attr->Value());
+        if (atrib == "emisB")      (*emiss)[2]  = stof(attr->Value());
     }
-    
-    modelo.setTexFlag(texFlag);
-    modelo.setAmbient(amb);
-    modelo.setDiffuse(diff);
-    modelo.setSpecular(spec);
-    modelo.setEmissive(emiss);
-    modelo.setShininess(shin);
 }
 
-void loadTexture(Model& modelo, string textureName) {
+void loadTexture(string textureName,GLuint &res) {
 
     unsigned int t, tw, th;
     unsigned char *texData;
-    unsigned int texID;
+    GLuint texID;
 
     ilInit();
-    ilEnable(IL_ORIGIN_SET);
-    ilOriginFunc(IL_ORIGIN_LOWER_LEFT);
     ilGenImages(1, &t);
     ilBindImage(t);
     ilLoadImage((ILstring)textureName.c_str());
@@ -421,7 +409,7 @@ void loadTexture(Model& modelo, string textureName) {
     glBindTexture(GL_TEXTURE_2D, 0);
 
     cout << "Loaded texture: " << textureName << endl;
-    modelo.setTexture(texID);
+    res = texID;
 }
 
 void parseGroup(Grupo& grupo, XMLElement* group) {
@@ -492,15 +480,29 @@ void parseGroup(Grupo& grupo, XMLElement* group) {
         else if (tag == "models") {
             //PERCORRE MODELS
             for (XMLElement* models = group->FirstChildElement("models")->FirstChildElement("model"); models; models = models->NextSiblingElement("model")) {
-                Model m; // Cada iteração de model cria um novo aqui
-                m.init();
+                
+                /* Campos do model */
+                int texFlag = 0;
+                VBO v;
+                GLuint texture = 0;
+                float *amb  ;
+                float *diff ;
+                float *spec ;
+                float *emiss;
+                float shin = 0;
+                /* --------------- */
+                
+                string tex_filename = "VAZIO";
+                
                 string ficheiro = models->Attribute("file");
-                readFile(grupo, ficheiro,m); // preenche os VBO's do Modelo m passado por argumento
-                /*loadModels(grupo, models, m); // preenche os restos dos campos do Modelo
-                string tex_filename = "";
-                if(models->Attribute("texture")) tex_filename = models->Attribute("texture");
-                loadTexture(m,tex_filename);*/
-                grupo.addModel(m); //
+                readFile(grupo, ficheiro,v); // preenche os VBO's do Modelo m passado por argumento
+                loadModels(grupo, models, texFlag,&amb,&diff,&spec,&emiss,shin,tex_filename); // preenche os restos dos campos do Modelo
+                
+                cout << "TexFlag = " << texFlag << " , texfilename = " << tex_filename << endl;
+                
+                if(texFlag == 1) loadTexture(tex_filename,texture);
+                Model* m = new Model(texFlag,v,texture,amb,diff,spec,emiss,shin);
+                grupo.addModel(m);
             }
         }
     }

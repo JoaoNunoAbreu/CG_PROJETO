@@ -1,13 +1,13 @@
 <scene>
     <!--sol-->
     <group>
-    <scale X="2.5" Y="2.5" Z="2.5" />
+  <scale X="2.5" Y="2.5" Z="2.5" />
         <group>
             <colour R="251" G="119" B="9" />
             <scale X="10" Y="10" Z="10"/>
             <rotate time="50" X="0" Y="1" Z="0" />
             <models>
-                <model file = "sphere.3d"/>
+                <model file = "sphere.3d" texture="earthmap.jpg" emisR="1.0" emisG="1.0" emisB="1.0"/>
             </models>
         </group>
 
@@ -181,14 +181,6 @@
             <models>
                 <model file = "sphere.3d"/>
             </models>
-            <!--anel-->
-            <group>
-                <colour R="255" G="10" B="100" />
-                <scale X="0.5" Y="0.5" Z="0.0"/>
-                <models>
-                    <model file = "torus.3d" />
-                </models>
-            </group>
             <!-- satelite Titã -->
             <group>
                 <translate time="650">
@@ -228,14 +220,6 @@
                 <model file = "sphere.3d"/>
             </models>
         <!--anel-->
-            <group>
-            	<rotate angle="70" X="-1" Y="0" Z="0"/>
-                <colour R="255" G="200" B="80" />
-                <scale X="0.5" Y="0.5" Z="0.0"/>
-                <models>
-                	<model file="torus.3d" />
-                </models>
-             </group>
       </group>     
       <group>
             <!--neptuno-->
@@ -254,25 +238,6 @@
             <scale X="1.275" Y="1.275" Z="1.275" />
             <models>
                 <model file = "sphere.3d"/>
-            </models>
-        </group>
-        <group>
-            <!-- cometa-->
-            <translate time="300">
-                <point X="40" Y="0" Z="-80" />
-                <point X="20" Y="0" Z="-5" />
-                <point X="45" Y="0" Z="25" />
-                <point X="-15" Y="0" Z="17" />
-                <point X="-36" Y="0" Z="-39" />
-                <point X="-28" Y="0" Z="-154.246" />
-                <point X="-6" Y="0" Z="-285" />
-                <point X="23" Y="0" Z="-69" />
-            </translate>
-            <colour R="255" G="78" B="84"/>
-            <rotate time="370" X="1" Y="0" Z="0"/>
-            <scale X="0.8" Y="0.8" Z="0.8" />
-            <models>
-                <model file = "teapot.3d"/>
             </models>
         </group>
     </group>

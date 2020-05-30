@@ -17,15 +17,14 @@ using namespace std;
 class Grupo {
 public:
     vector<Transformacao*> transformations;
-    vector<Model> models;
+    vector<Model*> models;
     vector<Grupo> childgroups;
 public:
     Grupo() {};
     ~Grupo() {};
     void drawGroup(float tempo);
-    void draw(Model models);
     void addTransformation(Transformacao* t);
-    void addModel(Model v);
+    void addModel(Model* v);
     void addChilds(Grupo t);
 };
 #endif
