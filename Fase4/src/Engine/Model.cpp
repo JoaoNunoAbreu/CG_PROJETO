@@ -1,16 +1,5 @@
 #include "headers/Model.h"
 
-Model::Model(VBO v) {
-    Model::texFlag = 0;
-    Model::texture = 0;
-    Model::v = v;
-    Model::ambient[0] = 0; Model::ambient[1] = 0; Model::ambient[2] = 0; Model::ambient[3] = 0;
-    Model::diffuse[0] = 0; Model::diffuse[1] = 0; Model::diffuse[2] = 0; Model::diffuse[3] = 0;
-    Model::specular[0] = 0; Model::specular[1] = 0; Model::specular[2] = 0; Model::specular[3] = 0;
-    Model::emissive[0] = 0; Model::emissive[1] = 0; Model::emissive[2] = 0; Model::emissive[3] = 0;
-    Model::shininess = 0;
-}
-
 Model::Model(int texFlag, VBO v, GLuint texture, float *amb, float *diff, float * spec, float *emiss, float shin) {
     Model::texFlag = texFlag;
     if(texFlag == 1)
@@ -21,43 +10,6 @@ Model::Model(int texFlag, VBO v, GLuint texture, float *amb, float *diff, float 
     Model::specular[0] = spec[0]; Model::specular[1] = spec[1]; Model::specular[2] = spec[2]; Model::specular[3] = spec[3];
     Model::emissive[0] = emiss[0]; Model::emissive[1] = emiss[1]; Model::emissive[2] = emiss[2]; Model::emissive[3] = emiss[3];
     Model::shininess = shin;
-}
-
-void Model:: setTexFlag(int texFlag){
-    this->texFlag = texFlag;
-}
-
-void Model:: setVBO(VBO v){
-    this->v.size_vertices = v.size_vertices;
-    this->v.vertices = v.vertices;
-}
-
-void Model:: setTexture(GLuint texture){
-    this->texture = texture;
-}
-
-void Model:: setAmbient(float* ambient){
-    for(int i = 0; i < 4; i++)
-        this->ambient[i] = ambient[i];
-}
-
-void Model:: setDiffuse(float* diffuse){
-    for(int i = 0; i < 4; i++)
-        this->diffuse[i] = diffuse[i];
-}
-
-void Model:: setSpecular(float* specular){
-    for(int i = 0; i < 4; i++)
-        this->specular[i] = specular[i];
-}
-
-void Model:: setEmissive(float* emissive){
-    for(int i = 0; i < 4; i++)
-        this->emissive[i] = emissive[i];
-}
-
-void Model:: setShininess(float shininess){
-    this->shininess = shininess;
 }
 
 void Model::drawModel() {

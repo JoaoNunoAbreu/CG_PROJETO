@@ -35,17 +35,7 @@ private:
 public:
     Model() {};
     ~Model() {};
-    Model(VBO v);
     Model(int texFlag, VBO v, GLuint texture, float *amb, float *diff, float * spec, float *emiss, float shin);
-
-    void setTexFlag(int texFlag);
-    void setVBO(VBO v);
-    void setTexture(GLuint texture);
-    void setAmbient(float* ambient);
-    void setDiffuse(float* diffuse);
-    void setSpecular(float* specular);
-    void setEmissive(float* emissive);
-    void setShininess(float shininess);
     void drawModel();
 };
 #endif

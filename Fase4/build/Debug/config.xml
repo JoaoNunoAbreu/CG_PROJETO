@@ -1,13 +1,16 @@
 <scene>
     <!--sol-->
     <group>
-  <scale X="2.5" Y="2.5" Z="2.5" />
+    <lights>
+        <light type="POINT" posX="0" posY="0" posZ="0" ambR="0.8" ambG="0.8" ambB="0.8"/>
+    </lights>
+    <scale X="2.5" Y="2.5" Z="2.5" />
         <group>
             <colour R="251" G="119" B="9" />
             <scale X="10" Y="10" Z="10"/>
             <rotate time="50" X="0" Y="1" Z="0" />
             <models>
-                <model file = "sphere.3d" texture="earthmap.jpg" emisR="1.0" emisG="1.0" emisB="1.0"/>
+                <model file = "sphere.3d" texture="sunmap.jpg" emisR="1" emisG="1" emisB="1"/>
             </models>
         </group>
 
@@ -27,7 +30,7 @@
             <colour R="219" G="170" B="0" />
             <scale X="0.3525" Y="0.3525" Z="0.3525" />
             <models>
-                <model file = "sphere.3d"/>
+                <model file = "sphere.3d" texture="mercurymap.jpg"/>
             </models>
         </group>
         <group>
@@ -46,7 +49,7 @@
             <colour R="254" G="198" B="115" />
             <scale X="0.8790" Y="0.8790" Z="0.8790" />
             <models>
-                <model file = "sphere.3d"/>
+                <model file = "sphere.3d" texture="venusmap.jpg"/>
             </models>
         </group>
         <group>
@@ -65,7 +68,7 @@
             <colour R="0" G="0" B="220" />
             <scale X="0.8865" Y="0.8865" Z="0.8865" />
             <models>
-                <model file="sphere.3d" />
+                <model file="sphere.3d" texture="earthmap.jpg"/>
             </models>
             <group>
                 <!--   lua-->
@@ -83,7 +86,7 @@
                 <colour R="255" G="255" B="255" />
                 <scale X="0.30" Y="0.30" Z="0.30" />
                 <models>
-                    <model file = "sphere.3d"/>
+                    <model file = "sphere.3d" texture="moonmap.jpg"/>
                 </models>
             </group>
         </group>
@@ -103,7 +106,7 @@
             <colour R="254" G="135" B="1" />
             <scale X="0.3720" Y="0.3720" Z="0.3720" />
             <models>
-                <model file = "sphere.3d"/>
+                <model file = "sphere.3d" texture="marsmap.jpg"/>
             </models>
         </group>
         <group>
@@ -122,7 +125,7 @@
             <colour R="231" G="232" B="197" />
             <scale X="2.5" Y="2.5" Z="2.5" />
             <models>
-                <model file = "sphere.3d" />
+                <model file = "sphere.3d" texture="jupitermap.jpg" />
             </models>
             <!--   satelite Ganimedes-->
             <group>
@@ -179,7 +182,7 @@
             <colour R="255" G="223" B="161" />
             <scale X="1.995" Y="1.995" Z="1.995" />
             <models>
-                <model file = "sphere.3d"/>
+                <model file = "sphere.3d" texture="saturnmap.jpg"/>
             </models>
             <!-- satelite Titã -->
             <group>
@@ -217,7 +220,7 @@
             <colour R="148" G="193" B="255" />
             <scale X="1.290" Y="1.290" Z="1.290" />
             <models>
-                <model file = "sphere.3d"/>
+                <model file = "sphere.3d" texture="uranusmap.jpg"/>
             </models>
         <!--anel-->
       </group>     
@@ -237,7 +240,26 @@
             <colour R="0" G="83" B="255" />
             <scale X="1.275" Y="1.275" Z="1.275" />
             <models>
-                <model file = "sphere.3d"/>
+                <model file = "sphere.3d" texture="neptunemap.jpg"/>
+            </models>
+        </group>
+        <group>
+            <!-- cometa-->
+            <translate time="300">
+                <point X="40" Y="0" Z="-80" />
+                <point X="20" Y="0" Z="-5" />
+                <point X="45" Y="0" Z="25" />
+                <point X="-15" Y="0" Z="17" />
+                <point X="-36" Y="0" Z="-39" />
+                <point X="-28" Y="0" Z="-154.246" />
+                <point X="-6" Y="0" Z="-285" />
+                <point X="23" Y="0" Z="-69" />
+            </translate>
+            <colour R="255" G="78" B="84"/>
+            <rotate time="370" X="1" Y="0" Z="0"/>
+            <scale X="0.8" Y="0.8" Z="0.8" />
+            <models>
+                <model file = "teapot.3d" texture="rockplanetmap.jpg" emisR="1" emisG="1" emisB="1"/>
             </models>
         </group>
     </group>

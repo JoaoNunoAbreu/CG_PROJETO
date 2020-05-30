@@ -196,8 +196,13 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 tyD = (i) * texture_stacks_step;
 
 
-                /* ----------------------------------- A - B - C ------------------------------------ */
+                /* ----------------------------------- C - A - B ------------------------------------ */
 
+                
+                file << "" << xC  << " " << yC  << " " << zC  << endl;
+                file << "" << nxC << " " << nyC << " " << nzC << endl;
+                file << "" << txC << " " << tyC << endl;
+                
                 file << "" << xA  << " " << yA  << " " << zA  << endl;
                 file << "" << nxA << " " << nyA << " " << nzA << endl;
                 file << "" << txA << " " << tyA << endl;
@@ -205,16 +210,8 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 file << "" << xB  << " " << yB  << " " << zB  << endl;
                 file << "" << nxB << " " << nyB << " " << nzB << endl;
                 file << "" << txB << " " << tyB << endl;
-
-                file << "" << xC  << " " << yC  << " " << zC  << endl;
-                file << "" << nxC << " " << nyC << " " << nzC << endl;
-                file << "" << txC << " " << tyC << endl;
                 
-                /* ----------------------------------- C - B - D -------------------------------- */
-
-                file << "" << xC  << " " << yC  << " " << zC  << endl;
-                file << "" << nxC << " " << nyC << " " << nzC << endl;
-                file << "" << txC << " " << tyC << endl;
+                /* ----------------------------------- B - D - C -------------------------------- */
 
                 file << "" << xB  << " " << yB  << " " << zB  << endl;
                 file << "" << nxB << " " << nyB << " " << nzB << endl;
@@ -223,6 +220,10 @@ void drawSphere(float radius, int slices, int stacks, string filename) {
                 file << "" << xD  << " " << yD  << " " << zD  << endl;
                 file << "" << nxD << " " << nyD << " " << nzD << endl;
                 file << "" << txD << " " << tyD << endl;
+                
+                file << "" << xC  << " " << yC  << " " << zC  << endl;
+                file << "" << nxC << " " << nyC << " " << nzC << endl;
+                file << "" << txC << " " << tyC << endl;
 
             }
             beta += deslocacao_beta;

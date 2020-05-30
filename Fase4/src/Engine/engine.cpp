@@ -86,7 +86,7 @@ void renderScene(void) {
         0.0, 0.0, 0.0,
         0.0f, 1.0f, 0.0f);
     
-    //for (auto light : lights) light.turnOn();
+    for (auto light : lights) light.turnOn();
     g.drawGroup(time);
     
     frame++;
@@ -226,7 +226,6 @@ void readFile (Grupo &grupo, string filename, VBO& v){
                     y = atof(token.c_str());
                     if(type == 0) vertices.push_back(y);
                     if(type == 1) normal.push_back(y);
-                    if(type == 2) textura.push_back(y);
                 }
                 s.erase(0, pos + delimiter.length());
                 i++;
@@ -235,11 +234,14 @@ void readFile (Grupo &grupo, string filename, VBO& v){
              
             if(type == 0) vertices.push_back(z);
             if(type == 1) normal.push_back(z);
+            if(type == 2) textura.push_back(z);
             
             if(type == 2) type = 0;
             else type++;
         }
-
+        
+        cout << "size da textura = " << textura.size() << endl;
+        
         // gera VBO
         GLuint vecbuf, normbuf, texbuf;
 
@@ -259,7 +261,7 @@ void readFile (Grupo &grupo, string filename, VBO& v){
         v.vertices = vecbuf;
         v.size_normals = normal.size()/3;
         v.normals = normbuf;
-        v.size_tex = textura.size() / 2;
+        v.size_tex = textura.size() / 3;
         v.texCoords = texbuf;
         
         infile.close();
@@ -386,6 +388,8 @@ void loadTexture(string textureName,GLuint &res) {
     GLuint texID;
 
     ilInit();
+    ilEnable(IL_ORIGIN_SET);
+    ilOriginFunc(IL_ORIGIN_LOWER_LEFT);
     ilGenImages(1, &t);
     ilBindImage(t);
     ilLoadImage((ILstring)textureName.c_str());
