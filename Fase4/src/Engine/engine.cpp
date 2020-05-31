@@ -36,8 +36,8 @@ using namespace tinyxml2;
 using namespace std;
 
 
-float alfa = 0.7f, beta = 0.5f, radius = 200.0f;
-float camX, camY, camZ;
+float alpha = 0.0f, beta = 0.5f, radius = 200.0f;
+float camX = 00, camY = 5, camZ = 40;
 
 int timebase = 0, frame = 0;
 
@@ -77,13 +77,11 @@ void renderScene(void) {
     time = glutGet(GLUT_ELAPSED_TIME);
     // clear buffers
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-    // transformações retiradas dos slides.
     
     // set the camera
     glLoadIdentity();
-    gluLookAt(camX,camY,camZ,
-        0.0, 0.0, 0.0,
+    gluLookAt(camX, camY, camZ,
+        camX + sin(alpha), camY, camZ + cos(alpha),
         0.0f, 1.0f, 0.0f);
     
     for (auto light : lights) light.turnOn();
@@ -103,16 +101,48 @@ void renderScene(void) {
     glutSwapBuffers();
 }
 
-void spherical2Cartesian() {
-
-    camX = radius * cos(beta) * sin(alfa);
-    camY = radius * sin(beta);
-    camZ = radius * cos(beta) * cos(alfa);
-}
-
 
 void processKeys(unsigned char c, int xx, int yy) {
+    float dx, dy = 0, dz, rx, rz;
+    float upx = 0, upy = 1, upz = 0;
+    float speed = 2;
+    switch (c) {
+        case 'w': {
+            dx = sin(alpha);
+            dz = cos(alpha);
+            camX = camX + speed * dx;
+            camZ = camZ + speed * dz;
+            break;
+        }
+        case 's': {
+            dx = sin(alpha);
+            dz = cos(alpha);
+            camX = camX + (-speed) * dx;
+            camZ = camZ + (-speed) * dz;
 
+            break;
+        }
+        case 'a': {
+            dx = sin(alpha);
+            dz = cos(alpha);
+            rx = dy * upz - cos(alpha) * upy;
+            rz = sin(alpha) * upy - dy * upx;
+            camX = camX + (-speed) * rx;
+            camZ = camZ + (-speed) * rz;
+
+            break;
+        }
+        case 'd': {
+            dx = sin(alpha);
+            dz = cos(alpha);
+            rx = dy * upz - cos(alpha) * upy;
+            rz = sin(alpha) * upy - dy * upx;
+            camX = camX + speed * rx;
+            camZ = camZ + speed * rz;
+
+            break;
+        }
+    }
 }
 
 void processSpecialKeys(int key, int xx, int yy) {
@@ -120,34 +150,11 @@ void processSpecialKeys(int key, int xx, int yy) {
     switch (key) {
 
     case GLUT_KEY_RIGHT:
-        alfa -= 0.1; break;
+        alpha -= 0.1; break;
 
     case GLUT_KEY_LEFT:
-        alfa += 0.1; break;
-
-    case GLUT_KEY_UP:
-        beta += 0.1f;
-        if (beta > 1.5f)
-            beta = 1.5f;
-        break;
-
-    case GLUT_KEY_DOWN:
-        beta -= 0.1f;
-        if (beta < -1.5f)
-            beta = -1.5f;
-        break;
-
-    case GLUT_KEY_PAGE_DOWN: radius -= 5.0f;
-        if (radius < 1.0f)
-            radius = 1.0f;
-        break;
-
-    case GLUT_KEY_PAGE_UP: radius += 5.0f; break;
-    
-    
+        alpha += 0.1; break;
     }
-    spherical2Cartesian();
-    glutPostRedisplay();
 
 }
 
@@ -573,8 +580,7 @@ int main(int argc, char **argv){
     createGLUTMenus();
     
     initGL();
-    
-    spherical2Cartesian();
+
 
     glutMainLoop();
     

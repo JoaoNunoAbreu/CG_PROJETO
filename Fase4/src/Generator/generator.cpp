@@ -609,14 +609,8 @@ void drawTorus(float ri, float re, int slices, int stacks, string filename) {
                 nyG = cos(beta - desBeta) * sin(alpha);
                 nzG = sin(beta - desBeta);
 
-                if (j == 0) {
-                    txG = i * textureStack;
-                    tyG = (slices - 1) * textureSlice;
-                }
-                else {
-                    txG = i * textureStack;
-                    tyG = (j - 1) * textureSlice;
-                }
+                txG = i * textureStack;
+                tyG = (slices - 1) * textureSlice;
 
                 xH = (re + ri * cos(beta - desBeta)) * cos(alpha + desAlpha);
                 yH = (re + ri * cos(beta - desBeta)) * sin(alpha + desAlpha);
@@ -625,15 +619,10 @@ void drawTorus(float ri, float re, int slices, int stacks, string filename) {
                 nxH = cos(beta - desBeta) * cos(alpha + desAlpha);
                 nyH = cos(beta - desBeta) * sin(alpha + desAlpha);
                 nzH = sin(beta - desBeta);
-
-                if (j == 0) {
-                    txH = (i + 1) * textureStack;
-                    tyH = (slices - 1) * textureSlice;
-                }
-                else {
-                    txH = (i + 1) * textureStack;
-                    tyH = (j - 1) * textureSlice;
-                }
+            
+                txH = (i + 1) * textureStack;
+                tyH = (slices - 1) * textureSlice;
+        
 
                 file << "" << xB << " " << yB << " " << zB << endl;
                 file << "" << nxB << " " << nyB << " " << nzB << endl;

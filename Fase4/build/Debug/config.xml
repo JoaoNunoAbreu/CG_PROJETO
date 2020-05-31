@@ -2,10 +2,9 @@
     <group>
         <group>
             <!-- cometa-->
-            <colour R="255" G="78" B="84"/>
-            <scale X="0.8" Y="0.8" Z="0.8" />
+            <scale X="1" Y="1" Z="1" />
             <models>
-                <model file = "torus.3d" texture="rockplanetmap.jpg" specR="1" specG="1" specB="1" shineness="0"/>
+                <model file = "sphere.3d" ambR="1" ambG="1" ambB="1"/>
             </models>
         </group>
     </group>

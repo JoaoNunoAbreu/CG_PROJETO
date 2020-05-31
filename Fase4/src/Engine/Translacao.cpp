@@ -45,10 +45,8 @@ void  Translacao :: transform(float tempo){
 
         renderCatmullRomCurve(controlpoints);
 
-        float X[3];
         static float Y[3] = { 0, 1, 0 };
         float Z[3];
-        float pos[3];
         float x = (time * 1000); 
         tm = tempo / x;
         getGlobalCatmullRomPoint(tm, controlpoints, res, deriv);
