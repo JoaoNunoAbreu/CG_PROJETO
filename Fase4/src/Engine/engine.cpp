@@ -261,7 +261,7 @@ void readFile (Grupo &grupo, string filename, VBO& v){
         v.vertices = vecbuf;
         v.size_normals = normal.size()/3;
         v.normals = normbuf;
-        v.size_tex = textura.size() / 3;
+        v.size_tex = textura.size() / 2;
         v.texCoords = texbuf;
         
         infile.close();
