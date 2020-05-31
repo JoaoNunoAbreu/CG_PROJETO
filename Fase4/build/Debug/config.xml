@@ -5,7 +5,7 @@
             <colour R="255" G="78" B="84"/>
             <scale X="0.8" Y="0.8" Z="0.8" />
             <models>
-                <model file = "cube.3d" texture="rockplanetmap.jpg" specR="1" specG="1" specB="1" shineness="0"/>
+                <model file = "torus.3d" texture="rockplanetmap.jpg" specR="1" specG="1" specB="1" shineness="0"/>
             </models>
         </group>
     </group>

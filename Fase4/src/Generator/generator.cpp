@@ -14,29 +14,44 @@ constexpr auto INDEX_PER_PATCH = 16;
 
 using namespace std;
 
-void drawPlane(float x, float z, string filename)
-{
+void drawPlane(float ladox, float ladoz, string f){
+    float x, y = 0, z;
+    ofstream file(f);
 
-    ofstream file(filename);
-    if (file.is_open())
-    {
 
-        file << "" << (-x / 2) << " 0 " << (-z / 2) << "\n";
-        file << "" << (-x / 2) << " 0 " << (z / 2) << "\n";
-        file << "" << (x / 2) << " 0 " << (z / 2) << "\n";
+    x = ladox/2;
+    z = ladoz/2;
 
-        file << "" << (-x / 2) << " 0 " << (-z / 2) << "\n";
-        file << "" << (x / 2) << " 0 " << (z / 2) << "\n";
-        file << "" << (x / 2) << " 0 " << (-z / 2) << "\n";
+    // Triangulo 1
+    file << x << " "    << y << " " << z    << endl;
+    file << 0 << " "    << 1 << " " << 0    << endl;
+    file << 1 << " "    << 1                << endl;
 
-        file << "" << (-x / 2) << " 0 " << (-z / 2) << "\n";
-        file << "" << (x / 2) << " 0 " << (z / 2) << "\n";
-        file << "" << (-x / 2) << " 0 " << (z / 2) << "\n";
 
-        file << "" << (-x / 2) << " 0 " << (-z / 2) << "\n";
-        file << "" << (x / 2) << " 0 " << (-z / 2) << "\n";
-        file << "" << (x / 2) << " 0 " << (z / 2) << "\n";
-    }
+    file << x << " "    << y << " " << -z   << endl;
+    file << 0 << " "    << 1 << " " << 0    << endl;
+    file << 1 << " "    << 0                << endl;
+
+    file << -x << " "   << y << " " << -z   << endl;
+    file << 0 << " "    << 1 << " " << 0    << endl;
+    file << 0 << " "    << 0                << endl;
+
+
+    // Triangulo 2
+    file << -x << " "   << y << " " << z    << endl;
+    file << 0 << " "    << 1 << " " << 0    << endl;
+    file << 0 << " "    << 1                << endl;
+
+
+    file << x << " "    << y << " " << z    << endl;
+    file << 0 << " "    << 1 << " " << 0    << endl;
+    file << 1 << " "    << 1                << endl;   
+
+
+    file << -x << " "   << y << " " << -z   << endl;
+    file << 0 << " "    << 1 << " " << 0    << endl;
+    file << 0 << " "    << 0                << endl;
+
     file.close();
 }
 
@@ -55,165 +70,165 @@ void drawCube(float x,float y,float z,int d,string filename) {
                 // face tras itera para a direita
                 file << "" << xShift * j     << " " << yShift * i           << " " << 0                   << endl;
                 file << "" << 0.0f           << " " << 0.0f                 << " " << -1.0f               << endl;
-                file << "" << (float)j / d   << " " << (float)i / d         << " " << 0.0f                << endl;
+                file << "" << (float)j / d   << " " << (float)i / d                                       << endl;
 
                 file << "" << xShift * j     << " " << yShift *(i+1)        << " " <<  0                  << endl;
                 file << "" << 0.0f           << " " << 0.0f                 << " " << -1.0f               << endl;
-                file << "" << (float)j / d   << " " << (float)(i+1)/d       << " " << 0.0f                << endl;
+                file << "" << (float)j / d   << " " << (float)(i+1)/d                                     << endl;
 
                 file << "" << xShift *(j+1)  << " " << yShift * i           << " " << 0                   << endl;
                 file << "" << 0.0f           << " " << 0.0f                 << " " << -1.0f               << endl;
-                file << "" << (float)(j+1)/d << " " << (float)i / d         << " " << 0.0f                << endl;
+                file << "" << (float)(j+1)/d << " " << (float)i / d                                       << endl;
 
                 // -------------------
 
                 file << "" << xShift *(j+1)  << " " << yShift * i           << " " << 0                   << endl;
                 file << "" << 0.0f           << " " << 0.0f                 << " " << -1.0f               << endl;
-                file << "" << (float)(j+1)/d << " " << (float)i / d         << " " << 0.0f                << endl;
+                file << "" << (float)(j+1)/d << " " << (float)i / d                                       << endl;
 
                 file << "" << xShift * j     << " " << yShift * (i + 1)     << " " << 0                   << endl;
                 file << "" << 0.0f           << " " << 0.0f                 << " " << -1.0f               << endl;
-                file << "" << (float)j / d   << " " << (float)(i + 1) / d   << " " << 0.0f                << endl;
+                file << "" << (float)j / d   << " " << (float)(i + 1) / d                                 << endl;
 
                 file << "" << xShift *(j+1)  << " " << yShift * (i + 1)     << " " << 0                   << endl;
                 file << "" << 0.0f           << " " << 0.0f                 << " " << -1.0f               << endl;
-                file << "" << (float)(j+1)/d << " " << (float)(i + 1) / d   << " " << 0.0f                << endl;
+                file << "" << (float)(j+1)/d << " " << (float)(i + 1) / d                                 << endl;
 
                 // face esquerda itera verticalmente
                 file << "" << 0              << " " << yShift * i           << " " << zShift*j            << endl;
                 file << "" << -1.0f          << " " << 0.0f                 << " " << 0.0f                << endl;
-                file << "" << 0.0f           << " " << (float)i / d         << " " << (float)j/d          << endl;
+                file << ""                   << (float)i / d                << " " << (float)j/d          << endl;
 
                 file << "" << 0              << " " << yShift * i           << " " << zShift*(j+1)        << endl;
                 file << "" << -1.0f          << " " << 0.0f                 << " " << 0.0f                << endl;
-                file << "" << 0.0f           << " " << (float)i / d         << " " << (float)(j + 1) / d  << endl;
+                file << "" << (float)i / d   << " " << (float)(j + 1) / d                                 << endl;
 
                 file << "" << 0              << " " << yShift * (i + 1)     << " " << zShift * j          << endl;
                 file << "" << -1.0f          << " " << 0.0f                 << " " << 0.0f                << endl;
-                file << "" << 0.0f           << " " << (float)(i + 1) / d   << " " << (float)j / d        << endl;
+                file << "" << (float)(i+1)/d << " " << (float)j / d                                       << endl;
 
                 // -------------------
 
                 file << "" << 0              << " " << yShift * (i + 1)     << " " << zShift * j          << endl;
                 file << "" << -1.0f          << " " << 0.0f                 << " " << 0.0f                << endl;
-                file << "" << 0.0f           << " " << (float)(i + 1) / d   << " " << (float)j / d        << endl;
+                file << "" << (float)(i+1)/d << " " << (float)j / d                                       << endl;
 
                 file << "" << 0              << " " << yShift * i           << " " << zShift * (j + 1)    << endl;
                 file << "" << -1.0f          << " " << 0.0f                 << " " << 0.0f                << endl;
-                file << "" << 0.0f           << " " << (float)i / d         << " " << (float)(j + 1) / d  << endl;
+                file << "" << (float)i / d   << " " << (float)(j + 1) / d                                 << endl;
 
                 file << "" << 0              << " " << yShift * (i + 1)     << " " << zShift * (j + 1)    << endl;
                 file << "" << -1.0f          << " " << 0.0f                 << " " << 0.0f                << endl;
-                file << "" << 0.0f           << " " << (float)(i + 1) / d   << " " << (float)(j + 1) / d  << endl;
+                file << "" << (float)(i+1)/d << " " << (float)(j + 1) / d                                 << endl;
 
 
                 // face baixo itera para  a direita
                 file << "" << xShift * j     << " " << 0                    << " " << zShift * i          << endl;
                 file << "" << 0.0f           << " " << -1.0f                << " " << 0.0f                << endl;
-                file << "" << (float)j / d   << " " << 0.0f                 << " " << (float)i / d        << endl;
+                file << "" << (float)j / d   << " " << (float)i / d                                       << endl;
 
                 file << "" << xShift *(j+1)  << " " << 0                    << " " << zShift * i          << endl;
                 file << "" << 0.0f           << " " << -1.0f                << " " << 0.0f                << endl;
-                file << "" << (float)(j+1)/d << " " << 0.0f                 << " " << (float)i / d        << endl;
+                file << "" << (float)(j+1)/d << " " << (float)i / d                                       << endl;
 
                 file << "" << xShift * j     << " " << 0                    << " " << zShift * (i + 1)    << endl;
                 file << "" << 0.0f           << " " << -1.0f                << " " << 0.0f                << endl;
-                file << "" << (float)j / d   << " " << 0.0f                 << " " << (float)(i + 1) / d  << endl;
+                file << "" << (float)j / d   << " " << (float)(i + 1) / d                                 << endl;
 
                 // -------------------
 
                 file << "" << xShift * j     << " " << 0.0f                 << " " << zShift * (i + 1)    << endl;
                 file << "" << 0.0f           << " " << -1.0f                << " " << 0.0f                << endl;
-                file << "" << (float)j / d   << " " << 0.0f                 << " " << (float)(i + 1) / d  << endl;
+                file << "" << (float)j / d   << " " << (float)(i + 1) / d                                 << endl;
 
                 file << "" << xShift *(j+1)  << " " << 0.0f                 << " " << zShift * i          << endl;
                 file << "" << 0.0f           << " " << -1.0f                << " " << 0.0f                << endl;
-                file << "" << (float)(j+1)/d << " " << 0.0f                 << " " << (float)i / d        << endl;
+                file << "" << (float)(j+1)/d << " " << (float)i / d                                       << endl;
 
                 file << "" << xShift *(j+1)  << " " << 0.0f                 << " " << zShift * (i + 1)    << endl;
                 file << "" << 0.0f           << " " << -1.0f                << " " << 0.0f                << endl;
-                file << "" << (float)(j+1)/d << " " << 0.0f                 << " " << (float)(i + 1) / d  << endl;
+                file << "" << (float)(j+1)/d << " " << (float)(i + 1) / d                                 << endl;
 
                 // face direita itera para  a frente
                 file << "" << xShift * d     << " " << yShift * i           << " " << zShift * j          << endl;
                 file << "" << 1.0f           << " " << 0.0f                 << " " << 0.0f                << endl;
-                file << "" << 1.0f           << " " << (float)i / d         << " " << (float)j / d        << endl;
+                file << "" << (float)i / d   << " " << (float)j / d                                       << endl;
 
                 file << "" << xShift * d     << " " << yShift * (i + 1)     << " " << zShift * j          << endl;
                 file << "" << 1.0f           << " " << 0.0f                 << " " << 0.0f                << endl;
-                file << "" << 1.0f           << " " << (float)(i + 1) / d   << " " << (float)j / d        << endl;
+                file << "" << (float)(i+1)/d << " " << (float)j / d                                       << endl;
 
                 file << "" << xShift* d      << " " << yShift* i            << " " << zShift* (j + 1)     << endl;
                 file << "" << 1.0f           << " " << 0.0f                 << " " << 0.0f                << endl;
-                file << "" << 1.0f           << " " << (float)i / d         << " " << (float)(j + 1) / d  << endl;
+                file << "" << (float)i / d   << " " << (float)(j + 1) / d                                 << endl;
 
                 // -------------------
 
                 file << "" << xShift* d      << " " << yShift* i            << " " << zShift* (j + 1)     << endl;
                 file << "" << 1.0f           << " " << 0.0f                 << " " << 0.0f                << endl;
-                file << "" << 1.0f           << " " << (float)i / d         << " " << (float)(j + 1) / d  << endl;
+                file << "" << (float)i / d   << " " << (float)(j + 1) / d                                 << endl;
 
                 file << "" << xShift* d      << " " << yShift* (i + 1)      << " " << zShift* j           << endl;
                 file << "" << 1.0f           << " " << 0.0f                 << " " << 0.0f                << endl;
-                file << "" << 1.0f           << " " << (float)(i + 1) / d   << " " << (float)j / d        << endl;
+                file << "" << (float)(i+1)/d << " " << (float)j / d                                       << endl;
 
                 file << "" << xShift * d     << " " << yShift * (i + 1)     << " " << zShift * (j + 1)    << endl;
                 file << "" << 1.0f           << " " << 0.0f                 << " " << 0.0f                << endl;
-                file << "" << 1.0f           << " " << (float)(i + 1) / d   << " " << (float)(j + 1) / d  << endl;
+                file << "" << (float)(i+1)/d << " " << (float)(j + 1) / d                                 << endl;
 
                 // face frente itera pra a direita
                 file << "" << xShift * j     << " " << yShift * i           << " " << zShift * d          << endl;
                 file << "" << 0.0f           << " " << 0.0f                 << " " << 1.0f                << endl;
-                file << "" << (float)j / d   << " " << (float)i / d         << " " << 1.0f                << endl;
+                file << "" << (float)j / d   << " " << (float)i / d                                       << endl;
 
                 file << "" << xShift * (j+1) << " " << yShift * i           << " " << zShift * d          << endl;
                 file << "" << 0.0f           << " " << 0.0f                 << " " << 1.0f                << endl;
-                file << "" << (float)(j+1)/d << " " << (float)i / d         << " " << 1.0f                << endl;
+                file << "" << (float)(j+1)/d << " " << (float)i / d                                       << endl;
 
                 file << "" << xShift * j     << " " << yShift * (i + 1)     << " " << zShift * d          << endl;
                 file << "" << 0.0f           << " " << 0.0f                 << " " << 1.0f                << endl;
-                file << "" << (float)j / d   << " " << (float)(i + 1) / d   << " " << 1.0f                << endl;
+                file << "" << (float)j / d   << " " << (float)(i + 1) / d                                 << endl;
 
                 // -------------------
 
                 file << "" << xShift * j     << " " << yShift * (i + 1)     << " " << zShift * d          << endl;
                 file << "" << 0.0f           << " " << 0.0f                 << " " << 1.0f                << endl;
-                file << "" << (float)j / d   << " " << (float)(i + 1) / d   << " " << 1.0f                << endl;
+                file << "" << (float)j / d   << " " << (float)(i + 1) / d                                 << endl;
 
                 file << "" << xShift *(j+1)  << " " << yShift * i           << " " << zShift * d          << endl;
                 file << "" << 0.0f           << " " << 0.0f                 << " " << 1.0f                << endl;
-                file << "" << (float)(j+1)/d << " " << (float)i / d         << " " << 1.0f                << endl;
+                file << "" << (float)(j+1)/d << " " << (float)i / d                                       << endl;
 
                 file << "" << xShift *(j+1)  << " " << yShift * (i + 1)     << " " << zShift * d          << endl;
                 file << "" << 0.0f           << " " << 0.0f                 << " " << 1.0f                << endl;
-                file << "" << (float)(j+1)/d << " " << (float)(i + 1) / d   << " " << 1.0f                << endl;
+                file << "" << (float)(j+1)/d << " " << (float)(i + 1) / d                                 << endl;
 
                 // face cima itera para a diretita
                 file << "" << xShift * j     << " " << yShift * d           << " " << zShift * i          << endl;
                 file << "" << 0.0f           << " " << 1.0f                 << " " << 0.0f                << endl;
-                file << "" << (float)j / d   << " " << 1.0f                 << " " << (float)i / d        << endl;
+                file << "" << (float)j / d   << " " << (float)i / d                                       << endl;
 
                 file << "" << xShift * j     << " " << yShift * d           << " " << zShift * (i + 1)    << endl;
                 file << "" << 0.0f           << " " << 1.0f                 << " " << 0.0f                << endl;
-                file << "" << (float)j / d   << " " << 1.0f                 << " " << (float)(i + 1) / d  << endl;
+                file << "" << (float)j / d   << " " << (float)(i + 1) / d                                 << endl;
 
                 file << "" << xShift *(j+1)  << " " << yShift * d           << " " << zShift * i          << endl;
                 file << "" << 0.0f           << " " << 1.0f                 << " " << 0.0f                << endl;
-                file << "" << (float)(j+1)/d << " " << 1.0f                 << " " << (float)i / d        << endl;
+                file << "" << (float)(j+1)/d << " " << (float)i / d                                       << endl;
 
                 // -------------------
 
                 file << "" << xShift *(j+1)  << " " << yShift * d           << " " << zShift * i          << endl;
                 file << "" << 0.0f           << " " << 1.0f                 << " " << 0.0f                << endl;
-                file << "" << (float)(j+1)/d << " " << 1.0f                 << " " << (float)i / d        << endl;
+                file << "" << (float)(j+1)/d << " " << (float)i / d                                       << endl;
 
                 file << "" << xShift * j     << " " << yShift * d           << " " << zShift * (i + 1)    << endl;
                 file << "" << 0.0f           << " " << 1.0f                 << " " << 0.0f                << endl;
-                file << "" << (float)j / d   << " " << 1.0f                 << " " << (float)(i + 1) / d  << endl;
+                file << "" << (float)j / d   << " " << (float)(i + 1) / d                                 << endl;
 
                 file << "" << xShift * (j+1) << " " << yShift * d           << " " << zShift * (i + 1)    << endl;
                 file << "" << 0.0f           << " " << 1.0f                 << " " << 0.0f                << endl;
-                file << "" << (float)(j+1)/d << " " << 1.0f                 << " " << (float)(i + 1) / d  << endl;
+                file << "" << (float)(j+1)/d << " " << (float)(i + 1) / d                                 << endl;
             }
         }
     }
@@ -426,10 +441,15 @@ void drawCone(float radius, float height, int slices, int stacks, string filenam
     file.close();
 }
 
-void drawTorus(float ri, float re, int slices, int stacks, string filename)
-{
+void drawTorus(float ri, float re, int slices, int stacks, string filename) {
     float alpha = 0;
     float beta = 0;
+
+    int i = 0;
+    int j = 0;
+
+    float textureStack = float(1) / stacks;
+    float textureSlice = float(1) / slices;
 
     float desAlpha = (2 * M_PI) / stacks;
     float desBeta = (2 * M_PI) / slices;
@@ -443,111 +463,213 @@ void drawTorus(float ri, float re, int slices, int stacks, string filename)
     float xG, yG, zG;
     float xH, yH, zH;
 
-    ofstream file(filename);
-    if (file.is_open())
-    {
+    float nxA = 0, nyA = 0, nzA = 0;   // Ponto A 
+    float nxB = 0, nyB = 0, nzB = 0;   // Ponto B 
+    float nxC = 0, nyC = 0, nzC = 0;   // Ponto C 
+    float nxD = 0, nyD = 0, nzD = 0;   // Ponto D 
+    float nxE = 0, nyE = 0, nzE = 0;   // Ponto E 
+    float nxF = 0, nyF = 0, nzF = 0;   // Ponto F 
+    float nxG = 0, nyG = 0, nzG = 0;   // Ponto G
+    float nxH = 0, nyH = 0, nzH = 0;   // Ponto H 
 
-        for (int i = 0; i < stacks; i++)
-        {
+    float txA = 0, tyA = 0;        // Ponto A 
+    float txB = 0, tyB = 0;        // Ponto B 
+    float txC = 0, tyC = 0;        // Ponto C 
+    float txD = 0, tyD = 0;       // Ponto D
+    float txE = 0, tyE = 0;       // Ponto E
+    float txF = 0, tyF = 0;       // Ponto F
+    float txG = 0, tyG = 0;       // Ponto G
+    float txH = 0, tyH = 0;       // Ponto H
+
+    ofstream file(filename);
+    if (file.is_open()) {
+
+        for (i = 0; i < stacks; i++) {
 
             xB = (re + ri * cos(beta)) * cos(alpha);
             yB = (re + ri * cos(beta)) * sin(alpha);
-            zB = ri * sin(beta); //B
+            zB = ri * sin(beta);
+
+            nxB = cos(alpha) * cos(beta);
+            nyB = cos(beta) * sin(alpha);
+            nzB = sin(beta);
+
+            txB = i * textureStack;
+            tyB = j * textureSlice;
 
             xC = (re + ri * cos(beta)) * cos(alpha + desAlpha);
             yC = (re + ri * cos(beta)) * sin(alpha + desAlpha);
-            zC = ri * sin(beta); // C
+            zC = ri * sin(beta); 
+
+            nxC = cos(beta) * cos(alpha + desAlpha);
+            nyC = cos(beta) * sin(alpha + desAlpha);
+            nzC = sin(beta);
+
+            txC = (i + 1) * textureStack;
+            tyC = j * textureSlice;
 
             xA = (re + ri * cos(beta + M_PI)) * cos(alpha);
             yA = (re + ri * cos(beta + M_PI)) * sin(alpha);
-            zA = ri * sin(beta + M_PI); // A
+            zA = ri * sin(beta + M_PI); 
 
-            file << "" << xB << " " << yB << " " << zB << endl;
-            file << "" << xC << " " << yC << " " << zC << endl;
-            file << "" << xA << " " << yA << " " << zA << endl;
+            nxA = cos(beta + M_PI) * cos(alpha);
+            nyA = cos(beta + M_PI) * sin(alpha);
+            nzA = sin(beta + M_PI);
 
-            xA = (re + ri * cos(beta + M_PI)) * cos(alpha);
-            yA = (re + ri * cos(beta + M_PI)) * sin(alpha);
-            zA = ri * sin(beta + M_PI); // A
-
-            xC = (re + ri * cos(beta)) * cos(alpha + desAlpha);
-            yC = (re + ri * cos(beta)) * sin(alpha + desAlpha);
-            zC = ri * sin(beta); // C
+            txA = i * textureStack;
+            tyA = (j + (slices / 2)) * textureSlice;
 
             xD = (re + ri * cos(beta + M_PI)) * cos(alpha + desAlpha);
             yD = (re + ri * cos(beta + M_PI)) * sin(alpha + desAlpha);
-            zD = ri * sin(beta + M_PI); // D
+            zD = ri * sin(beta + M_PI);
+
+            nxD = cos(beta + M_PI) * cos(alpha + desAlpha);
+            nyD = cos(beta + M_PI) * sin(alpha + desAlpha);
+            nzD = sin(beta + M_PI);
+
+            txD = (i + 1) * textureStack;
+            tyD = (j + (slices/2)) * textureSlice;
+
+            file << "" << xB << " " << yB << " " << zB << endl;
+            file << "" << nxB << " " << nyB << " " << nzB << endl;
+            file << "" << txB << " " << tyB << endl;
+
+            file << "" << xC << " " << yC << " " << zC << endl;
+            file << "" << nxC << " " << nyC << " " << nzC << endl;
+            file << "" << txC << " " << tyC << endl;
 
             file << "" << xA << " " << yA << " " << zA << endl;
-            file << "" << xC << " " << yC << " " << zC << endl;
-            file << "" << xD << " " << yD << " " << zD << endl;
+            file << "" << nxA << " " << nyA << " " << nzA << endl;
+            file << "" << txA << " " << tyA << endl;
 
-            for (int j = 0; j < slices; j++)
-            {
+            file << "" << xA << " " << yA << " " << zA << endl;
+            file << "" << nxA << " " << nyA << " " << nzA << endl;
+            file << "" << txA << " " << tyA << endl;
+
+            file << "" << xC << " " << yC << " " << zC << endl;
+            file << "" << nxC << " " << nyC << " " << nzC << endl;
+            file << "" << txC << " " << tyC << endl;
+
+            file << "" << xD << " " << yD << " " << zD << endl;
+            file << "" << nxD << " " << nyD << " " << nzD << endl;
+            file << "" << txD << " " << tyD << endl;
+
+
+            for (j = 0; j < slices; j++) {
 
                 xB = (re + ri * cos(beta)) * cos(alpha);
                 yB = (re + ri * cos(beta)) * sin(alpha);
-                zB = ri * sin(beta); //B
+                zB = ri * sin(beta); 
+
+                nxB = cos(alpha) * cos(beta);
+                nyB = cos(beta) * sin(alpha);
+                nzB = sin(beta);
+
+                txB = i * textureStack;
+                tyB = j * textureSlice;
 
                 xF = (re + ri * cos(beta + desBeta)) * cos(alpha + desAlpha);
                 yF = (re + ri * cos(beta + desBeta)) * sin(alpha + desAlpha);
-                zF = ri * sin(beta + desBeta); // F
+                zF = ri * sin(beta + desBeta);
+
+                nxF = cos(beta + desBeta) * cos(alpha + desAlpha);
+                nyF = cos(beta + desBeta) * sin(alpha + desAlpha);
+                nzF = sin(beta + desBeta);
+
+                txF = (i + 1) * textureStack;
+                tyF = (j + 1) * textureSlice;
 
                 xE = (re + ri * cos(beta + desBeta)) * cos(alpha);
                 yE = (re + ri * cos(beta + desBeta)) * sin(alpha);
-                zE = ri * sin(beta + desBeta); //E
+                zE = ri * sin(beta + desBeta);
 
-                file << "" << xB << " " << yB << " " << zB << endl;
-                file << "" << xF << " " << yF << " " << zF << endl;
-                file << "" << xE << " " << yE << " " << zE << endl;
+                nxE = cos(beta + desBeta) * cos(alpha);
+                nyE = cos(beta + desBeta) * sin(alpha);
+                nzE = sin(beta + desBeta);
 
-                xB = (re + ri * cos(beta)) * cos(alpha);
-                yB = (re + ri * cos(beta)) * sin(alpha);
-                zB = ri * sin(beta); //B
+                txE = i * textureStack;
+                tyE = (j + 1) * textureSlice;
 
                 xC = (re + ri * cos(beta)) * cos(alpha + desAlpha);
                 yC = (re + ri * cos(beta)) * sin(alpha + desAlpha);
-                zC = ri * sin(beta); // C
+                zC = ri * sin(beta); 
 
-                xF = (re + ri * cos(beta + M_PI)) * cos(alpha);
-                yF = (re + ri * cos(beta + M_PI)) * sin(alpha);
-                zF = ri * sin(beta + M_PI); // F
+                nxC = cos(beta) * cos(alpha + desAlpha);
+                nyC = cos(beta) * sin(alpha + desAlpha);
+                nzC = sin(beta);
 
-                file << "" << xB << " " << yB << " " << zB << endl;
-                file << "" << xC << " " << yC << " " << zC << endl;
-                file << "" << xF << " " << yF << " " << zF << endl;
-
-                xB = (re + ri * cos(beta)) * cos(alpha);
-                yB = (re + ri * cos(beta)) * sin(alpha);
-                zB = ri * sin(beta); //B
+                txF = (i + 1) * textureStack;
+                tyF = (j + 1) * textureSlice;
 
                 xG = (re + ri * cos(beta - desBeta)) * cos(alpha);
                 yG = (re + ri * cos(beta - desBeta)) * sin(alpha);
-                zG = ri * sin(beta - desBeta); //G
+                zG = ri * sin(beta - desBeta); 
 
-                xC = (re + ri * cos(beta)) * cos(alpha + desAlpha);
-                yC = (re + ri * cos(beta)) * sin(alpha + desAlpha);
-                zC = ri * sin(beta); // C
+                nxG = cos(beta - desBeta) * cos(alpha);
+                nyG = cos(beta - desBeta) * sin(alpha);
+                nzG = sin(beta - desBeta);
 
-                file << "" << xB << " " << yB << " " << zB << endl;
-                file << "" << xG << " " << yG << " " << zG << endl;
-                file << "" << xC << " " << yC << " " << zC << endl;
-
-                xC = (re + ri * cos(beta)) * cos(alpha + desAlpha);
-                yC = (re + ri * cos(beta)) * sin(alpha + desAlpha);
-                zC = ri * sin(beta); // C
-
-                xG = (re + ri * cos(beta - desBeta)) * cos(alpha);
-                yG = (re + ri * cos(beta - desBeta)) * sin(alpha);
-                zG = ri * sin(beta - desBeta); //G
+                if (j == 0) {
+                    txG = i * textureStack;
+                    tyG = (slices - 1) * textureSlice;
+                }
+                else {
+                    txG = i * textureStack;
+                    tyG = (j - 1) * textureSlice;
+                }
 
                 xH = (re + ri * cos(beta - desBeta)) * cos(alpha + desAlpha);
                 yH = (re + ri * cos(beta - desBeta)) * sin(alpha + desAlpha);
-                zH = ri * sin(beta - desBeta); // H
+                zH = ri * sin(beta - desBeta);
+
+                nxH = cos(beta - desBeta) * cos(alpha + desAlpha);
+                nyH = cos(beta - desBeta) * sin(alpha + desAlpha);
+                nzH = sin(beta - desBeta);
+
+                if (j == 0) {
+                    txH = (i + 1) * textureStack;
+                    tyH = (slices - 1) * textureSlice;
+                }
+                else {
+                    txH = (i + 1) * textureStack;
+                    tyH = (j - 1) * textureSlice;
+                }
+
+                file << "" << xB << " " << yB << " " << zB << endl;
+                file << "" << nxB << " " << nyB << " " << nzB << endl;
+                file << "" << txB << " " << tyB << endl;
+
+                file << "" << xF << " " << yF << " " << zF << endl;
+                file << "" << nxF << " " << nyF << " " << nzF << endl;
+                file << "" << txF << " " << tyF << endl;
+
+                file << "" << xE << " " << yE << " " << zE << endl;
+                file << "" << nxE << " " << nyE << " " << nzE << endl;
+                file << "" << txE << " " << tyE << endl;
+                
+                file << "" << xB << " " << yB << " " << zB << endl;
+                file << "" << nxB << " " << nyB << " " << nzB << endl;
+                file << "" << txB << " " << tyB << endl;
+
+                file << "" << xG << " " << yG << " " << zG << endl;
+                file << "" << nxG << " " << nyG << " " << nzG << endl;
+                file << "" << txG << " " << tyG << endl;
 
                 file << "" << xC << " " << yC << " " << zC << endl;
+                file << "" << nxC << " " << nyC << " " << nzC << endl;
+                file << "" << txC << " " << tyC << endl;
+
+                file << "" << xC << " " << yC << " " << zC << endl;
+                file << "" << nxC << " " << nyC << " " << nzC << endl;
+                file << "" << txC << " " << tyC << endl;
+            
                 file << "" << xG << " " << yG << " " << zG << endl;
+                file << "" << nxG << " " << nyG << " " << nzG << endl;
+                file << "" << txG << " " << tyG << endl;
+
                 file << "" << xH << " " << yH << " " << zH << endl;
+                file << "" << nxH << " " << nyH << " " << nzH << endl;
+                file << "" << txH << " " << tyH << endl;
 
                 beta += desBeta;
             }
