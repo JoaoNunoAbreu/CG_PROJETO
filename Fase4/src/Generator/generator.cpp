@@ -517,7 +517,7 @@ void drawTorus(float ri, float re, int slices, int stacks, string filename) {
             nzA = sin(beta + M_PI);
 
             txA = i * textureStack;
-            tyA = (j + (slices / 2)) * textureSlice;
+            tyA = (j + 0.5) * textureSlice;
 
             xD = (re + ri * cos(beta + M_PI)) * cos(alpha + desAlpha);
             yD = (re + ri * cos(beta + M_PI)) * sin(alpha + desAlpha);
@@ -528,7 +528,7 @@ void drawTorus(float ri, float re, int slices, int stacks, string filename) {
             nzD = sin(beta + M_PI);
 
             txD = (i + 1) * textureStack;
-            tyD = (j + (slices/2)) * textureSlice;
+            tyD = (j + 0.5) * textureSlice;
 
             file << "" << xB << " " << yB << " " << zB << endl;
             file << "" << nxB << " " << nyB << " " << nzB << endl;
@@ -598,8 +598,8 @@ void drawTorus(float ri, float re, int slices, int stacks, string filename) {
                 nyC = cos(beta) * sin(alpha + desAlpha);
                 nzC = sin(beta);
 
-                txF = (i + 1) * textureStack;
-                tyF = (j + 1) * textureSlice;
+                txC = (i + 1) * textureStack;
+                tyC = (j) * textureSlice;
 
                 xG = (re + ri * cos(beta - desBeta)) * cos(alpha);
                 yG = (re + ri * cos(beta - desBeta)) * sin(alpha);
@@ -610,7 +610,7 @@ void drawTorus(float ri, float re, int slices, int stacks, string filename) {
                 nzG = sin(beta - desBeta);
 
                 txG = i * textureStack;
-                tyG = (slices - 1) * textureSlice;
+                tyG = (j + 1) * textureSlice;
 
                 xH = (re + ri * cos(beta - desBeta)) * cos(alpha + desAlpha);
                 yH = (re + ri * cos(beta - desBeta)) * sin(alpha + desAlpha);
@@ -621,8 +621,7 @@ void drawTorus(float ri, float re, int slices, int stacks, string filename) {
                 nzH = sin(beta - desBeta);
             
                 txH = (i + 1) * textureStack;
-                tyH = (slices - 1) * textureSlice;
-        
+                tyH = (j + 1) * textureSlice;
 
                 file << "" << xB << " " << yB << " " << zB << endl;
                 file << "" << nxB << " " << nyB << " " << nzB << endl;
@@ -667,6 +666,7 @@ void drawTorus(float ri, float re, int slices, int stacks, string filename) {
     }
     file.close();
 }
+
 
 void generateBezierPatches(vector<int> &indices, vector<Ponto> &control_points, int numPatches, int tessellation, string fileToWrite)
 {
