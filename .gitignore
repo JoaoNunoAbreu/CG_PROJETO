@@ -1,2 +1,5 @@
 .DS_Store
 build/
+*.patch
+*.3d
+*.roff
